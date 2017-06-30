@@ -369,9 +369,10 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 					$post['c_value'] = $_POST[$c_value];
 				}
 				$r = $db -> row_insert('selfdefine_value', $post);
-			}echo 222;
+			}
+			echo function_exists(html_cars);
 			//html_cars($insertid);
-			header("location:index.php?m=user&a=addpicture&carid=".$insertid);
+			//header("location:index.php?m=user&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
@@ -507,7 +508,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 	} 
 }
 // 添加图片
-elseif ($ac == 'addpicture') {echo 111;var_dump($_GET);
+elseif ($ac == 'addpicture') {
 	// 添加或修改
 	if (submitcheck('a')) {
 		$arr_not_empty = array();
