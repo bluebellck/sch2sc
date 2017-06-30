@@ -15,7 +15,7 @@ $m = isset($_GET['m']) && trim($_GET['m']) ? trim($_GET['m']) : 'index';
 
 if (!file_exists('index/'.$m.'.php')) exit('error url');
 if(isMobile()){
-	header('location:http://sch2sc.tuzhong.cn/m/');
+	include('m/index/'.$m.'.php');
 }else{
 	include('index/'.$m.'.php');
 }

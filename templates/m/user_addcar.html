@@ -244,9 +244,9 @@
 		$(function(){
 			//品牌选择
 			$("#brand").change(function(){
-				$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
+				$.get("http://sch2sc.tuzhong.cn/index.php?m=ajax&ajax=1", { 
 					brandid :  $("#brand").val() 
-				}, function (data, textStatus){alert(data);
+				}, function (data, textStatus){alert("<{$weburl}>/index.php?m=ajax&ajax=1");
 									 $("#subbrand").html(data); // 把返回的数据添加到页面上
 					}
 				);
