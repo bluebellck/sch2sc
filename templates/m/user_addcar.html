@@ -20,7 +20,7 @@
 			<div class="uk-width-1-10"></div>
 		</div>
 		
-		
+	<form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">	
 		<div class="business-tianjia uk-margin-bottom">
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
@@ -233,14 +233,48 @@
 				<textarea  name="p_details" cols="" rows="" placeholder="备注" class="business-hz"><{$cars.p_details}></textarea>
 			</div>
 		</div>
-		<input type="submit" value="提 交" class="business-button g uk-button">
+		<input type="submit" value="下一步" class="business-button g uk-button">
 		<input type="hidden" name="a" value="<{$ac}>">
 		<input type="hidden" name="id" value="<{$cars.p_id}>">
-		
-		<a href="business-tianjia-2.html" class="business-button g uk-button">下一步</a>
-		
+	</form>
 		<script type="text/javascript" src="<{$weburl}>/static/js/uikit/jquery-3.2.0.min.js"></script>
 		<script type="text/javascript" src="<{$weburl}>/static/js/uikit/uikit.min.js"></script>
+		<script type="text/javascript" src="<{$weburl}>/static/js/laydate/laydate.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			//品牌选择
+			$("#brand").change(function(){
+				$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
+					brandid :  $("#brand").val() 
+				}, function (data, textStatus){
+									 $("#subbrand").html(data); // 把返回的数据添加到页面上
+					}
+				);
+			});
+			//品牌选择
+			$("#subbrand").change(function(){
+				$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
+					subbrandid :  $("#subbrand").val() 
+				}, function (data, textStatus){
+									 $("#subsubbrand").html(data); // 把返回的数据添加到页面上
+					}
+				);
+			});
+			<{if $setting.version==3}>
+			//城市选择
+			$("#province").change(function(){
+				$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
+					cityid :  $("#province").val() 
+				}, function (data, textStatus){
+					$("#city").html(data); // 把返回的数据添加到页面上
+							}
+				);
+			});
+			<{/if}>
+
+			});
+		});
+		</script>
 	</body>
 </html>
 
@@ -254,85 +288,6 @@
 
 
 
-<script type="text/javascript" src="<{$weburl}>/static/js/laydate/laydate.js"></script>
-<script type="text/javascript">
-$(function(){
-	//品牌选择
-	$("#brand").change(function(){
-		$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
-			brandid :  $("#brand").val() 
-		}, function (data, textStatus){
-               $("#subbrand").html(data); // 把返回的数据添加到页面上
-			}
-		);
-	});
-	//品牌选择
-	$("#subbrand").change(function(){
-		$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
-			subbrandid :  $("#subbrand").val() 
-		}, function (data, textStatus){
-               $("#subsubbrand").html(data); // 把返回的数据添加到页面上
-			}
-		);
-	});
-	<{if $setting.version==3}>
-	//城市选择
-	$("#province").change(function(){
-		$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
-			cityid :  $("#province").val() 
-		}, function (data, textStatus){
-			$("#city").html(data); // 把返回的数据添加到页面上
-					}
-		);
-	});
-	<{/if}>
-	//图片删除
-	$("#piclist li div span").live('click', function(){
-		$.get("index.php?m=user&ajax=1&p_id=<{$cars.p_id}>",{
-			p_pic :  $(this).next().val()
-		}, function (data, textStatus){
-			$("li").remove("#"+data);
-		});
-	});
-
-	//设为封面
-	$("#piclist li p span").live('click', function(){
-		$(this).parent().parent().children('.img').addClass("selected");
-		$(this).parent().parent().siblings().children('.img').removeClass("selected");
-		$("#mainpic").empty();
-		$("#mainpic").append('<input type="hidden" name="p_mainpic" value="'+$(this).next().val()+'">');
-	});
-	KindEditor.ready(function(K) {
-	var editor = K.editor({
-		uploadJson : 'index.php?m=upload_car',
-		allowFileManager : false,
-		imageUploadLimit : 10
-	});
-	K('#J_selectImage').click(function() {
-		var inputArr = $("#piclist").children("li");
-			var length = inputArr.length;
-			if(length>=10){
-				alert("您最多只能上传10图片！");
-				exit;
-			}
-		editor.loadPlugin('multiimage', function() {
-			editor.plugin.multiImageDialog({
-				clickFn : function(urlList) {
-					var div = K('#piclist');
-					K.each(urlList, function(i, data) {
-						var arr_picid = data.url.split("/");
-						var arr_length = arr_picid.length;
-						var arr_picids = arr_picid[arr_length-1].split(".");
-						div.append('<li id="'+arr_picids[0]+'"><img src="' + data.url + '" class="vt img"><div><span class="del"></span><input type="hidden" name="p_pics[]" value="'+ data.url +'"></div><p><span>设为封面</span><input type="hidden" name="url" value="'+ data.url +'"></p></li>');
-					});
-					editor.hideDialog();
-				}
-			});
-		});
-	});	
-	});
-});
-</script>
 <form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">
     <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
     <{if $setting.version==3}>
