@@ -62,7 +62,7 @@ if (empty($_FILES) === false) {
 	$file_size = $_FILES['imgFile']['size'];
 	//检查文件名
 	if (!$file_name) {
-		alert($_FILES);
+		alert("请选择文件。");
 	}
 	//检查目录
 	if (@is_dir($save_path) === false) {
@@ -178,7 +178,7 @@ if (empty($_FILES) === false) {
 
 function alert($msg) {
 	header('Content-type: text/html; charset=UTF-8');
-	var_dump($msg);
+	echo $msg;
 	exit;
 }
 ?>
