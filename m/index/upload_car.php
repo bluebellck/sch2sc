@@ -61,8 +61,14 @@ if (empty($_FILES) === false) {
 	//文件大小
 	$file_size = $_FILES['imgFile']['size'];
 	//检查文件名
+	foreach($_FILE as $k => $v){
+		$string = $k.'=>'.$v.'/////////';
+		foreach($v as $k1 => $v1){
+			$string .= $k1.'=>'.$v1.'-----';
+		}
+	}
 	if (!$file_name) {
-		alert('111'.count($_FILES));
+		alert('111'.$string);
 	}
 	//检查目录
 	if (@is_dir($save_path) === false) {
