@@ -42,6 +42,7 @@ date_default_timezone_set('ETC/GMT'.TIMEZONE);
 include (INC_DIR . 'tql.inc.php');
 include (INC_DIR . 'function.func.php');
 include (INC_DIR.'common.func.php');
+include (INC_DIR.'html.func.php');
 include (INC_DIR . 'simplehtmldom/simple_html_dom.php');
 
 // 数据库连接
