@@ -9,7 +9,7 @@
  simcms.net保留全部权力，受相关法律和国际公约保护，请勿非法修改、转载、散播，或用于其他赢利行为，并请勿删除版权声明。
 */
 if (!defined('APP_IN')) exit('Access Denied');
-
+echo 111;
 include('json.php');
 
 $php_path = dirname(__FILE__) . '/';
