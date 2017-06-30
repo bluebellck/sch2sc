@@ -76,7 +76,7 @@ if($userinfo['isdealer']==1){
 	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态', 'carlist' => '车源列表','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息');
 }
 else{
-	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源','addpicture'=>'添加图片' 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息', 'carlist' => '车源列表','editshop' => '店铺设置', 'asklist' => '问答列表', 'replyask' => '回复问答', 'delask' => '删除问答', 'newslist' => '促销信息列表', 'addnews' => '添加促销信息', 'editnews' => '编辑促销信息', 'delnews' => '删除促销信息', 'dealerlist' => '销售代表列表', 'adddealer' => '添加销售代表', 'editdealer' => '编辑销售代表', 'deldealer' => '删除销售代表','subscribelist'=>'预约管理','subscribelist'=>'预约管理','delsubscribe'=>'删除预约','inquirylist'=>'询价管理','delinquiry'=>'删除询价');
+	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源','addpicture'=>'添加图片', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息', 'carlist' => '车源列表','editshop' => '店铺设置', 'asklist' => '问答列表', 'replyask' => '回复问答', 'delask' => '删除问答', 'newslist' => '促销信息列表', 'addnews' => '添加促销信息', 'editnews' => '编辑促销信息', 'delnews' => '删除促销信息', 'dealerlist' => '销售代表列表', 'adddealer' => '添加销售代表', 'editdealer' => '编辑销售代表', 'deldealer' => '删除销售代表','subscribelist'=>'预约管理','subscribelist'=>'预约管理','delsubscribe'=>'删除预约','inquirylist'=>'询价管理','delinquiry'=>'删除询价');
 }
 
 // 当前操作
@@ -508,7 +508,39 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 }
 // 添加图片
 elseif ($ac == 'addpicture') {echo 111;var_dump($_GET);
-
+	// 添加或修改
+	if (submitcheck('a')) {
+		$arr_not_empty = array();
+		can_not_be_empty($arr_not_empty, $_POST);
+		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
+		$haspic="0";
+		foreach($post as $value){
+			if($value!=""){
+			$haspic="1";
+				break;
+			}
+		}
+		if($haspic=="0"){
+			$post["status"] = 6;
+		}
+		else{
+			$post["status"] = 7;
+		}
+		$rs = $db -> row_update('cars', $post, "p_id=".$carid);
+		html_cars($carid);
+	} 
+	// 转向添加或修改页面
+	else {
+		$configure_list = array();
+		if (empty($carid)) {
+			$data = array('p_mainpic'=>'','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
+		} else {
+			$data = $db -> row_select_one('cars', "p_id=".$carid);
+		} 
+		$tpl -> assign('cars', $data);
+		$tpl -> display('m/add_carpicture.html');
+		exit;
+	} 
 }
 
 // 刷新车源
