@@ -313,6 +313,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 		if(!empty($post['p_subsubbrand'])){
 			$post['p_allname'] .= " ".arr_brandname($post['p_subsubbrand']);
 		}
+			echo 333;
 
 		$post['p_details'] = strip_tags($post['p_details']);
 
@@ -372,7 +373,6 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 			}
 			html_cars($insertid);
 			//header("location:mdealer.php?m=basecar&a=addpicture&carid=".$insertid);
-			echo 111;
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
