@@ -23,7 +23,7 @@
 				上传图片
 			</div>
 		</div>
-		<form name="form1" class="carform" enctype="multipart/form-data" method="post" action="<{$weburl}>/mdealer.php?m=basecar" onsubmit="return chksubmit();">
+		<form name="form1" class="carform" enctype="multipart/form-data" method="post" action="<{$weburl}>/mdealer.php?m=basecar">
 		<div id="addpicContainer">
 			<ul class="upload" id="piclist">
 				<li class="pic01">
@@ -121,7 +121,7 @@ $(document).ready(function() {
 		var src = t.parent().siblings(".pic").children("input").val();
 		var cid = $("input[name=carid]").val();
 		var loc = t.parent().siblings(".pic").children("input").attr('name');
-		$.get("<{$weburl}>/mobile.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){
+		$.get("<{$weburl}>/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){
 			if(data){
 				t.parent().siblings(".pic").children("img").remove();
 				t.parent().siblings(".pic").children("input").val('');
@@ -136,30 +136,6 @@ $(document).ready(function() {
 		$(this).siblings('.inputfile').click();
 	});
 });
-//添加车辆时做图片的校验
-function chksubmit(){
-//form1
-	var p_mainpic = $("input[name='p_mainpic']").val();
-	var p_backpic = $("input[name='p_backpic']").val();
-	var p_foresightpic = $("input[name='p_foresightpic']").val();
-	var p_leftforepic = $("input[name='p_leftforepic']").val();
-	var p_rightforepic = $("input[name='p_rightforepic']").val();
-	var p_backsightpic = $("input[name='p_backsightpic']").val();
-	var p_leftbackpic = $("input[name='p_leftbackpic']").val();
-	var p_rightbackpic = $("input[name='p_rightbackpic']").val();
-	var p_sidepic = $("input[name='p_sidepic']").val();
-	var p_wheelpic = $("input[name='p_wheelpic']").val();
-	var p_rightpic = $("input[name='p_rightpic']").val();
-	var p_driverlicpic = $("input[name='p_driverlicpic']").val();
-	var p_drivinglicpic = $("input[name='p_drivinglicpic']").val();
-
-	if(!(p_mainpic||p_backpic||p_foresightpic||p_leftforepic||p_rightforepic||p_backsightpic
-	||p_leftbackpic||p_rightbackpic||p_sidepic||p_wheelpic||p_rightpic||p_driverlicpic||p_drivinglicpic))
-	{
-		alert("您未添加车辆图片，系统已为您下架，请添加图片后再上架！");
-	}
-	
-}
 
 </script>
 </body>
