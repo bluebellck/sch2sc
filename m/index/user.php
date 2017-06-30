@@ -508,39 +508,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 }
 // 添加图片
 elseif ($ac == 'addpicture') {echo 111;var_dump($_GET);
-	// 添加或修改
-	if (submitcheck('a')) {
-		$arr_not_empty = array();
-		can_not_be_empty($arr_not_empty, $_POST);
-		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
-		$haspic="0";
-		foreach($post as $value){
-			if($value!=""){
-			$haspic="1";
-				break;
-			}
-		}
-		if($haspic=="0"){
-			$post["status"] = 6;
-		}
-		else{
-			$post["status"] = 7;
-		}
-		$rs = $db -> row_update('cars', $post, "p_id=".$carid);
-		html_cars($carid);
-	} 
-	// 转向添加或修改页面
-	else {
-		$configure_list = array();
-		if (empty($carid)) {
-			$data = array('p_mainpic'=>'','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
-		} else {
-			$data = $db -> row_select_one('cars', "p_id=".$carid);
-		} 
-		$tpl -> assign('cars', $data);
-		$tpl -> display('m/add_carpicture.html');
-		exit;
-	} 
+
 }
 
 // 刷新车源
