@@ -369,8 +369,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 					$post['c_value'] = $_POST[$c_value];
 				}
 				$r = $db -> row_insert('selfdefine_value', $post);
-			}
-			html_cars($insertid);
+			}echo 222;
+			//html_cars($insertid);
 			header("location:index.php?m=user&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
