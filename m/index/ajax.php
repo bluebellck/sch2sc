@@ -208,5 +208,22 @@ if (!empty($_GET['ajax']) && isset($_GET['searchcityid']))
 	echo $citylist;
 	exit;
 }
+//经销商上传车辆图片的时候，可以删除图片
+if (!empty($_GET['ajax']) && !empty($_GET['addpicture'])){
+	$file = '.'.$_GET['addpicture'];
+	$filesmall = '.'.str_replace('.','_small.',$_GET['addpicture']);
+	if(file_exists($file) && $filesmall && unlink($file) && unlink($filesmall)){
+		if(!empty($_GET['loc']) && !empty($_GET['cid'])){
+			$update[$_GET['loc']]='';
+			$r=$db->row_update('cars',$update,'p_id='.$_GET['cid']);
+			echo true;
+		}else{
+			echo false;
+		}
+	}else{
+		echo false;
+	}
+	exit;
+}
 
 ?>
