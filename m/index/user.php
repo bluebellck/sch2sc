@@ -370,9 +370,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 				}
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
-			var_dump(function_exists('html_cars'));
-			//html_cars($insertid);
-			//header("location:index.php?m=user&a=addpicture&carid=".$insertid);
+			html_cars($insertid);
+			header("location:index.php?m=user&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
