@@ -59,7 +59,7 @@ if (!empty($_GET['ajax']) && !empty($_GET['bid']))
 
 //二级品牌选择
 if (!empty($_GET['ajax']) && !empty($_GET['brandid']))
-{	header('Content-Type:text/plain; charset=utf-8');
+{	
 	$brandlist = "<option value='' selected>请选择车系</option>";
 	$list = $db->row_select('brand',"b_parent='".$_GET['brandid']."'");
 	if($list){
@@ -79,7 +79,7 @@ if (!empty($_GET['ajax']) && !empty($_GET['brandid']))
 //三级品牌选择
 if (!empty($_GET['ajax']) && !empty($_GET['subbrandid']))
 
-{	header('Content-Type:text/plain; charset=utf-8');
+{	
 	$brandlist = "<option value='' selected>请选择款式</option>";
 	$list = $db->row_select('brand',"b_parent='".$_GET['subbrandid']."'");
 	if($list){
@@ -100,7 +100,7 @@ if (!empty($_GET['ajax']) && !empty($_GET['subbrandid']))
 //四级品牌选择
 if (!empty($_GET['ajax']) && !empty($_GET['subsubbrandid']))
 
-{	header('Content-Type:text/plain; charset=utf-8');
+{	
 	$brandlist = "<option value='' selected>请选择款式</option>";
 	$list = $db->row_select('brand',"b_parent='".$_GET['subsubbrandid']."'");
 	if($list){
