@@ -313,7 +313,6 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 		if(!empty($post['p_subsubbrand'])){
 			$post['p_allname'] .= " ".arr_brandname($post['p_subsubbrand']);
 		}
-			echo 333;
 
 		$post['p_details'] = strip_tags($post['p_details']);
 
@@ -371,6 +370,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 				}
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
+			echo 444;
 			html_cars($insertid);
 			//header("location:mdealer.php?m=basecar&a=addpicture&carid=".$insertid);
 			exit;
