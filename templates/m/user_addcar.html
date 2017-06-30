@@ -50,7 +50,7 @@
 					</div>
 					<div class="uk-width-9-10 uk-text-left right">
 						<select class="subbrand" id="subsubbrand" name="p_subsubbrand" datatype="n" nullmsg="请选择款式！">
-							<option  value="">请选1择款式</option>
+							<option  value="">请选择款式</option>
 							<{$select_subsubbrand}>	
 						</select>
 					</div>
@@ -67,8 +67,6 @@
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-1-10 uk-text-left left2">
 						城市：
@@ -80,7 +78,6 @@
 					</div>
 				</div>
 			</div>
-
 
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
@@ -100,7 +97,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="里程数" />
+						<input name="p_kilometre" type="text" id="p_kilometre" size="5" value="<{$cars.p_kilometre}>"  />
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万公里
@@ -110,7 +107,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="预售价" />
+						<input type="text" name="p_price"  size="5" value="<{$cars.p_price}>" datatype="s" nullmsg="请填写价格！">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -120,7 +117,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="出厂价" />
+						<input type="text" name="p_newprice"  size="5" value="<{$cars.p_newprice}>">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -130,7 +127,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="购置税" />
+						<input type="text" name="p_tax"  size="5" value="<{$cars.p_tax}>">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -140,7 +137,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="为您节省" />
+						<input type="text" name="p_save"  size="5" value="<{$cars.p_save}>">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -150,7 +147,9 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="车体颜色" />
+						<select name="p_color">
+							<{$select_color}>
+						</select>
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						<i class="uk-icon-angle-right"></i>
