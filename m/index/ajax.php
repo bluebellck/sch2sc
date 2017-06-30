@@ -124,5 +124,60 @@ if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['month']) &&
 	echo $str;
 	exit;
 }
+//二级品牌选择
+if (!empty($_GET['ajax']) && !empty($_GET['brandid']))
+{	header('Content-Type:text/plain; charset=utf-8');
+	$brandlist = "<option value='' selected>请选择车系</option>";
+	$list = $db->row_select('brand',"b_parent='".$_GET['brandid']."'");
+	if($list){
+		foreach($list as $key => $value){
+			$brandlist .= "<optgroup label=".$value['b_name']." style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
+			$sublist = $db->row_select('brand',"b_parent='".$value['b_id']."'");
+			foreach($sublist as $subkey => $subvalue){
+				$brandlist .= "<option value=".$subvalue['b_id'].">".$subvalue['b_name']."</option>";
+			}
+		}
+	}
+	echo $brandlist;
+	exit;
+}
+
+
+//三级品牌选择
+if (!empty($_GET['ajax']) && !empty($_GET['subbrandid']))
+
+{	header('Content-Type:text/plain; charset=utf-8');
+	$brandlist = "<option value='' selected>请选择款式</option>";
+	$list = $db->row_select('brand',"b_parent='".$_GET['subbrandid']."'");
+	if($list){
+		foreach($list as $key => $value){
+			$brandlist .= "<optgroup label='".$value['b_name']."' style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
+			$sublist = $db->row_select('brand',"b_parent='".$value['b_id']."'");
+			foreach($sublist as $subkey => $subvalue){
+				$brandlist .= "<option value=".$subvalue['b_id'].">".$subvalue['b_name']."</option>";
+			}
+		}
+	}
+	echo $brandlist;
+	exit;
+}
+
+
+
+//四级品牌选择
+if (!empty($_GET['ajax']) && !empty($_GET['subsubbrandid']))
+
+{	header('Content-Type:text/plain; charset=utf-8');
+	$brandlist = "<option value='' selected>请选择款式</option>";
+	$list = $db->row_select('brand',"b_parent='".$_GET['subsubbrandid']."'");
+	if($list){
+		foreach($list as $key => $value){
+				$brandlist .= "<option value=".$value['b_id'].">".$value['b_name']."</option>";
+		}
+	}
+	echo $brandlist;
+	exit;
+}
+
 
 ?>
