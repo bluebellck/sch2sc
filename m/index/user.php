@@ -267,7 +267,7 @@ elseif ($ac == 'carlist') {
 	exit;
 } 
 // 添加或修改车源
-elseif ($ac == 'addcar' || $ac == 'editcar') {
+elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 	if ($userinfo['isdealer'] == 2 and $userinfo['ischeck']!=1) {
 		showmsg('您的公司信息暂未通过审核，暂不能发布信息！', "index.php?m=user&a=carlist");
 	}
@@ -278,7 +278,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 		} 
 	}
 
-	if (submitcheck('a')) {
+	if (submitcheck('a')) {echo 222;
 		foreach (array('p_details') as $v) {
 			if (!is_array($_POST[$v])) {
 				$_POST[$v] = htmlspecialchars($_POST[$v]);
