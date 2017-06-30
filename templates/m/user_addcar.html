@@ -158,51 +158,61 @@
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="车型选择" />
+					<div class="uk-width-2-10 uk-text-left left2">
+						车型选择：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="box business-hz">
-				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="排量" />
-					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						L
+					<div class="uk-width-8-10 uk-text-left right">
+						<select name="p_model">
+							<{$select_model}>
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="变速箱" />
+					<div class="uk-width-2-10 uk-text-left left2">
+						排量：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="box business-hz">
-				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="进口国产" />
-					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-8-10 uk-text-left right">
+						<select name="p_gas">
+							<{$select_gas}>
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="使用类型" />
+					<div class="uk-width-2-10 uk-text-left left2">
+						变速箱：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-8-10 uk-text-left right">
+						<select name="p_transmission">
+							<{$select_transmission}>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="box business-hz">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-2-10 uk-text-left left2">
+						进口国产：
+					</div>
+					<div class="uk-width-8-10 uk-text-left right">
+						<select name="p_country">
+							<{$select_country}>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="box business-hz">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-2-10 uk-text-left left2">
+						车辆用途：
+					</div>
+					<div class="uk-width-8-10 uk-text-left right">
+						<select name="p_country">
+							<{$select_country}>
+						</select>
 					</div>
 				</div>
 			</div>
@@ -408,7 +418,7 @@ $(function(){
 			</tr>
 			<{foreach from=$paralist key=key item=paralist}>
 			<tr>
-				<th><{$paralist.c_name}>：</th>
+				<th>123<{$paralist.c_name}>：</th>
 				<td>
 				<{if $paralist.type_name=='input'}>
 					<input name="para<{$paralist.id}>" type="text" size="20" value="<{$paralist.c_value}>"/>
