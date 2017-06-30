@@ -71,7 +71,7 @@ if (!empty($_GET['ajax']) && !empty($_GET['brandid']))
 			}
 		}
 	}
-	echo 111111;
+	echo $brandlist;
 	exit;
 }
 

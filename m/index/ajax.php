@@ -179,5 +179,34 @@ if (!empty($_GET['ajax']) && !empty($_GET['subsubbrandid']))
 	exit;
 }
 
+//城市选择
+if (!empty($_GET['ajax']) && isset($_GET['cityid']))
+{	header('Content-Type:text/plain; charset=utf-8');
+	$provincelist = "<option value='' selected>请选择城市</option>";
+	$list = $db->row_select('area',"parentid='".$_GET['cityid']."'");
+	if($list){
+		foreach($list as $key => $value){
+			$provincelist .= "<option value=".$value['id'].">".$value['name']."</option>";		
+		}
+	}
+	echo $provincelist;
+	exit;
+
+}
+
+
+//城市选择(搜索页面)
+if (!empty($_GET['ajax']) && isset($_GET['searchcityid']))
+{	header('Content-Type:text/plain; charset=utf-8');
+	$citylist = "";
+	$list = $db->row_select('area',"parentid='".$_GET['searchcityid']."'");
+	if($list){
+		foreach($list as $key => $value){
+			$citylist .= "<option value='c_".$value['id']."'>".$value['name']."</option>";
+		}
+	}
+	echo $citylist;
+	exit;
+}
 
 ?>
