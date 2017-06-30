@@ -107,7 +107,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" name="p_price"  size="5" value="<{$cars.p_price}>" datatype="s" nullmsg="请填写价格！" placeholder="预售价">
+						<input type="number" name="p_price"  size="5" value="<{$cars.p_price}>" datatype="s" nullmsg="请填写价格！" placeholder="预售价">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -117,7 +117,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" name="p_newprice"  size="5" value="<{$cars.p_newprice}>" placeholder="出厂价">
+						<input type="number" name="p_newprice"  size="5" value="<{$cars.p_newprice}>" placeholder="出厂价">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -127,7 +127,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" name="p_tax"  size="5" value="<{$cars.p_tax}>" placeholder="购置税">
+						<input type="number" name="p_tax"  size="5" value="<{$cars.p_tax}>" placeholder="购置税">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -137,7 +137,7 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" name="p_save"  size="5" value="<{$cars.p_save}>" placeholder="为您节省">
+						<input type="number" name="p_save"  size="5" value="<{$cars.p_save}>" placeholder="为您节省">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -230,9 +230,12 @@
 			<{/foreach}>
 
 			<div class="box business-hz">
-				<textarea cols="" rows="" placeholder="备注" class="business-hz"></textarea>
+				<textarea  name="p_details" cols="" rows="" placeholder="备注" class="business-hz"><{$cars.p_details}></textarea>
 			</div>
 		</div>
+		<input type="submit" value="提 交" class="business-button g uk-button">
+		<input type="hidden" name="a" value="<{$ac}>">
+		<input type="hidden" name="id" value="<{$cars.p_id}>">
 		
 		<a href="business-tianjia-2.html" class="business-button g uk-button">下一步</a>
 		
