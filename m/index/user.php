@@ -371,6 +371,9 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
 			html_cars($insertid);
+			//header("location:mdealer.php?m=basecar&a=addpicture&carid=".$insertid);
+			echo 111;
+			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
 			//修改改自定义参数值
