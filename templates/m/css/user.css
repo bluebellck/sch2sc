@@ -1,0 +1,60 @@
+html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; background: #eeeeee;}
+.bodybox{width:100%; min-width: 320px; max-width: 640px;position: fixed; top: 0;}
+.boxhz{width: 95%;}
+.boxhzcl{clear: both;}
+
+
+.topbox{width: 100%; height: 40px; background: #8dc420;}
+.topbox .left{line-height: 40px;}
+.topbox .left a{color: #fff;}
+.topbox .center{line-height: 40px; color: #fff; font-size: 20px;}
+
+.daikuan{overflow: hidden;}
+
+
+
+.user-hz{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.user-topbox{width: 100%; height: auto; overflow: hidden;}
+.user-topbox .tx{top: 10%; left: 50%; margin-left: -10%; width: 20%; height: auto; border-radius: 100px; overflow: hidden; border: 3px solid #fff;}
+.user-topbox .yh{font-size: 16px; top: 70%; text-align: center; color: #fff;}
+.user-nav{overflow: hidden;}
+.user-button{width: 95%; background: #dddddd; color: #333333; line-height: 40px; border-radius: 3px; margin-left:2.5%;}
+.user-button.xiugai{background: #8fc420; color: #fff;}
+
+.user-shoucang{width: 95%; overflow: hidden; height: auto; border-radius: 3px; border: 1px solid #ddd;}
+.user-shoucang .top{width: 100%; padding: 5px 10px; overflow: hidden; background: #dddddd; }
+.user-shoucang .top span{color: #333;}
+.user-shoucang .top a{color: #666;}
+.user-shoucang .text{padding: 10px; overflow: hidden; background: #fff;}
+.user-shoucang .text .img{height: 94px; width: 135px; overflow: hidden; margin-right: 8px;}
+.user-shoucang .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: 40px;}
+.user-shoucang .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
+.user-shoucang .text>p.jg{font-size: 14px;}
+.user-shoucang .text>p.jg span{color: #ff6600; font-weight: bold;}
+.user-shoucang .button{width: 100%; line-height: 40px; background: #9dd820; color: #fff;}
+.user-shoucang .button.lx{background: #8fc420;}
+
+.user-baogao{width: 95%; overflow: hidden; height: auto; border-radius: 3px; border: 1px solid #ddd;}
+.user-baogao .top{width: 100%; padding: 5px 10px; overflow: hidden; background: #dddddd; }
+.user-baogao .text{padding: 10px 15px; background: #fff; overflow: hidden;}
+.user-baogao .text>p{padding: 0; margin: 0; line-height: 25px;}
+.user-baogao .button{width: 100%; line-height: 40px; background: #eaeaea; color: #666; text-align: center;}
+.user-baogao .button>span{color: #ff0000;}
+.user-baogao .button-ck{width: 100%; line-height: 40px; background: #8fc420; color: #fff;}
+
+.user-xingrenzheng{width: 95%; overflow: hidden; height: auto; border-radius: 3px; border: 1px solid #ddd;}
+.user-xingrenzheng .top{width: 100%; padding: 5px 10px; overflow: hidden; background: #dddddd; }
+.user-xingrenzheng .text{padding: 10px 15px; background: #fff; overflow: hidden;}
+.user-xingrenzheng .text>p{padding: 0; margin: 0; line-height: 25px;}
+.user-xingrenzheng .bot{overflow: hidden; border-top: 1px solid #ddd;}
+.user-xingrenzheng .bot .button{width: 100%; line-height: 40px; color: #fff; background: #8fc420;}
+.user-xingrenzheng .bot .button.wz{background: #ddd; color: #333;}
+.user-xingrenzheng .bot .zt{width: 100%; display: block; line-height: 40px; color: #666; background: #fff; text-align: center;}
+
+.user-xiugai{width: 95%; overflow: hidden;}
+.user-xiugai>input{width: 100%; border: 1px solid #ddd; padding: 0; margin: 0; border-radius: 3px; background: #fff; line-height: 40px; text-align: center;}
+.user-xiugai .but{width: 100%; border: 1px solid #ddd; border-radius: 3px; background: #ddd; line-height: 40px; text-align: center;}
+.user-xiugai>p{padding: 25px 0; margin: 0; font-size: 16px; text-align: center; line-height: 30px;}
+.user-xiugai>p>span{font-size: 20px;}
+
+.Validform_checktip {margin-left:0px !important}

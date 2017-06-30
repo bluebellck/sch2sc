@@ -1,0 +1,148 @@
+<?php /* Smarty version 2.6.18, created on 2017-06-29 15:38:10
+         compiled from m/login.html */ ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >	
+	<title>途众好车</title>
+	<link href="<?php echo $this->_tpl_vars['weburl']; ?>
+/templates/m/css/mobile.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
+/templates/default/<?php echo $this->_tpl_vars['setting']['templates']; ?>
+/js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/js/Validform_v5.3.2_min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//表单验证
+			$(".loginform").Validform({
+				tiptype:3
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="mobile_user_top text-center">
+				<a href="javascript:window.history.go(-1);"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/img/jt.png" style="width:10px; height:14px; margin:12px 0 0 16px;"></a>
+				登录
+				<a href="<?php echo $this->_tpl_vars['weburl']; ?>
+/m/" class="user_logout">首页</a>
+			</div>
+		</div>
+		<div class="login-box">
+			<ul class="login-box-title">
+				<li>登录</li>
+			</ul>
+				
+			<div id="login_1" class="login-box-ti" style="">
+				<form name="loginform" class="loginform" method="post" action="m/index.php?m=login">
+					<dl class="login-box-ti-d">
+						<dt>手机号码</dt>
+						<dd><input type="text" name="username" class="inp01" ajaxurl="index.php?m=login&ajax=1" datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！"/></dd>
+					</dl>
+					<dl class="login-box-ti-d">
+						<dt>密码</dt>
+						<dd><input type="password" name="password" class="inp01"/></dd>
+					</dl>
+					<div class="login-box-ti-but">
+						<input type="submit" class="login_but" value="登录">
+						<input type="hidden" name="action" value="login">
+					</div>
+				</form>
+			</div>      
+				
+
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>登录 - <?php echo $this->_tpl_vars['setting']['title']; ?>
+</title>
+		<meta content="<?php echo $this->_tpl_vars['setting']['keywords']; ?>
+"  name="keywords"/>
+		<meta content="<?php echo $this->_tpl_vars['setting']['description']; ?>
+" name="description"/>
+		<link href="<?php echo $this->_tpl_vars['weburl']; ?>
+/templates/default/<?php echo $this->_tpl_vars['setting']['templates']; ?>
+/css/user.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
+/templates/default/<?php echo $this->_tpl_vars['setting']['templates']; ?>
+/js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/js/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			//表单验证
+			$(".loginform").Validform({
+				tiptype:3
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!--内容-->
+		<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "default/".($this->_tpl_vars['setting']['templates'])."/head.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+		<div class="login_main mt10 clearfix">
+			<div class="login_left">
+				<div class="title">登录</div>
+				<form name="loginform" class="loginform" method="post" action="index.php?m=login">
+					<table class="logintable mt20">
+						<tr>
+							<th>会员名：</th>
+							<td><input type="text" name="username" class="inp01" ajaxurl="index.php?m=login&ajax=1" datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！"/></td>
+						</tr>
+						<tr>
+							<th>密&nbsp;&nbsp;&nbsp;码：</th>
+							<td><input type="password" name="password" class="inp01"/></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><input type="submit" class="login_but" value="登录"><a href="index.php?mod=register"></a> <input type="hidden" name="action" value="login"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+		<!--版权-->
+		<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "default/".($this->_tpl_vars['setting']['templates'])."/foot.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+	</body>
+</html>

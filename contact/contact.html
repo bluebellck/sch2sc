@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>联系我们 - 顺驰二手车</title>
+		<meta content="顺驰二手车"  name="keywords"/>
+		<meta content="顺驰二手车" name="description"/>
+		<script type="text/javascript" src="/templates/default/default/js/jquery-1.7.1.js"></script>
+		<link href="/templates/default/default/css/page.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<!--内容-->
+		
+
+
+<!--头部-->
+<script language="JavaScript">
+$(function(){
+	$("#login").load("/index.php?m=ajax&ajax=1&login=1");
+})
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<div class="top">
+	<div class="top_main clearfix">
+		<div class="top_left">
+			欢迎来到顺驰二手车！<a href="/index.php?m=login">登录</a>
+		</div>
+		<div class="top_right">
+			<a href="/m/">手机端</a>&nbsp;&nbsp;|&nbsp;&nbsp;客服热线：<span class="orange01 fb">18157447500</span>
+		</div>
+	</div>
+</div><div class="headw">
+	<div class="head">
+		<div class="logo"><a href="/"><img src="/upload/image/20170615/20170615141442_35458.jpg" alt="顺驰二手车"></a></div>
+		 	
+		<div class="topsearch">
+			<div class="topsearchbox">
+			<form method="get" action="/index.php">
+				<input type="text" name="k" class="keywords" placeholder="请输入车辆关键词或信息编号，如：别克 或 别克 君威"><input type="submit" value="" class="button"/>
+				<input type="hidden" name="m" value="search">
+			</form>
+			</div>
+			<p class="topkeywords"><a href="/index.php?m=search&k=%E5%AE%9D%E9%A9%AC">宝马</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E5%A5%94%E9%A9%B0">奔驰</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E5%A4%A7%E4%BC%97">大众</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E5%88%AB%E5%85%8B">别克</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E9%9B%AA%E5%BC%97%E5%85%B0">雪弗兰</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E5%B9%BF%E5%B7%9E%E6%9C%AC%E7%94%B0">广州本田</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E4%B8%9C%E9%A3%8E%E6%9C%AC%E7%94%B0">东风本田</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E4%B8%B0%E7%94%B0">丰田</a>&nbsp;&nbsp;<a href="/index.php?m=search&k=%E8%B5%B7%E4%BA%9A">起亚</a>&nbsp;&nbsp;</p>
+		</div>
+		<div class="carnum" id="carcount">
+		</div>
+	</div>
+</div>
+<div class="nav_list">
+	<ul class="clearfix">
+				<li>
+		<a href="/index.php" title="首页"  >首页</a>
+		</li>
+				<li>
+		<a href="/index.php?m=search" title="我要买车"  >我要买车</a>
+		</li>
+				<li>
+		<a href="/index.php?m=maicar" title="我要卖车"  >我要卖车</a>
+		</li>
+				<li>
+		<a href="/index.php?m=assesscar" title="车价评估"  >车价评估</a>
+		</li>
+				<li>
+		<a href="/contact/index.html" title="关于顺驰"  >关于顺驰</a>
+		</li>
+				<li>
+		<a href="/contact/contact.html" title="联系我们"  >联系我们</a>
+		</li>
+			</ul>
+</div>
+<!--头部end -->		<div class="main mt10 clearfix">
+			<div class="aboutbox clearfix">
+				<div class="abouttitle fb">联系</div>
+				<div class="leftbox">
+					<ul class="leftlist">
+												<li><a href="index.html" >关于我们</a></li>
+												<li><a href="contact.html" class="here">联系我们</a></li>
+											</ul>
+				</div>
+				<div class="rightbox">
+					<h3>联系我们</h3>
+					<div class="infobox">
+						<p>
+	<br />
+</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--版权-->
+		<script type="text/javascript" src="/static/js/layer/layer.min.js"></script>
+<script language="JavaScript">
+$(function() {
+	$('#feedback').on('click', function(){
+		var feedbackindex =  $.layer({
+			type: 1,
+			title: '意见反馈',
+			shade: [0.5, '#000'],
+			area: ['440px', 'auto'],
+			page: {dom: '#A1'}
+		});
+	
+		$('#btnfeedback').on('click', function(){
+			$.post("/index.php?m=ajax&ajax=1&feedback=1",{
+				f_tel: $("#A1 input[name='f_tel']").val(),
+				f_detail:$("#A1 textarea[name='f_detail']").val()
+				},function(data){
+					if (data==1)
+					{
+						layer.close(feedbackindex);
+						layer.alert("您的反馈信息已成功提交！", 9);
+						$('#feedbackform')[0].reset();
+					}
+					else{
+						layer.close(feedbackindex);
+						layer.alert("提交失败！请再次提交！", 9);
+					}
+				});
+		});
+	});
+});
+</script>
+<!--底部导航-->
+<div class="footer" id="foot">
+	<div class="footbox">
+      <div class="footleft">
+		<p class="foottop">
+						<a href="/index.php" title="首页" class="whiteA f14 pl10 pr10">首页</a> | 
+						<a href="/index.php?m=search" title="我要买车" class="whiteA f14 pl10 pr10">我要买车</a> | 
+						<a href="/index.php?m=maicar" title="我要卖车" class="whiteA f14 pl10 pr10">我要卖车</a> | 
+						<a href="/index.php?m=assesscar" title="车价评估" class="whiteA f14 pl10 pr10">车价评估</a> | 
+						<a href="/contact/index.html" title="关于顺驰" class="whiteA f14 pl10 pr10">关于顺驰</a> | 
+						<a href="/contact/contact.html" title="联系我们" class="whiteA f14 pl10 pr10">联系我们</a> | 
+					</p>
+		<p class="mt10 pl10"> 顺驰二手车&nbsp;&nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#9c9c9c"></a>&nbsp;&nbsp;&nbsp;咨询电话：<span class="orange01 fb">18157447500</span></p>
+		<p class="mt10 pl10"> Copyright  顺驰二手车 版权所有.  &nbsp;&nbsp;&nbsp;地址：宁波市海曙区鄞县大道古林段1号途众汽车商城(顺驰名车)&nbsp;&nbsp;&nbsp;</p>
+      </div>
+      
+	</div>
+	<div id="right-side" class="right-side">
+		<ul>
+		<li class="side-top w4"><a id="backtop" title="返回顶部" href="#top" style="display: block;">返回顶部</a></li>
+	  </ul>
+	</div>
+</div>
+<div id="A1" class="hide">
+	<div class="popnotice">
+		请填写您的反馈内容和联系电话
+	</div>
+	<div class="p20">
+	<form method="post" name="yuyueform" id="yuyueform" class="yuyueform">
+		<table class="poptable">
+		<tr> 
+			<th><span class="red">*</span> 反馈内容：</th>
+			<td><textarea name="f_detail" rows="5" cols="35" datatype="*" nullmsg="请填写留言！"></textarea></td>
+		</tr>
+		<tr>
+			<th><span class="red">*</span> 手机号：</th>
+			<td><input type="text" name="f_tel" datatype="m" nullmsg="请填写手机号！"></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td class="gray">您的信息不会在网站上显示，我们将保证您的隐私安全。</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><span class="button_orange h35-p25 mr5"><a id="btnfeedback" href="javascript:;">提交</a></span></td>
+		</tr>
+		</table>
+	</form>
+	</div>
+</div>
+
+<!-- 版权 结束 -->	</body>
+</html>
