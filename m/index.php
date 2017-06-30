@@ -11,6 +11,7 @@
 include_once(dirname(dirname(__FILE__)).'/common.inc.php');
 include('index/page.php');
 $m = isset($_GET['m']) ? $_GET['m'] : 'index';
-if (!file_exists('index/'.$m.'.php')) exit('error url');
+if (!file_exists('index/'.$m.'.php')) exit('error url');
+echo dirname(dirname(__FILE__));
 include('index/'.$m.'.php');
 ?>
