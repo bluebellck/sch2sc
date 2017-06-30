@@ -267,7 +267,7 @@ elseif ($ac == 'carlist') {
 	exit;
 } 
 // 添加或修改车源
-elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
+elseif ($ac == 'addcar' || $ac == 'editcar') {
 	if ($userinfo['isdealer'] == 2 and $userinfo['ischeck']!=1) {
 		showmsg('您的公司信息暂未通过审核，暂不能发布信息！', "index.php?m=user&a=carlist");
 	}
@@ -278,7 +278,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 		} 
 	}
 
-	if (submitcheck('a')) {echo 222;
+	if (submitcheck('a')) {
 		foreach (array('p_details') as $v) {
 			if (!is_array($_POST[$v])) {
 				$_POST[$v] = htmlspecialchars($_POST[$v]);
@@ -370,9 +370,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {echo 111;
 				}
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
-			echo 444;
 			html_cars($insertid);
-			//header("location:mdealer.php?m=basecar&a=addpicture&carid=".$insertid);
+			header("location:mdealer.php?m=basecar&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
