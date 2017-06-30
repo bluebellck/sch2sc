@@ -246,7 +246,7 @@
 			$("#brand").change(function(){
 				$.get("<{$weburl}>/index.php?m=ajax&ajax=1", { 
 					brandid :  $("#brand").val() 
-				}, function (data, textStatus){
+				}, function (data, textStatus){alert(data);
 									 $("#subbrand").html(data); // 把返回的数据添加到页面上
 					}
 				);
