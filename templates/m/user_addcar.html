@@ -204,18 +204,31 @@
 					</div>
 				</div>
 			</div>
+
+
+			<{foreach from=$paralist key=key item=paralist}>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-2-10 uk-text-left left2">
-						车辆用途：
+						<{$paralist.c_name}>：
 					</div>
 					<div class="uk-width-8-10 uk-text-left right">
-						<select name="p_country">
-							<{$select_country}>
-						</select>
+						<{if $paralist.type_name=='input'}>
+							<input name="para<{$paralist.id}>" type="text" size="20" value="<{$paralist.c_value}>"/>
+						<{elseif $paralist.type_name=='textarea' }>	
+							<textarea name="para<{$paralist.id}>" ><{$paralist.c_value}></textarea>
+						<{elseif $paralist.type_name=='select' }>	
+							<select name="para<{$paralist.id}>"><{$paralist.select}></select>
+						<{elseif $paralist.type_name=='time' }>	
+							<input name="para<{$paralist.id}>" type="text" size="20" class="laydate-icon" value="<{$paralist.c_value}>" onclick="laydate()"/>
+						<{elseif $paralist.type_name=='checkbox' }>	
+							<{$checkbox_str}>
+						<{/if}>
 					</div>
 				</div>
 			</div>
+			<{/foreach}>
+
 			<div class="box business-hz">
 				<textarea cols="" rows="" placeholder="备注" class="business-hz"></textarea>
 			</div>
