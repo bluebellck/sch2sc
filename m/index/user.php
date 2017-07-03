@@ -536,14 +536,14 @@ elseif ($ac == 'addpicture') {
 			$arr = explode('|',$r['p_pics']);
 			$count = count($arr);
 			$i = 0;
-var_dump($data);			foreach($data as $key => $value){
+			foreach($data as $key => $value){
 				if($count > $i){
 					$data[$key] = $arr[$i];
 					$i++;
 				}	
 			}
 		} 
-		
+		var_dump($arr);
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
 		exit;
