@@ -11,10 +11,10 @@ if ($dir_base !== '') {
 }
 $ymd = date("Ymd");
 $save_path .= $ymd . "/";echo 111;
-if (!file_exists($save_path)) {echo 22;
+if (!file_exists($save_path)) {echo 22;exit;
 	mkdir($save_path);
 }
-echo 333;break;
+echo 333;exit;
 //没有成功上传文件，报错并退出。
 if(empty($_FILES)) {
 	echo "上传错误";
