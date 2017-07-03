@@ -52,7 +52,35 @@ foreach($_FILES as $file){
 			$file_url = $save_path.$new_filename;
 			$file_url_small = $save_path.$new_filename_small;
 			copy($file_url,$file_url_small);
-			require_once '/srv/www/sch2sc/include/aa.php';
+			require_once '/srv/www/sch2sc/include/img.class.php';
+			$settings = settings();
+			$t = new ThumbHandler();
+			$t -> setSrcImg($file_url);
+			$t -> setDstImg($file_url);
+			if($settings['imgwidth']==''||$settings['imgheight']==''){
+				$t -> createImg(1000,1000);
+			}
+			else{
+				$t -> createImg($settings['imgwidth'], $settings['imgheight']);
+			}
+			$ts = new ThumbHandler();
+			$ts -> setSrcImg($file_url_small);
+			$ts -> setDstImg($file_url_small);
+			if($settings['thumbwidth']==''||$settings['thumbheight']==''){
+				$ts -> createImg(300,300);
+			}
+			else{
+			   $ts -> createImg($settings['thumbwidth'], $settings['thumbheight']); 
+			}
+			// 加水印
+			if ($settings['water'] == 1 and $settings['waterpic']!="") {
+				$ty = new ThumbHandler();
+				$ty -> setMaskPosition($settings['position']);
+				$ty -> setSrcImg($file_url);
+				$ty -> setDstImg($file_url);
+				$ty -> setMaskImg($settings['waterpic']);
+				$ty -> createImg(100);
+			}
 		}
 	}else{
 		$isMoved = true; //已存在文件设置为上传成功
