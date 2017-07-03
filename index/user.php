@@ -145,7 +145,7 @@ if (!empty($_GET['ajax']) && isset($_GET['rentid'])) {
 	echo $picstr[0];
 	exit;
 } 
-
+echo 333444;
 // 登陆欢迎页面
 if ($ac == 'index') {
 	$userinfo['last_login_time'] = date("Y-m-d H:i:s", $userinfo['last_login_time']);
