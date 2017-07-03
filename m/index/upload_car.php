@@ -45,6 +45,15 @@ foreach($_FILES as $file){
 		$rEFileTypes = "/^\.(jpg|jpeg|gif|png){1}$/i"; 
 		$rand_str = rand(10000, 99999);
 
+		if ($_FILES[$upload_filename]['size'] <= $MAXIMUM_FILESIZE && 
+			preg_match($rEFileTypes, strrchr($filename, '.'))) {	
+			$isMoved = @move_uploaded_file ( $_FILES[$upload_filename]['tmp_name'], $save_path.$new_filename); //上传文件
+			//生成缩略图
+			$file_url = $save_path.$new_filename;
+			$file_url_small = $save_path.$new_filename_small;
+			copy($file_url,$file_url_small);
+			require_once 'include/img.class.php';
+		}
 	}else{
 		$isMoved = true; //已存在文件设置为上传成功
 	}
