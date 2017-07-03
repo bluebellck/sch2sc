@@ -11,7 +11,7 @@ if ($dir_base !== '') {
 }
 $ymd = date("Ymd");
 $save_path .= $ymd . "/";
-if (!file_exists($save_path)) {echo 22;exit;
+if (!file_exists($save_path)) {echo $save_path;exit;
 	mkdir($save_path);
 }
 echo 333;exit;
