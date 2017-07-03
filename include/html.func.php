@@ -10,7 +10,7 @@
 */
 // 生成首页
 // 生成单页
-function html_page() {
+function aa() {
 }
 echo 77;
 ?>
