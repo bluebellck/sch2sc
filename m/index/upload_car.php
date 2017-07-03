@@ -52,7 +52,6 @@ foreach($_FILES as $file){
 			$file_url = $save_path.$new_filename;
 			$file_url_small = $save_path.$new_filename_small;
 			copy($file_url,$file_url_small);
-			require_once 'include/img.class.php';
 		}
 	}else{
 		$isMoved = true; //已存在文件设置为上传成功
