@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-03 14:02:17
+<?php /* Smarty version 2.6.18, created on 2017-07-03 14:34:54
          compiled from m/add_carpicture.html */ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -175,15 +175,16 @@ $(document).ready(function() {
 		var t = $(this);
 		var src = t.parent().siblings(".pic").children("input").val();
 		var cid = $("input[name=carid]").val();
-		var loc = t.parent().siblings(".pic").children("input").attr('name');
+		var loc = t.parent().siblings(".pic").children("input").attr('name');alert(222);
 		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){
+/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){alert(33);
 			if(data){
 				t.parent().siblings(".pic").children("img").remove();
 				t.parent().siblings(".pic").children("input").val('');
 				t.hide();
+				alert(addpicture+'|112'+cid+'|'+loc);
 			}else{
-				alert('图片删除失败，请刷新重试');
+				alert(addpicture+'|'+cid+'|'+loc);
 			}
 		})
 	})
