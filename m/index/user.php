@@ -74,8 +74,6 @@ $tpl -> assign('user', $userinfo);
 $carid = isset($_REQUEST['carid']) ? intval($_REQUEST['carid']) : 0;
 $tpl -> assign('carid', $carid);
 
-$ac = isset($_REQUEST['a']) && isset($ac_arr[$_REQUEST['a']]) ? $_REQUEST['a'] : 'index';
-echo $ac;
 // 允许操作
 if($userinfo['isdealer']==1){
 	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态', 'carlist' => '车源列表','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息');
@@ -512,7 +510,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 	} 
 }
 // 添加图片
-elseif ($ac == 'addpicture') {
+elseif ($ac == 'addpicture') {echo 111;
 	// 添加或修改
 	if (submitcheck('a')) {echo 333;
 		$arr_not_empty = array();
