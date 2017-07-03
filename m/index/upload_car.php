@@ -55,11 +55,11 @@ if (!empty($_FILES['imgFile']['error'])) {
 //有上传文件时
 if (empty($_FILES) === false) {
 	//原文件名
-	$file_name = $_FILES['imgFile']['name'];
+	$file_name = $_FILES['upload_file0']['name'];
 	//服务器上临时文件名
-	$tmp_name = $_FILES['imgFile']['tmp_name'];
+	$tmp_name = $_FILES['upload_file0']['tmp_name'];
 	//文件大小
-	$file_size = $_FILES['imgFile']['size'];
+	$file_size = $_FILES['upload_file0']['size'];
 	//检查文件名
 	if (!$file_name) {
 		alert("请选择文件。");
