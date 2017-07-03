@@ -10,11 +10,11 @@ if ($dir_base !== '') {
 	}
 }
 $ymd = date("Ymd");
-$save_path .= $ymd . "/";
-if (!file_exists($save_path)) {
+$save_path .= $ymd . "/";echo 111;
+if (!file_exists($save_path)) {echo 22;
 	mkdir($save_path);
 }
-
+echo 333;break;
 //没有成功上传文件，报错并退出。
 if(empty($_FILES)) {
 	echo "上传错误";
@@ -54,7 +54,7 @@ foreach($_FILES as $file){
 			copy($file_url,$file_url_small);
 			require_once '/srv/www/sch2sc/include/img.class.php';
 			$settings = settings();
-			$t = new ThumbHandler();echo $file_url;break;
+			$t = new ThumbHandler();echo $file_url;break;upload/image/20170703/20170703135918_98680.jpg
 			$t -> setSrcImg($file_url);
 			$t -> setDstImg($file_url);
 			if($settings['imgwidth']==''||$settings['imgheight']==''){
