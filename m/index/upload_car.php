@@ -54,7 +54,7 @@ foreach($_FILES as $file){
 			copy($file_url,$file_url_small);
 			require_once '/srv/www/sch2sc/include/img.class.php';
 			$settings = settings();
-			$t = new ThumbHandler();echo $file_url;break;upload/image/20170703/20170703135918_98680.jpg
+			$t = new ThumbHandler();
 			$t -> setSrcImg($file_url);
 			$t -> setDstImg($file_url);
 			if($settings['imgwidth']==''||$settings['imgheight']==''){
