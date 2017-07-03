@@ -62,7 +62,7 @@ if (empty($_FILES) === false) {
 	$file_size = $_FILES['imgFile']['size'];
 	//检查文件名
 	if (!$file_name) {
-		alert("请选择文件。");
+		alert("请选择11文件。");
 	}
 	//检查目录
 	if (@is_dir($save_path) === false) {
