@@ -120,8 +120,8 @@ $(document).ready(function() {
 		var t = $(this);
 		var src = t.parent().siblings(".pic").children("input").val();
 		var cid = $("input[name=carid]").val();
-		var loc = t.parent().siblings(".pic").children("input").attr('name');
-		$.get("<{$weburl}>/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){
+		var loc = t.parent().siblings(".pic").children("input").attr('name');alert(222);
+		$.get("<{$weburl}>/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){alert(33);
 			if(data){
 				t.parent().siblings(".pic").children("img").remove();
 				t.parent().siblings(".pic").children("input").val('');
