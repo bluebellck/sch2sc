@@ -339,6 +339,7 @@ function html_qiugoucars($id) {
 	fclose($fp);
 	return true;
 }
+echo 666;
 // 生成单页
 function html_page($id) {
 	global $db, $tpl, $settings;
@@ -380,4 +381,5 @@ function html_page($id) {
 	fclose($fp);
 	return true;
 }
+echo 77;
 ?>
