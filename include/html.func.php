@@ -235,6 +235,7 @@ function html_cars($id) {
 	fclose($fp);
 	return true;
 } 
+echo 444;
 // 生成租车详细页
 function html_rentcars($id) {
 	global $db, $tpl , $settings;
