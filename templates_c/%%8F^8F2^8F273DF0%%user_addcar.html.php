@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 17:33:03
+<?php /* Smarty version 2.6.18, created on 2017-06-30 15:16:47
          compiled from m/user_addcar.html */ ?>
 <!DOCTYPE html>
 <html>
@@ -24,27 +24,25 @@
 			<div class="uk-width-1-10"></div>
 		</div>
 		
-		
+	<form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">	
 		<div class="business-tianjia uk-margin-bottom">
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						品牌：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select name="p_brand" id="brand" datatype="n" nullmsg="请选择品牌！">
 							<?php echo $this->_tpl_vars['select_brand']; ?>
 
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						车系：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select class="subbrand" id="subbrand" name="p_subbrand" datatype="n" nullmsg="请选择车系！">
 							<option  value="">请选择车系</option>
 							<?php echo $this->_tpl_vars['select_subbrand']; ?>
@@ -52,13 +50,11 @@
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						车型：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select class="subbrand" id="subsubbrand" name="p_subsubbrand" datatype="n" nullmsg="请选择款式！">
 							<option  value="">请选择款式</option>
 							<?php echo $this->_tpl_vars['select_subsubbrand']; ?>
@@ -69,23 +65,21 @@
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						省份：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select name="aid" id="province">
 							<?php echo $this->_tpl_vars['selectprovince']; ?>
 
 						</select>
 					</div>
 				</div>
-			</div>
-			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						城市：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select name="cid" id="city">
 							<?php echo $this->_tpl_vars['selectcity']; ?>
 
@@ -94,13 +88,12 @@
 				</div>
 			</div>
 
-
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-1-10 uk-text-left left2">
+					<div class="uk-width-3-10 uk-text-left left2">
 						上牌日期：
 					</div>
-					<div class="uk-width-9-10 uk-text-left right">
+					<div class="uk-width-7-10 uk-text-left right">
 						<select name="p_year" id="p_year">
 							<?php echo $this->_tpl_vars['select_year']; ?>
 
@@ -115,7 +108,8 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="里程数" />
+						<input name="p_kilometre" type="number" id="p_kilometre" size="5" value="<?php echo $this->_tpl_vars['cars']['p_kilometre']; ?>
+" placeholder="里程数" />
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万公里
@@ -125,7 +119,8 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="预售价" />
+						<input type="number" name="p_price"  size="5" value="<?php echo $this->_tpl_vars['cars']['p_price']; ?>
+" datatype="s" nullmsg="请填写价格！" placeholder="预售价">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -135,7 +130,8 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="出厂价" />
+						<input type="number" name="p_newprice"  size="5" value="<?php echo $this->_tpl_vars['cars']['p_newprice']; ?>
+" placeholder="出厂价">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -145,7 +141,8 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="购置税" />
+						<input type="number" name="p_tax"  size="5" value="<?php echo $this->_tpl_vars['cars']['p_tax']; ?>
+" placeholder="购置税">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -155,7 +152,8 @@
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
 					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="为您节省" />
+						<input type="number" name="p_save"  size="5" value="<?php echo $this->_tpl_vars['cars']['p_save']; ?>
+" placeholder="为您节省">
 					</div>
 					<div class="uk-width-2-10 uk-text-right right">
 						万元
@@ -164,75 +162,159 @@
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="车体颜色" />
+					<div class="uk-width-3-10 uk-text-left left2">
+						车体颜色：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
-					</div>
-				</div>
-			</div>
-			<div class="box business-hz">
-				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="车型选择" />
-					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-7-10 uk-text-left right">
+						<select name="p_color">
+							<?php echo $this->_tpl_vars['select_color']; ?>
+
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="排量" />
+					<div class="uk-width-3-10 uk-text-left left2">
+						车型选择：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						L
-					</div>
-				</div>
-			</div>
-			<div class="box business-hz">
-				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="变速箱" />
-					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-7-10 uk-text-left right">
+						<select name="p_model">
+							<?php echo $this->_tpl_vars['select_model']; ?>
+
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="进口国产" />
+					<div class="uk-width-3-10 uk-text-left left2">
+						排量：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-7-10 uk-text-left right">
+						<select name="p_gas">
+							<?php echo $this->_tpl_vars['select_gas']; ?>
+
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
 				<div class="uk-grid uk-grid-collapse">
-					<div class="uk-width-8-10 left">
-						<input type="text" placeholder="使用类型" />
+					<div class="uk-width-3-10 uk-text-left left2">
+						变速箱：
 					</div>
-					<div class="uk-width-2-10 uk-text-right right">
-						<i class="uk-icon-angle-right"></i>
+					<div class="uk-width-7-10 uk-text-left right">
+						<select name="p_transmission">
+							<?php echo $this->_tpl_vars['select_transmission']; ?>
+
+						</select>
 					</div>
 				</div>
 			</div>
 			<div class="box business-hz">
-				<textarea cols="" rows="" placeholder="备注" class="business-hz"></textarea>
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-3-10 uk-text-left left2">
+						进口国产：
+					</div>
+					<div class="uk-width-7-10 uk-text-left right">
+						<select name="p_country">
+							<?php echo $this->_tpl_vars['select_country']; ?>
+
+						</select>
+					</div>
+				</div>
+			</div>
+
+
+			<?php $_from = $this->_tpl_vars['paralist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['paralist']):
+?>
+			<div class="box business-hz">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-3-10 uk-text-left left2">
+						<?php echo $this->_tpl_vars['paralist']['c_name']; ?>
+：
+					</div>
+					<div class="uk-width-7-10 uk-text-left right">
+						<?php if ($this->_tpl_vars['paralist']['type_name'] == 'input'): ?>
+							<input name="para<?php echo $this->_tpl_vars['paralist']['id']; ?>
+" type="text" size="20" value="<?php echo $this->_tpl_vars['paralist']['c_value']; ?>
+"/>
+						<?php elseif ($this->_tpl_vars['paralist']['type_name'] == 'textarea'): ?>	
+							<textarea name="para<?php echo $this->_tpl_vars['paralist']['id']; ?>
+" ><?php echo $this->_tpl_vars['paralist']['c_value']; ?>
+</textarea>
+						<?php elseif ($this->_tpl_vars['paralist']['type_name'] == 'select'): ?>	
+							<select name="para<?php echo $this->_tpl_vars['paralist']['id']; ?>
+"><?php echo $this->_tpl_vars['paralist']['select']; ?>
+</select>
+						<?php elseif ($this->_tpl_vars['paralist']['type_name'] == 'time'): ?>	
+							<input name="para<?php echo $this->_tpl_vars['paralist']['id']; ?>
+" type="text" size="20" class="laydate-icon" value="<?php echo $this->_tpl_vars['paralist']['c_value']; ?>
+" onclick="laydate()"/>
+						<?php elseif ($this->_tpl_vars['paralist']['type_name'] == 'checkbox'): ?>	
+							<?php echo $this->_tpl_vars['checkbox_str']; ?>
+
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endforeach; endif; unset($_from); ?>
+
+			<div class="box business-hz">
+				<textarea  name="p_details" cols="" rows="" placeholder="备注" class="business-hz"><?php echo $this->_tpl_vars['cars']['p_details']; ?>
+</textarea>
 			</div>
 		</div>
-		
-		<a href="business-tianjia-2.html" class="business-button g uk-button">下一步</a>
-		
+		<input type="submit" value="下一步" class="business-button g uk-button">
+		<input type="hidden" name="a" value="<?php echo $this->_tpl_vars['ac']; ?>
+">
+		<input type="hidden" name="id" value="<?php echo $this->_tpl_vars['cars']['p_id']; ?>
+">
+	</form>
 		<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/js/uikit/jquery-3.2.0.min.js"></script>
 		<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/js/uikit/uikit.min.js"></script>
+		<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/js/laydate/laydate.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			//品牌选择
+			$("#brand").change(function(){
+				$.get("<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=ajax&ajax=1", { 
+					brandid :  $("#brand").val() 
+				}, function (data, textStatus){
+									 $("#subbrand").html(data); // 把返回的数据添加到页面上
+					}
+				);
+			});
+			//品牌选择
+			$("#subbrand").change(function(){
+				$.get("<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=ajax&ajax=1", { 
+					subbrandid :  $("#subbrand").val() 
+				}, function (data, textStatus){
+									 $("#subsubbrand").html(data); // 把返回的数据添加到页面上
+					}
+				);
+			});
+			<?php if ($this->_tpl_vars['setting']['version'] == 3): ?>
+			//城市选择
+			$("#province").change(function(){
+				$.get("<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=ajax&ajax=1", { 
+					cityid :  $("#province").val() 
+				}, function (data, textStatus){
+					$("#city").html(data); // 把返回的数据添加到页面上
+							}
+				);
+			});
+			<?php endif; ?>
+		});
+		</script>
 	</body>
 </html>
 
@@ -246,90 +328,6 @@
 
 
 
-<script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
-/static/js/laydate/laydate.js"></script>
-<script type="text/javascript">
-$(function(){
-	//品牌选择
-	$("#brand").change(function(){
-		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=ajax&ajax=1", { 
-			brandid :  $("#brand").val() 
-		}, function (data, textStatus){
-               $("#subbrand").html(data); // 把返回的数据添加到页面上
-			}
-		);
-	});
-	//品牌选择
-	$("#subbrand").change(function(){
-		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=ajax&ajax=1", { 
-			subbrandid :  $("#subbrand").val() 
-		}, function (data, textStatus){
-               $("#subsubbrand").html(data); // 把返回的数据添加到页面上
-			}
-		);
-	});
-	<?php if ($this->_tpl_vars['setting']['version'] == 3): ?>
-	//城市选择
-	$("#province").change(function(){
-		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=ajax&ajax=1", { 
-			cityid :  $("#province").val() 
-		}, function (data, textStatus){
-			$("#city").html(data); // 把返回的数据添加到页面上
-					}
-		);
-	});
-	<?php endif; ?>
-	//图片删除
-	$("#piclist li div span").live('click', function(){
-		$.get("index.php?m=user&ajax=1&p_id=<?php echo $this->_tpl_vars['cars']['p_id']; ?>
-",{
-			p_pic :  $(this).next().val()
-		}, function (data, textStatus){
-			$("li").remove("#"+data);
-		});
-	});
-
-	//设为封面
-	$("#piclist li p span").live('click', function(){
-		$(this).parent().parent().children('.img').addClass("selected");
-		$(this).parent().parent().siblings().children('.img').removeClass("selected");
-		$("#mainpic").empty();
-		$("#mainpic").append('<input type="hidden" name="p_mainpic" value="'+$(this).next().val()+'">');
-	});
-	KindEditor.ready(function(K) {
-	var editor = K.editor({
-		uploadJson : 'index.php?m=upload_car',
-		allowFileManager : false,
-		imageUploadLimit : 10
-	});
-	K('#J_selectImage').click(function() {
-		var inputArr = $("#piclist").children("li");
-			var length = inputArr.length;
-			if(length>=10){
-				alert("您最多只能上传10图片！");
-				exit;
-			}
-		editor.loadPlugin('multiimage', function() {
-			editor.plugin.multiImageDialog({
-				clickFn : function(urlList) {
-					var div = K('#piclist');
-					K.each(urlList, function(i, data) {
-						var arr_picid = data.url.split("/");
-						var arr_length = arr_picid.length;
-						var arr_picids = arr_picid[arr_length-1].split(".");
-						div.append('<li id="'+arr_picids[0]+'"><img src="' + data.url + '" class="vt img"><div><span class="del"></span><input type="hidden" name="p_pics[]" value="'+ data.url +'"></div><p><span>设为封面</span><input type="hidden" name="url" value="'+ data.url +'"></p></li>');
-					});
-					editor.hideDialog();
-				}
-			});
-		});
-	});	
-	});
-});
-</script>
 <form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">
     <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
     <?php if ($this->_tpl_vars['setting']['version'] == 3): ?>
@@ -450,7 +448,7 @@ $(function(){
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['paralist']):
 ?>
 			<tr>
-				<th><?php echo $this->_tpl_vars['paralist']['c_name']; ?>
+				<th>123<?php echo $this->_tpl_vars['paralist']['c_name']; ?>
 ：</th>
 				<td>
 				<?php if ($this->_tpl_vars['paralist']['type_name'] == 'input'): ?>

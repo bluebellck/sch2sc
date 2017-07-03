@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:38:10
+<?php /* Smarty version 2.6.18, created on 2017-06-30 13:36:10
          compiled from m/login.html */ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -40,7 +40,7 @@
 			</ul>
 				
 			<div id="login_1" class="login-box-ti" style="">
-				<form name="loginform" class="loginform" method="post" action="m/index.php?m=login">
+				<form name="loginform" class="loginform" method="post" action="index.php?m=login">
 					<dl class="login-box-ti-d">
 						<dt>手机号码</dt>
 						<dd><input type="text" name="username" class="inp01" ajaxurl="index.php?m=login&ajax=1" datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！"/></dd>
