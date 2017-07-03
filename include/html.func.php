@@ -283,6 +283,7 @@ function html_rentcars($id) {
 	fclose($fp);
 	return true;
 }
+echo 555;
 // 生成求购详细页
 function html_qiugoucars($id) {
 	global $db, $tpl , $settings;
