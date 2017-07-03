@@ -1,6 +1,6 @@
 <?php
 header('content-type:text/html charset:utf-8');
-$dir_base = "./upload/image"; //文件上传根目录
+$dir_base = "../upload/image"; //文件上传根目录
 $save_path = "";
 //创建文件夹
 if ($dir_base !== '') {
