@@ -15,4 +15,6 @@ define('HTML_DIR', ''); //静态文件目录
 define('CACHETIME',3600); //缓存时间
 define('COOKIETIME',3600); //缓存时间
 define('ADMIN_PAGE', 'admin_login.php'); //后台入口文件
+define('HTML_URL', WEB_URL . "/"); //静态文件地址
+
 ?>

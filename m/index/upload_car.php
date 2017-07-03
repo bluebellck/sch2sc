@@ -1,6 +1,6 @@
 <?php
 header('content-type:text/html charset:utf-8');
-$dir_base = "/srv/www/sch2sc/upload/image"; //文件上传根目录
+$dir_base = "upload/image"; //文件上传根目录
 $save_path = "";
 //创建文件夹
 if ($dir_base !== '') {
@@ -52,7 +52,7 @@ foreach($_FILES as $file){
 			$file_url = $save_path.$new_filename;
 			$file_url_small = $save_path.$new_filename_small;
 			copy($file_url,$file_url_small);
-			require_once '/srv/www/sch2sc/include/img.class.php';
+			require_once 'include/img.class.php';
 			$settings = settings();
 			$t = new ThumbHandler();
 			$t -> setSrcImg($file_url);
