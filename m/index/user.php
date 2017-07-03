@@ -523,7 +523,7 @@ elseif ($ac == 'addpicture') {
 					$data['p_mainpic'] = $value;
 			}
 		}
-		$data['p_pics'] = trim($data['p_pics']);
+		$data['p_pics'] = trim($data['p_pics'],'|');
 		$data['p_id'] = $carid;
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		html_cars($carid);
