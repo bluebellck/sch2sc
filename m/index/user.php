@@ -21,7 +21,7 @@ if (!empty($_POST['param']) and $_POST['name'] == "email") {
 		echo '{"info":"邮箱地址已存在！","status":"n"}';
 	} 
 	exit;
-} echo 4444;
+} 
 // 验证手机号
 if (!empty($_POST['param']) and $_POST['name'] == "mobilephone") {
 	$data = $db -> row_count('member', "mobilephone='" . $_POST['param'] . "' and id!={$_SESSION['USER_ID']}");
@@ -533,7 +533,8 @@ elseif ($ac == 'addpicture') {
 		if (empty($carid)) {
 			$data = array('p_mainpic'=>'','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
 		} else {
-			$data = $db -> row_select_one('cars', "p_id=".$carid);
+			$r = $db -> row_select_one('cars', "p_id=".$carid);
+			$data = explode('|',$r['p_pics'])
 		} 
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
