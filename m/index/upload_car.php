@@ -52,7 +52,7 @@ foreach($_FILES as $file){
 			$file_url = $save_path.$new_filename;
 			$file_url_small = $save_path.$new_filename_small;
 			copy($file_url,$file_url_small);
-			require_once 'include/aa.php';
+			require_once '/srv/www/sch2sc/include/aa.php';
 		}
 	}else{
 		$isMoved = true; //已存在文件设置为上传成功
