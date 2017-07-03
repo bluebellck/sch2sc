@@ -138,7 +138,7 @@ function html_news($id) {
 	fclose($fp);
 	return true;
 } 
-
+echo 555;
 // 生成车源详细页
 function html_cars($id) {
 	global $db,$tpl;
@@ -235,6 +235,7 @@ function html_cars($id) {
 	fclose($fp);
 	return true;
 } 
+echo 66l;
 // 生成租车详细页
 function html_rentcars($id) {
 	global $db, $tpl , $settings;
@@ -282,6 +283,7 @@ function html_rentcars($id) {
 	fclose($fp);
 	return true;
 }
+echo 777;
 // 生成求购详细页
 function html_qiugoucars($id) {
 	global $db, $tpl , $settings;
@@ -337,6 +339,7 @@ function html_qiugoucars($id) {
 	fclose($fp);
 	return true;
 }
+echo 888;
 // 生成单页
 function html_page($id) {
 	global $db, $tpl, $settings;
@@ -378,4 +381,5 @@ function html_page($id) {
 	fclose($fp);
 	return true;
 }
+echo 99;
 ?>
