@@ -10,7 +10,7 @@ if ($dir_base !== '') {
 	}
 }
 $ymd = date("Ymd");
-$save_path .= $ymd . "/";echo 111;
+$save_path .= $ymd . "/";
 if (!file_exists($save_path)) {echo 22;exit;
 	mkdir($save_path);
 }
