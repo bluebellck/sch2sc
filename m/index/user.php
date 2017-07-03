@@ -11,7 +11,7 @@
 if (!defined('APP_IN')) exit('Access Denied');
 
 include ('page.php');
-include(INC_DIR . 'html.func.php');
+include(INC_DIR . 'html.func.php');echo 4444;
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
 	$data = $db -> row_count('member', "email='" . $_POST['param'] . "' and id!={$_SESSION['USER_ID']}");
