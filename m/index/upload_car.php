@@ -45,45 +45,18 @@ foreach($_FILES as $file){
 		$rEFileTypes = "/^\.(jpg|jpeg|gif|png){1}$/i"; 
 		$rand_str = rand(10000, 99999);
 
-		if ($_FILES[$upload_filename]['size'] <= $MAXIMUM_FILESIZE && 
-			preg_match($rEFileTypes, strrchr($filename, '.'))) {	
-			$isMoved = @move_uploaded_file ( $_FILES[$upload_filename]['tmp_name'], $save_path.$new_filename); //上传文件
-			//生成缩略图
-			$file_url = $save_path.$new_filename;
-			$file_url_small = $save_path.$new_filename_small;
-			copy($file_url,$file_url_small);
-			require_once 'include/img.class.php';
-			$settings = settings();
-			$t = new ThumbHandler();
-			$t -> setSrcImg($file_url);
-			$t -> setDstImg($file_url);
-			if($settings['imgwidth']==''||$settings['imgheight']==''){
-				$t -> createImg(1000,1000);
-			}
-			else{
-				$t -> createImg($settings['imgwidth'], $settings['imgheight']);
-			}
-			$ts = new ThumbHandler();
-			$ts -> setSrcImg($file_url_small);
-			$ts -> setDstImg($file_url_small);
-			if($settings['thumbwidth']==''||$settings['thumbheight']==''){
-				$ts -> createImg(300,300);
-			}
-			else{
-			   $ts -> createImg($settings['thumbwidth'], $settings['thumbheight']); 
-			}
-			// 加水印
-			if ($settings['water'] == 1 and $settings['waterpic']!="") {
-				$ty = new ThumbHandler();
-				$ty -> setMaskPosition($settings['position']);
-				$ty -> setSrcImg($file_url);
-				$ty -> setDstImg($file_url);
-				$ty -> setMaskImg($settings['waterpic']);
-				$ty -> createImg(100);
-			}
-		}
 	}else{
 		$isMoved = true; //已存在文件设置为上传成功
+	}
+	if($isMoved){
+		//输出图片文件<img>标签
+		//注：在一些系统src可能需要urlencode处理，发现图片无法显示，
+		//请尝试 urlencode($filename) 或 urlencode($filename)，不行请查看HTML中显示的src并酌情解决。
+		header('Content-type: text/html; charset=UTF-8');
+		$output .= "<img src='{$save_path}{$new_filename}' title='{$new_filename}' alt='{$new_filename}' width='230' height='180'/><input type='hidden' name='{$picname}' value='/{$save_path}{$new_filename}'>";
+	}else {
+		header('Content-type: text/html; charset=UTF-8');
+		$output .= "上传错误";
 	}
 	$index++;
 }
