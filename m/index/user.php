@@ -10,7 +10,7 @@
 */
 if (!defined('APP_IN')) exit('Access Denied');
 
-include ('page.php');echo 222;
+include ('page.php');
 //include(INC_DIR . 'html.func.php');
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
@@ -84,10 +84,10 @@ else{
 
 // 当前操作
 $ac = isset($_REQUEST['a']) && isset($ac_arr[$_REQUEST['a']]) ? $_REQUEST['a'] : 'index';
-echo $ac;
+
 $tpl -> assign('ac_arr', $ac_arr);
 $tpl -> assign('ac', $ac);
-var_dump($_POST);
+
 // 修改密码处理ajax后台处理
 if (!empty($_GET['ajax']) && isset($_GET['oldpassword'])) {
 	if ($userinfo['password'] == md5($_GET['oldpassword'])) {
@@ -512,7 +512,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 // 添加图片
 elseif ($ac == 'addpicture') {
 	// 添加或修改
-	if (submitcheck('a')) {echo 'abcdefg';
+	if (submitcheck('a')) {
 		$arr_not_empty = array();
 		can_not_be_empty($arr_not_empty, $_POST);
 		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
