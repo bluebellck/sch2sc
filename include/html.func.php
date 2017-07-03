@@ -9,7 +9,7 @@
  simcms.net保留全部权力，受相关法律和国际公约保护，请勿非法修改、转载、散播，或用于其他赢利行为，并请勿删除版权声明。
 */
 // 生成首页
-/*function html_index() {
+function html_index() {
 	global $db, $tpl , $settings,$db_config;
 
 	$tpl -> assign('menustate', 1);
@@ -375,5 +375,5 @@ function html_page($id) {
 	fwrite($fp, $pagehtml);
 	fclose($fp);
 	return true;
-}*/
+}
 ?>
