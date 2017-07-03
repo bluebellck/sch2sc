@@ -1,8 +1,8 @@
 <?php
 if (!defined('APP_IN')) exit('Access Denied');
 
-include ('page.php');
-include(INC_DIR . 'html.func.php');
+include ('page.php');echo 123;
+include(INC_DIR . 'html.func.php');echo 555;
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
 	$data = $db -> row_count('member', "email='" . $_POST['param'] . "' and id!={$_SESSION['USER_ID']}");
@@ -75,7 +75,7 @@ $ac = isset($_REQUEST['a']) && isset($ac_arr[$_REQUEST['a']]) ? $_REQUEST['a'] :
 
 $tpl -> assign('ac_arr', $ac_arr);
 $tpl -> assign('ac', $ac);
-
+echo 333444;
 // 修改密码处理ajax后台处理
 if (!empty($_GET['ajax']) && isset($_GET['oldpassword'])) {
 	if ($userinfo['password'] == md5($_GET['oldpassword'])) {
@@ -145,7 +145,7 @@ if (!empty($_GET['ajax']) && isset($_GET['rentid'])) {
 	echo $picstr[0];
 	exit;
 } 
-echo 333444;
+
 // 登陆欢迎页面
 if ($ac == 'index') {
 	$userinfo['last_login_time'] = date("Y-m-d H:i:s", $userinfo['last_login_time']);
