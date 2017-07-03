@@ -52,7 +52,7 @@ foreach($_FILES as $file){
 			$file_url = $save_path.$new_filename;
 			$file_url_small = $save_path.$new_filename_small;
 			copy($file_url,$file_url_small);
-			require_once './include/img.class.php';
+			require_once '../include/img.class.php';
 			$settings = settings();
 			$t = new ThumbHandler();
 			$t -> setSrcImg($file_url);
