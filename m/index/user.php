@@ -87,7 +87,7 @@ $ac = isset($_REQUEST['a']) && isset($ac_arr[$_REQUEST['a']]) ? $_REQUEST['a'] :
 
 $tpl -> assign('ac_arr', $ac_arr);
 $tpl -> assign('ac', $ac);
-
+echo $ac;
 // 修改密码处理ajax后台处理
 if (!empty($_GET['ajax']) && isset($_GET['oldpassword'])) {
 	if ($userinfo['password'] == md5($_GET['oldpassword'])) {
