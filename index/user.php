@@ -1,7 +1,7 @@
 <?php
 if (!defined('APP_IN')) exit('Access Denied');
 
-include ('page.php');echo 123;
+include ('page.php');echo INC_DIR . 'html.func.php';
 include(INC_DIR . 'html.func.php');echo 555;
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
