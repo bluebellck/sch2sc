@@ -97,4 +97,4 @@ foreach($_FILES as $file){
 	}
 	$index++;
 }
-echo $output;
+echo 11;
