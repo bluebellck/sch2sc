@@ -10,8 +10,8 @@
 */
 if (!defined('APP_IN')) exit('Access Denied');
 
-include ('page.php');echo 333657;
-include(INC_DIR . 'html.func.php');echo 4444;
+include ('page.php');
+//include(INC_DIR . 'html.func.php');
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
 	$data = $db -> row_count('member', "email='" . $_POST['param'] . "' and id!={$_SESSION['USER_ID']}");
@@ -87,7 +87,7 @@ $ac = isset($_REQUEST['a']) && isset($ac_arr[$_REQUEST['a']]) ? $_REQUEST['a'] :
 
 $tpl -> assign('ac_arr', $ac_arr);
 $tpl -> assign('ac', $ac);
-echo $ac;
+
 // 修改密码处理ajax后台处理
 if (!empty($_GET['ajax']) && isset($_GET['oldpassword'])) {
 	if ($userinfo['password'] == md5($_GET['oldpassword'])) {
@@ -513,7 +513,19 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 elseif ($ac == 'addpicture') {
 	// 添加或修改
 	if (submitcheck('a')) {
-		echo 2222;
+		$arr_not_empty = array();
+		can_not_be_empty($arr_not_empty, $_POST);
+		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
+		foreach($post as $key => $value){
+			if($value!=""){
+				$data['p_pics'] .= $value.'|';
+				if(empty($data['p_mainpic']))
+					$data['p_mainpic'] = $value;
+			}
+		}
+		$data['p_id'] = $carid;
+		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
+		html_cars($carid);
 	} 
 	// 转向添加或修改页面
 	else {
