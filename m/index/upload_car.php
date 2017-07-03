@@ -12,7 +12,7 @@ if ($dir_base !== '') {
 $ymd = date("Ymd");
 $save_path .= $ymd . "/";
 if (!file_exists($save_path)) {
-	if(mkdir($save_path,0777)){echo 111;}else{echo 222;}
+	if(mkdir($save_path)){echo 111;}else{echo 222;}
 }
 exit;
 //没有成功上传文件，报错并退出。
