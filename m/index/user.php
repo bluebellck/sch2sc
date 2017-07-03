@@ -537,9 +537,9 @@ elseif ($ac == 'addpicture') {
 			$arr = explode('|',$r['p_pics']);
 			$count = count($arr);
 			$i = 0;
-			foreach($data as $key => $value){
+			foreach($data as $kk => $value){
 				if($count > $i){
-					$data[$key] = $arr[$i];echo $key;
+					$data[$kk] = $arr[$i];echo $kk;
 					$i++;
 				}	
 			}
