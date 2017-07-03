@@ -1,0 +1,28 @@
+<?php /* Smarty version 2.6.18, created on 2017-07-03 11:22:14
+         compiled from default/default/user_uppwd.html */ ?>
+<form name="form1" class="carform" method="post" action="index.php?m=user">
+                <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+                    <tr>
+                        <th>原始密码：</th>
+                        <td colspan="3"><input type="password" name="oldpassword" value="" size="30" class="inp01" datatype="*6-16" ajaxurl="index.php?m=user&ajax=1" nullmsg="请输入原始密码！" errormsg="请输入正确的原始密码！"/></td>
+                    </tr>
+                    <tr>
+                        <th>新密码：</th>
+                        <td colspan="3"><input type="password" name="password" value="" size="30" class="inp01" datatype="*6-16" nullmsg="请输入新密码！" errormsg="请输入正确的新密码！"/></td>
+                    </tr>
+                    <tr>
+                        <th>重复密码：</th>
+                        <td colspan="3"><input type="password" name="repassword" value="" size="30" class="inp01" datatype="*" recheck="password" nullmsg="请再输入一次密码！" errormsg="您两次输入的密码不一致！"/></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="5"><div class="buttons">
+                                <input type="submit" value="提 交" class="submit">
+                                <input type="hidden" name="a" value="<?php echo $this->_tpl_vars['ac']; ?>
+">
+                                <input type="hidden" name="id" value="<?php echo $this->_tpl_vars['user']['id']; ?>
+">
+                            </div></td>
+                    </tr>
+                </table>
+            </form>
