@@ -1,6 +1,6 @@
 <?php
 if (!defined('APP_IN')) exit('Access Denied');
-echo 111;
+
 include ('page.php');
 include(INC_DIR . 'html.func.php');
 // 验证邮箱地址
@@ -150,7 +150,7 @@ if (!empty($_GET['ajax']) && isset($_GET['rentid'])) {
 if ($ac == 'index') {
 	$userinfo['last_login_time'] = date("Y-m-d H:i:s", $userinfo['last_login_time']);
 	$tpl -> assign('user', $userinfo); 
-
+echo 333;
 	$tpl -> display('default/' . $settings['templates'] . '/user.html');
 	exit;
 } 
