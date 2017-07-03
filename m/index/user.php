@@ -510,9 +510,9 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 	} 
 }
 // 添加图片
-elseif ($ac == 'addpicture') {
+elseif ($ac == 'addpicture') {echo 111;
 	// 添加或修改
-	if (submitcheck('a')) {
+	if (submitcheck('a')) {echo 333;
 		$arr_not_empty = array();
 		can_not_be_empty($arr_not_empty, $_POST);
 		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
