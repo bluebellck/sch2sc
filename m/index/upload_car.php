@@ -178,7 +178,7 @@ if (empty($_FILES) === false) {
 
 function alert($msg) {
 	header('Content-type: text/html; charset=UTF-8');
-	var_dump($_FILES);
+	echo $msg;
 	exit;
 }
 ?>
