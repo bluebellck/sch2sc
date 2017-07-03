@@ -10,7 +10,7 @@
 */
 if (!defined('APP_IN')) exit('Access Denied');
 
-include ('page.php');
+include ('page.php');echo 222;
 //include(INC_DIR . 'html.func.php');
 // 验证邮箱地址
 if (!empty($_POST['param']) and $_POST['name'] == "email") {
@@ -21,7 +21,7 @@ if (!empty($_POST['param']) and $_POST['name'] == "email") {
 		echo '{"info":"邮箱地址已存在！","status":"n"}';
 	} 
 	exit;
-} 
+} echo 4444;
 // 验证手机号
 if (!empty($_POST['param']) and $_POST['name'] == "mobilephone") {
 	$data = $db -> row_count('member', "mobilephone='" . $_POST['param'] . "' and id!={$_SESSION['USER_ID']}");
@@ -51,7 +51,7 @@ $array_color = arr_color();
 $array_gas = arr_gas();
 $array_transmission = arr_transmission();
 
-if (!is_user_login()) showmsg('请先登陆', 'index.php?mod=login');
+if (!is_user_login()) showmsg('请先登陆', 'index.php?m=login');
 // 个人信息
 $userinfo = $db -> row_select_one('member', "id={$_SESSION['USER_ID']}");
 $userinfo['regtime'] = date("Y/m/d", $userinfo['regtime']);
