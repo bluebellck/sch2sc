@@ -530,11 +530,18 @@ elseif ($ac == 'addpicture') {
 	// 转向添加或修改页面
 	else {
 		$configure_list = array();
-		if (empty($carid)) {
-			$data = array('p_mainpic'=>'','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
-		} else {
+		$data = array('p_mainpic'=>'','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
+		if (!empty($carid)){
 			$r = $db -> row_select_one('cars', "p_id=".$carid);
-			$data = explode('|',$r['p_pics'])
+			$arr = explode('|',$r['p_pics']);
+			$count = count($arr);
+			$i = 0;
+			foreach($data as $key => $value){
+				if($count > $i){
+					$data[$key] = $arr[$i];
+					$i++;
+				}	
+			}
 		} 
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
