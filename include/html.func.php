@@ -9,7 +9,6 @@
  simcms.net保留全部权力，受相关法律和国际公约保护，请勿非法修改、转载、散播，或用于其他赢利行为，并请勿删除版权声明。
 */
 // 生成首页
-echo 222;
 function html_index() {
 	global $db, $tpl , $settings,$db_config;
 
@@ -108,7 +107,6 @@ function html_index() {
 	fclose($fp);
 	return true;
 } 
-echo 4444;
 // 生成新闻详细页
 function html_news($id) {
 	global $db, $tpl, $settings;
@@ -138,7 +136,7 @@ function html_news($id) {
 	fclose($fp);
 	return true;
 } 
-echo 555;
+
 // 生成车源详细页
 function html_cars($id) {
 	global $db,$tpl;
@@ -235,7 +233,6 @@ function html_cars($id) {
 	fclose($fp);
 	return true;
 } 
-echo 66l;
 // 生成租车详细页
 function html_rentcars($id) {
 	global $db, $tpl , $settings;
@@ -283,7 +280,6 @@ function html_rentcars($id) {
 	fclose($fp);
 	return true;
 }
-echo 777;
 // 生成求购详细页
 function html_qiugoucars($id) {
 	global $db, $tpl , $settings;
@@ -339,7 +335,6 @@ function html_qiugoucars($id) {
 	fclose($fp);
 	return true;
 }
-echo 888;
 // 生成单页
 function html_page($id) {
 	global $db, $tpl, $settings;
@@ -381,5 +376,4 @@ function html_page($id) {
 	fclose($fp);
 	return true;
 }
-echo 99;
 ?>
