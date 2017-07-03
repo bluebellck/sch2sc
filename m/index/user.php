@@ -523,6 +523,7 @@ elseif ($ac == 'addpicture') {
 					$data['p_mainpic'] = $value;
 			}
 		}
+		$data['p_pics'] = trim($data['p_pics']);
 		$data['p_id'] = $carid;
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		html_cars($carid);
@@ -538,12 +539,12 @@ elseif ($ac == 'addpicture') {
 			$i = 0;
 			foreach($data as $key => $value){
 				if($count > $i){
-					$data[$key] = $arr[$i];
+					$data[$key] = $arr[$i];echo $key;
 					$i++;
 				}	
 			}
 		} 
-		var_dump($arr);
+		//var_dump($arr);
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
 		exit;
