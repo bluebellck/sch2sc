@@ -31,10 +31,10 @@
 			</div>
 			<div class="text business-hz">
 				<div class="img uk-float-left">
-					<a href="m/index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_mainpic<>''}><img src="<{$cars.p_mainpic}>" width="80" height="60"/><{else}><img src="/static/img/img-cs.png" /><{/if}></a>
+					<a href="index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_mainpic<>''}><img src="<{$cars.p_mainpic}>" width="80" height="60"/><{else}><img src="/static/img/img-cs.png" /><{/if}></a>
 				</div>
 				<h2>
-					<a href="m/index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_allname!=""}><{$cars.p_allname}><{else}><{$cars.p_name}><{/if}></a>
+					<a href="index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_allname!=""}><{$cars.p_allname}><{else}><{$cars.p_name}><{/if}></a>
 				</h2>
 				<p><{$cars.p_year}>年<{$cars.p_month}>月 | <{$cars.p_kilometre}>万公里</p>
 				<p class="jg">当前价格： <span>¥<{$cars.p_price}></span> 万</p>
