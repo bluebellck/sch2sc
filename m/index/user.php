@@ -252,14 +252,14 @@ elseif ($ac == 'carlist') {
 	}
 	include('../'.INC_DIR . 'Page.class.php');
 	$Page = new Page($db -> tb_prefix . 'cars', $where, '*', '50', 'issell asc,listtime desc');
-	$list = $Page -> get_data();echo 888;
+	$list = $Page -> get_data();
 	foreach($list as $key => $value) {
 		$list[$key]['listtime'] = date('Y-m-d H:i:s', $value['listtime']);
 		$list[$key]['p_addtime'] = date('Y-m-d H:i:s', $value['p_addtime']);
 		if (!empty($value['p_model'])) $list[$key]['p_modelname'] = $array_model[$value['p_model']];
 		$list[$key]['p_url'] = HTML_DIR . "buycars/" . date('Y/m/d', $value['p_addtime']) . "/" . $value['p_id'] . ".html";
 	} 
-	echo 123;
+
 	$button_basic = $Page -> button_basic();
 	$button_select = $Page -> button_select();
 	$pageid = $Page -> page;
@@ -267,7 +267,7 @@ elseif ($ac == 'carlist') {
 	$tpl -> assign('button_select', $button_select);
 	$tpl -> assign('carslist', $list);
 	$tpl -> assign('currpage', $pageid);
-	$tpl -> display('default/m/user_carlist.html');
+	$tpl -> display('m/user_carlist.html');
 	exit;
 } 
 // 添加或修改车源
