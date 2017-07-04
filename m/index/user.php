@@ -516,8 +516,6 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 elseif ($ac == 'addpicture') {
 	// 添加或修改
 	if (submitcheck('a')) {
-		$arr_not_empty = array();
-		can_not_be_empty($arr_not_empty, $_POST);
 		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
 		foreach($post as $key => $value){
 			if($value!=""){
@@ -529,8 +527,9 @@ elseif ($ac == 'addpicture') {
 		$data['p_pics'] = trim($data['p_pics'],'|');
 		$data['p_id'] = $carid;
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
+		var_dump($data);
 		html_cars($carid);
-		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
+		//showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
 	} 
 	// 转向添加或修改页面
 	else {
