@@ -528,17 +528,17 @@ elseif ($ac == 'addpicture') {
 		}
 		$data['p_pics'] = trim($data['p_pics'],'|');
 		$data['p_id'] = $carid;
-		$rs = $db -> row_update('cars', $data, "p_id=".$carid);echo 222;
+		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		html_cars($carid);
 		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
 	} 
 	// 转向添加或修改页面
-	else {echo 111;
+	else {
 		$configure_list = array();
 		$data = array('p_mainpic'=>'','p_backpic'=>'','p_foresightpic'=>'','p_leftforepic'=>'','p_rightforepic'=>'','p_backsightpic'=>'','p_leftbackpic'=>'','p_rightbackpic'=>'','p_leftpic'=>'','p_sidepic'=>'','p_wheelpic'=>'','p_rightpic'=>'','p_driverlicpic'=>'','p_drivinglicpic'=>'');
-		if (!empty($carid)){echo 444;
+		if (!empty($carid)){echo $carid
 			$r = $db -> row_select_one('cars', "p_id=".$carid);var_dump($r);
-			$arr = explode('|',$r['p_pics']);var_dump($arr);
+			$arr = explode('|',$r['p_pics']);
 			$count = count($arr);
 			$i = 0;
 			foreach($data as $key => $value){
@@ -548,7 +548,7 @@ elseif ($ac == 'addpicture') {
 				}	
 			}
 		} 
-echo 5555;
+
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
 		exit;
