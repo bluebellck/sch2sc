@@ -58,7 +58,7 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .business-shoucang .top a{color: #666;}
 .business-shoucang .text{padding: 10px; overflow: hidden; background: #fff;}
 .business-shoucang .text .img{height: 94px; width: 135px; overflow: hidden; margin-right: 8px;}    
-.business-shoucang .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: 60px;}
+.business-shoucang .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: auto; overflow:hidden;}
 .business-shoucang .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
 .business-shoucang .text>p.jg{font-size: 14px;}
 .business-shoucang .text>p.jg span{color: #ff6600; font-weight: bold;}
