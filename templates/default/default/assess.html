@@ -20,20 +20,25 @@
 					<table cellspacing="0" cellpadding="0" width="100%"  class="sell_table">
 						<tr>
 							<th> 品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</th>
-							<td colspan="3">
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆品牌！"/>
+							<td colspan="3"><select name="p_brand" id="brand" datatype="n" nullmsg="请选择品牌！" class="select01">
+									<{$selectbrand}>
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<th> 颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</th>
+							<th> 车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系：</th>
 							<td>
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆颜色！"/>
+								<select id="subbrand" name="p_subbrand" datatype="n" nullmsg="请选择车系！" class="select01">
+									<option value="" selected>请选择车系</option>                       
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<th> 排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</th>
+							<th> 车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</th>
 							<td>
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆排量！"/>
+								<select id="subsubbrand" name="p_subsubbrand" datatype="n" nullmsg="请选择款式！" class="select01">
+								<option value="" selected>请选择款式</option>
+							</select>
 							</td>
 						</tr>
 						<tr>
