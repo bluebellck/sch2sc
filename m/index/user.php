@@ -515,7 +515,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 // 添加图片
 elseif ($ac == 'addpicture') {
 	// 添加或修改
-	if (submitcheck('sure')) {
+	if (submitcheck('sure')) {echo 111;
 		$arr_not_empty = array();
 		can_not_be_empty($arr_not_empty, $_POST);
 		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
@@ -527,7 +527,6 @@ elseif ($ac == 'addpicture') {
 			}
 		}
 		$data['p_pics'] = trim($data['p_pics'],'|');
-		$data['p_id'] = $carid;
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		html_cars($carid);
 		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
