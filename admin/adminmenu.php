@@ -5,7 +5,7 @@
 		<li><a href="<?php echo WEB_PATH?>?m=carmodel&a=list" target="report_iframe">车型管理</a></li>
 		<li><a href="<?php echo WEB_PATH?>?m=model&a=list" target="report_iframe">级别管理</a></li>
 		<li><a href="<?php echo WEB_PATH?>?m=cars&a=list&clear=1" target="report_iframe">车源列表</a></li>
-		<!--<li><a href="<?php echo WEB_PATH?>?m=assesscars&a=list" target="report_iframe">车源评估</a></li>-->
+		<li><a href="<?php echo WEB_PATH?>?m=assesscars&a=list" target="report_iframe">车源评估</a></li>
 		<!--<li><a href="<?php echo WEB_PATH?>?m=buycars&a=list" target="report_iframe">求购信息</a></li>-->
 		<!--<li><a href="<?php echo WEB_PATH?>?m=subscribe&a=list" target="report_iframe">预约管理</a></li>-->
 		<!--<li><a href="<?php echo WEB_PATH?>?m=inquiry&a=list" target="report_iframe">询价管理</a></li>-->
