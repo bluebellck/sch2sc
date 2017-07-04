@@ -493,7 +493,7 @@ width:auto; padding:0; clear:both; margin:15px -15px 0 -15px;}
 .login-box-ti .login-box-ti-d dt{ line-height:35px; text-align:right; width:75px; float:left; margin-right:18px; font-size:14px; color:#666;}
 .login-box-ti .login-box-ti-d dd input{width:210px; height:33px; border:1px solid #e8e8e8; line-height:33px; padding:0 5px;}
 .login-box-ti .login-box-ti-but{overflow:hidden; padding-top:15px; text-align:center;}
-.login-box-ti .login-box-ti-but input{width:265px; height:45px; background:#8fc320; color:#fff; border:none; cursor:pointer; border-radius:3px;}
+.login-box-ti .login-box-ti-but input{width:265px; height:45px; background:#fc7000; color:#fff; border:none; cursor:pointer; border-radius:3px;}
 .login-box-ti .login-box-ti-bot{overflow:hidden; padding:15px 70px 0 0; text-align:right; font-size:14px; color:#666;}
 .login-box-ti .login-box-ti-bot a{font-size:14px; color:#666;}
 
