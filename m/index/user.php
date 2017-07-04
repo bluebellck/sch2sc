@@ -172,7 +172,7 @@ if ($ac == 'index') {
 elseif (is_user_login() && $ac == 'logout') {
 	session_unset();
 	session_destroy();
-	showmsg($ac_arr[$ac] . ('成功'), "index.php?mod=login");
+	showmsg($ac_arr[$ac] . ('成功'), "index.php?m=login");
 } 
 // 修改密码
 elseif ($ac == 'uppwd') {
