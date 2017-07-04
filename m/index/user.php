@@ -528,6 +528,7 @@ elseif ($ac == 'addpicture') {
 		$data['p_id'] = $carid;
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		var_dump($data);
+		echo $carid;
 		html_cars($carid);
 		//showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
 	} 
