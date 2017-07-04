@@ -266,7 +266,7 @@ elseif ($ac == 'carlist') {
 	$tpl -> assign('button_select', $button_select);
 	$tpl -> assign('carslist', $list);
 	$tpl -> assign('currpage', $pageid);
-	$tpl -> display('default/' . $settings['templates'] . '/user.html');
+	$tpl -> display('default/' . $settings['templates'] . '/user_carlist.html');
 	exit;
 } 
 // 添加或修改车源
