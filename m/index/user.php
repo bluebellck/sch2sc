@@ -548,6 +548,7 @@ elseif ($ac == 'addpicture') {
 				}	
 			}
 		} 
+		var_dump($data);
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
 		exit;
