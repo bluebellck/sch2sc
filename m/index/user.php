@@ -537,8 +537,7 @@ elseif ($ac == 'addpicture') {
 		$configure_list = array();
 		$data = array('p_mainpic'=>'','p_backpic'=>'','p_foresightpic'=>'','p_leftforepic'=>'','p_rightforepic'=>'','p_backsightpic'=>'','p_leftbackpic'=>'','p_rightbackpic'=>'','p_leftpic'=>'','p_sidepic'=>'','p_wheelpic'=>'','p_rightpic'=>'','p_driverlicpic'=>'','p_drivinglicpic'=>'');
 		if (!empty($carid)){
-			$r = $db -> row_select_one('cars', "p_id=".$carid);		var_dump($r);
-
+			$r = $db -> row_select_one('cars', "p_id=".$carid);
 			$arr = explode('|',$r['p_pics']);
 			$count = count($arr);
 			$i = 0;
@@ -549,7 +548,7 @@ elseif ($ac == 'addpicture') {
 				}	
 			}
 		} 
-		var_dump($data);
+
 		$tpl -> assign('cars', $data);
 		$tpl -> display('m/add_carpicture.html');
 		exit;
