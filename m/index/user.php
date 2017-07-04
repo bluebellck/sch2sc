@@ -244,7 +244,7 @@ elseif ($ac == 'addlogo') {
 	} 
 } 
 // 车源列表
-elseif ($ac == 'carlist') {
+elseif ($ac == 'carlist') {echo 111;
 	$where = 'uid=' . $_SESSION['USER_ID'];
 	if(!empty($_GET['keywords'])) {
 		$keywords = $_GET['keywords'];
