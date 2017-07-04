@@ -250,6 +250,7 @@ elseif ($ac == 'carlist') {
 		$keywords = $_GET['keywords'];
 		$where .= " and (name like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
 	}
+	echo 111;
 	include('../'.INC_DIR . 'Page.class.php');
 	exit;
 } 
