@@ -11,7 +11,7 @@
 
 include('common.inc.php');echo 222;
 include(INC_DIR.'permission.func.php');echo 333;
-include(INC_DIR . 'html.func.php');
+include(INC_DIR . 'html.func.php');echo 444;
 include ('index/page.php');
 
 
