@@ -537,8 +537,8 @@ elseif ($ac == 'addpicture') {
 		$configure_list = array();
 		$data = array('p_mainpic'=>'','p_backpic'=>'','p_foresightpic'=>'','p_leftforepic'=>'','p_rightforepic'=>'','p_backsightpic'=>'','p_leftbackpic'=>'','p_rightbackpic'=>'','p_leftpic'=>'','p_sidepic'=>'','p_wheelpic'=>'','p_rightpic'=>'','p_driverlicpic'=>'','p_drivinglicpic'=>'');
 		if (!empty($carid)){echo 444;
-			$r = $db -> row_select_one('cars', "p_id=".$carid);
-			$arr = explode('|',$r['p_pics']);
+			$r = $db -> row_select_one('cars', "p_id=".$carid);var_dump($r);
+			$arr = explode('|',$r['p_pics']);var_dump($arr);
 			$count = count($arr);
 			$i = 0;
 			foreach($data as $key => $value){
