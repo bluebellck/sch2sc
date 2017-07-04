@@ -250,7 +250,7 @@ elseif ($ac == 'carlist') {
 		$keywords = $_GET['keywords'];
 		$where .= " and (name like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
 	}
-	include(INC_DIR . 'Page.class.php');
+	include('../'.INC_DIR . 'Page.class.php');
 	$Page = new Page($db -> tb_prefix . 'cars', $where, '*', '50', 'issell asc,listtime desc');
 	$list = $Page -> get_data();
 	foreach($list as $key => $value) {
