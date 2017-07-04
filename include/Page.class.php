@@ -8,7 +8,6 @@
  网址：http://www.simcms.net
  simcms.net保留全部权力，受相关法律和国际公约保护，请勿非法修改、转载、散播，或用于其他赢利行为，并请勿删除版权声明。
 */
-echo 333;
 class Page {
 	// 总记录条数
 	var $total_num; 
