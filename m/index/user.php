@@ -335,16 +335,6 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$post['isshow'] = 0;
 		} 
 
-		if (isset($_POST['p_pics'])) {
-			$post['p_pics'] = implode("|", $_POST['p_pics']);
-			if (isset($_POST['p_mainpic'])) {
-				$post['p_mainpic'] = $_POST['p_mainpic'];
-			} else {
-				$post['p_mainpic'] = $_POST['p_pics'][0];
-			} 
-		} else {
-			$post['p_pics'] = "";
-		} 
 
 		$post['uid'] = $_SESSION['USER_ID'];
 		$paralist = $db -> row_select('selfdefine', "isshow=1",' id,type_name,type_value,c_name',0,'orderid');
@@ -515,7 +505,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 // 添加图片
 elseif ($ac == 'addpicture') {
 	// 添加或修改
-	if (submitcheck('sure')) {echo 111;
+	if (submitcheck('sure')) {
 		$arr_not_empty = array();
 		can_not_be_empty($arr_not_empty, $_POST);
 		$post = post('p_mainpic','p_backpic','p_foresightpic','p_leftforepic','p_rightforepic','p_backsightpic','p_leftbackpic','p_rightbackpic','p_leftpic','p_sidepic','p_wheelpic','p_rightpic','p_driverlicpic','p_drivinglicpic');
@@ -535,8 +525,8 @@ elseif ($ac == 'addpicture') {
 	else {
 		$configure_list = array();
 		$data = array('p_mainpic'=>'','p_backpic'=>'','p_foresightpic'=>'','p_leftforepic'=>'','p_rightforepic'=>'','p_backsightpic'=>'','p_leftbackpic'=>'','p_rightbackpic'=>'','p_leftpic'=>'','p_sidepic'=>'','p_wheelpic'=>'','p_rightpic'=>'','p_driverlicpic'=>'','p_drivinglicpic'=>'');
-		if (!empty($carid)){echo $carid;             
-			$r = $db -> row_select_one('cars', "p_id=".$carid);var_dump($r);
+		if (!empty($carid)){            
+			$r = $db -> row_select_one('cars', "p_id=".$carid);
 			$arr = explode('|',$r['p_pics']);
 			$count = count($arr);
 			$i = 0;
