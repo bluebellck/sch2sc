@@ -402,6 +402,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 				}
 			}			
 			html_cars(intval($_POST['id']));
+			header("location:index.php?m=user&a=addpicture&carid=".$_POST['id']);
+
 		} 
 		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'), "index.php?m=user&a=carlist");
 	} 
