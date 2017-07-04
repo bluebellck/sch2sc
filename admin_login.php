@@ -9,9 +9,9 @@
  simcms.net保留全部权力，受相关法律和国际公约保护，请勿非法修改、转载、散播，或用于其他赢利行为，并请勿删除版权声明。
 */
 
-include('common.inc.php');echo 222;
-include(INC_DIR.'permission.func.php');echo 333;
-include(INC_DIR . 'html.func.php');echo 444;
+include('common.inc.php');
+include(INC_DIR.'permission.func.php');
+//include(INC_DIR . 'html.func.php');
 include ('index/page.php');
 
 
