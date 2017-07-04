@@ -220,4 +220,5 @@ class Page {
 		return $str;
 	} 
 } 
+echo 444;
 ?>
