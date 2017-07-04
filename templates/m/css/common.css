@@ -38,3 +38,9 @@ a:focus/*取消链接的虚线*/{outline:none;-moz-outline:none;}
 .folist a{color:#666;}
 
 .hide{display:none;}
+
+/*分页*/
+.page_list{height:35px;line-height:35px;padding:5px 10px;text-align:right;background:#f9f9f9;}
+.page_list span,.page_list a{margin-right:5px;padding:3px 5px;border:1px solid #d5dfe8;background:#fff;}
+.page_list a.selected{background:#ee7700;color:#fff;border:1px solid #ee7700;}
+
