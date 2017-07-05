@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 16:48:56
+<?php /* Smarty version 2.6.18, created on 2017-07-04 14:37:34
          compiled from m/user.html */ ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@
 <body style="background:#f5f5f5;">
 		<div class="topbox uk-grid uk-grid-collapse">
 			<div class="uk-width-1-10 uk-text-center left">
-				<a href="/mobile.php"><i class="uk-icon-chevron-left"></i></a>
+				<a href="index.php"><i class="uk-icon-chevron-left"></i></a>
 			</div>
 			<div class="uk-width-8-10 uk-text-center center">
 				<span>商家中心</span>
@@ -54,7 +54,7 @@
 		</div>
 		
 		<a href="<?php echo $this->_tpl_vars['weburl']; ?>
-/mdealer.php?m=user&a=logout" class="business-button uk-button">退出登录</a>
+/index.php?m=user&a=logout" class="business-button uk-button">退出登录</a>
 	
 		<?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "mobile/".($this->_tpl_vars['setting']['templates'])."/common/bottombar.html", 'smarty_include_vars' => array()));

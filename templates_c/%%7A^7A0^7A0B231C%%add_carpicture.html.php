@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-03 14:34:54
+<?php /* Smarty version 2.6.18, created on 2017-07-04 14:11:22
          compiled from m/add_carpicture.html */ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -49,7 +49,7 @@
 					</span>
 					<span class="loading"></span>
 					<p class="upload_text">
-						主图
+						
 						<img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_mainpic'] <> ''): ?>style="display:block;"<?php endif; ?>>
 					</p>
@@ -67,59 +67,59 @@
 					</span>
 					<span class="loading"></span>
 					<p class="upload_text">
-						正面照
+						
 						<img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_backpic'] <> ''): ?>style="display:block;"<?php endif; ?>>
 					</p>
 				</li>
 				<li class="pic03"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_foresightpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_foresightpic']; ?>
 ' alt="侧面正照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_foresightpic' value='<?php echo $this->_tpl_vars['cars']['p_foresightpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">侧面正照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_foresightpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic04"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_leftforepic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_leftforepic']; ?>
 ' alt="尾部正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_leftforepic' value='<?php echo $this->_tpl_vars['cars']['p_leftforepic']; ?>
-'></span><span class="loading"></span><p class="upload_text">尾部正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_leftforepic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic05"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_rightforepic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_rightforepic']; ?>
 ' alt="驾驶室正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_rightforepic' value='<?php echo $this->_tpl_vars['cars']['p_rightforepic']; ?>
-'></span><span class="loading"></span><p class="upload_text">驾驶室正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_rightforepic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic06"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_backsightpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_backsightpic']; ?>
 ' alt="后排座正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_backsightpic' value='<?php echo $this->_tpl_vars['cars']['p_backsightpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">后排座正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_backsightpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic07"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_leftbackpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_leftbackpic']; ?>
 ' alt="仪表台正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_leftbackpic' value='<?php echo $this->_tpl_vars['cars']['p_leftbackpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">仪表台正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_leftbackpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic08"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_rightbackpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_rightbackpic']; ?>
 ' alt="仪表正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_rightbackpic' value='<?php echo $this->_tpl_vars['cars']['p_rightbackpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">仪表正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_rightbackpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic09"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_leftpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_leftpic']; ?>
 ' alt="发动机舱正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_leftpic' value='<?php echo $this->_tpl_vars['cars']['p_leftpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">发动机舱正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_leftpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic10"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_sidepic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_sidepic']; ?>
 ' alt="铭牌正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_sidepic' value='<?php echo $this->_tpl_vars['cars']['p_sidepic']; ?>
-'></span><span class="loading"></span><p class="upload_text">铭牌正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_sidepic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
-				<li class="pic11"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_wheelpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_wheelpic']; ?>
+				<!--<li class="pic11"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_wheelpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_wheelpic']; ?>
 ' alt="后备箱正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_wheelpic' value='<?php echo $this->_tpl_vars['cars']['p_wheelpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">后备箱正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_wheelpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic12"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_rightpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_rightpic']; ?>
 ' alt="备胎正面照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_rightpic' value='<?php echo $this->_tpl_vars['cars']['p_rightpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">备胎正面照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_rightpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic12"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_driverlicpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_driverlicpic']; ?>
 ' alt="驾驶证照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_driverlicpic' value='<?php echo $this->_tpl_vars['cars']['p_driverlicpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">驾驶证照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_driverlicpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
 				<li class="pic12"><span class="add">+</span><input type="file" multiple="multiple" class="inputfile"/><span class="pic"><?php if ($this->_tpl_vars['cars']['p_drivinglicpic'] <> ''): ?><img src='<?php echo $this->_tpl_vars['cars']['p_drivinglicpic']; ?>
 ' alt="行驶证照" width='90' height='60'/><?php endif; ?><input type='hidden' name='p_drivinglicpic' value='<?php echo $this->_tpl_vars['cars']['p_drivinglicpic']; ?>
-'></span><span class="loading"></span><p class="upload_text">行驶证照<img src="<?php echo $this->_tpl_vars['weburl']; ?>
-/static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_drivinglicpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>
+'></span><span class="loading"></span><p class="upload_text"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/img/delete.png" width="22" height="22" class="del_img" <?php if ($this->_tpl_vars['cars']['p_drivinglicpic'] <> ''): ?>style="display:block;"<?php endif; ?>></p></li>-->
 			</ul>
 		</div>
 		<div class="upload_button">
@@ -130,6 +130,7 @@
 ">
 			<input type="hidden" name="page" value="<?php echo $this->_tpl_vars['page_g']; ?>
 ">
+			<input type="hidden" name="sure" value="1">
 		</div>
 		</form>
 	</div>
@@ -175,16 +176,15 @@ $(document).ready(function() {
 		var t = $(this);
 		var src = t.parent().siblings(".pic").children("input").val();
 		var cid = $("input[name=carid]").val();
-		var loc = t.parent().siblings(".pic").children("input").attr('name');alert(222);
+		var loc = t.parent().siblings(".pic").children("input").attr('name');
 		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){alert(33);
+/index.php?m=ajax&ajax=1",{addpicture:src,cid:cid,loc:loc},function(data){
 			if(data){
 				t.parent().siblings(".pic").children("img").remove();
 				t.parent().siblings(".pic").children("input").val('');
 				t.hide();
-				alert(addpicture+'|112'+cid+'|'+loc);
 			}else{
-				alert(addpicture+'|'+cid+'|'+loc);
+				alert('图片删除失败，请刷新重试');
 			}
 		})
 	})

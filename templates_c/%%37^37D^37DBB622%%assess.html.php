@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 17:38:55
+<?php /* Smarty version 2.6.18, created on 2017-07-04 17:24:29
          compiled from default/default/assess.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,11 +15,38 @@
 /templates/default/<?php echo $this->_tpl_vars['setting']['templates']; ?>
 /css/page.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
-/templates/default/<?php echo $this->_tpl_vars['setting']['templates']; ?>
-/js/jquery-1.7.1.js"></script>
+/static/js/jquery-1.7.1.js"></script>
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/js/Validform_v5.3.2_min.js"></script>
-
+<script type="text/javascript">
+$(document).ready(function() {
+    //品牌选择
+	$("#brand").change(function(){
+		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=ajax&ajax=1", { 
+			brandid :  $("#brand").val() 
+		}, function (data, textStatus){
+               $("#subbrand").html(data); // 把返回的数据添加到页面上
+			}
+		);
+	});
+	//品牌选择
+	$("#subbrand").change(function(){
+		$.get("<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=ajax&ajax=1", { 
+			subbrandid :  $("#subbrand").val() 
+		}, function (data, textStatus){
+               $("#subsubbrand").html(data); // 把返回的数据添加到页面上
+			}
+		);
+	});
+	
+	//表单验证
+	$(".carform").Validform({
+		tiptype:2
+	});
+});
+</script>
 </head>
 <body>
 <!--内容--> 
@@ -36,20 +63,26 @@ unset($_smarty_tpl_vars);
 					<table cellspacing="0" cellpadding="0" width="100%"  class="sell_table">
 						<tr>
 							<th> 品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</th>
-							<td colspan="3">
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆品牌！"/>
+							<td colspan="3"><select name="p_brand" id="brand" datatype="n" nullmsg="请选择品牌！" class="select01">
+									<?php echo $this->_tpl_vars['selectbrand']; ?>
+
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<th> 颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色：</th>
+							<th> 车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系：</th>
 							<td>
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆颜色！"/>
+								<select id="subbrand" name="p_subbrand" datatype="n" nullmsg="请选择车系！" class="select01">
+									<option value="" selected>请选择车系</option>                       
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<th> 排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</th>
+							<th> 车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</th>
 							<td>
-								<input name="p_contact_tel" type="text" size="30" class="inp01" value="" datatype="m" nullmsg="请填车辆排量！"/>
+								<select id="subsubbrand" name="p_subsubbrand" datatype="n" nullmsg="请选择款式！" class="select01">
+								<option value="" selected>请选择款式</option>
+							</select>
 							</td>
 						</tr>
 						<tr>

@@ -92,7 +92,7 @@ a:hover{color:#f60;}
 .carlist_right p{padding:0;}
 
 /*车源详细*/
-.carname{height:45px;line-height:45px;padding:0 10px;font-size:16px;color:#fff;background:#666;}
+.carname{height:auto;line-height:20px;padding:0 10px;font-size:16px;color:#fff;background:#666;}
 .carspicbox{background:#ccc;padding:10px;}
 .carspic li{float:left;padding:5px;width:290px;height:230px;}
 .carspic li img{width:290px;}
