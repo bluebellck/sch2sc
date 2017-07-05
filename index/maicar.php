@@ -46,31 +46,14 @@ if (submitcheck('action'))
 
 	$post['p_addtime'] = TIMESTAMP;
 
-    $db->row_insert('maicar',$post);
+    $rs = $db->row_insert('maicar',$post);
 
-	$lastprice = rapidasscars($post['p_subsubbrand'],$post['p_kilometre'],$post['p_year'],$post['p_month']);
-	$tpl -> assign('post', $post);
-	$tpl -> assign('lastprice', $lastprice);
 
-	$tpl -> display('default/' . $settings['templates'] . '/assessresult.html');
+	showmsg('您的信息已成功提交！', "index.php?m=maicar");
 }
 else{
 	$tpl -> assign('menustate', 3);
 
-	//最新评估列表
-	$assesslist = $db->row_select('assesscars','p_price!=0');
-	foreach($assesslist as $key => $value){
-		$assesslist[$key]['p_assesstime'] = date('Y-m-d H:i:s', $value['p_assesstime']);
-		if($settings['version']==3){
-			if($value['aid']!=0){
-				$assesslist[$key]['province']=$commoncache['provincelist'][$value['aid']];
-			}
-			if($value['cid']!=0){
-				$assesslist[$key]['city']=$commoncache['citylist'][$value['cid']];
-			}
-		}
-	}
-	$tpl -> assign('assesslist', $assesslist);
 	$tpl -> display('default/' . $settings['templates'] . '/maicar.html');
 }
 ?>
