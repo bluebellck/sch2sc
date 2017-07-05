@@ -80,7 +80,7 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .listcar .check02{float:left;display:block;width:17px;height:16px;background:url(../img/check.jpg) no-repeat -17px 0;display:inline;margin-left:5px;}
 .listcar .check03{float:left;display:block;width:17px;height:16px;background:url(../img/check.jpg) no-repeat -34px 0;display:inline;margin-left:5px;}
 .listcar .check04{float:left;display:block;width:56px;height:16px;background:url(../img/check.jpg) no-repeat -51px 0;display:inline;margin-left:5px;}
-.listcar .price{float:left;color: #d00;font-family: Tahoma;}
+.listcar .price{float:left;color: #d00;font-family: Microsoft YaHei;}
 .soldout .price{float:left;color: #a3a3a3;}
 
 /*车源详情*/

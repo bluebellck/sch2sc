@@ -133,7 +133,7 @@ background-position: -180px -910px;
 .psoldout  img{-moz-opacity: .3!important;opacity: .3!important;}
 .bigcarlist li p.carname{height:50px;line-height:25px;font-size:14px;}
 .bigcarlist li .psoldout p a,.bigcarlist li .psoldout p .price{color:#a3a3a3;}
-.bigcarlist li .price{color:#d00;font-weight:bold;font-size:30px;font-family: Tahoma;}
+.bigcarlist li .price{color:#d00;font-weight:bold;font-size:24px;font-family: Microsoft YaHei; margin-right: 5px;}
 .bigcarlist .check01{float:left;display:block;width:17px;height:16px;background:url(../img/check.jpg) no-repeat;display:inline;margin-left:5px;}
 .bigcarlist .check02{float:left;display:block;width:17px;height:16px;background:url(../img/check.jpg) no-repeat -17px 0;display:inline;margin-left:5px;}
 .bigcarlist .check03{float:left;display:block;width:17px;height:16px;background:url(../img/check.jpg) no-repeat -34px 0;display:inline;margin-left:5px;}
@@ -243,7 +243,7 @@ background-position: -180px -910px;
 .Validform_wrong{color:red;padding-left:20px;white-space:nowrap;background:url(../img/form/error.png) no-repeat left center;}
 .Validform_loading{padding-left:20px;background:url(../img/form/onLoad.gif) no-repeat left center;}
 .Validform_error{background-color:#ffe7e7;}
-#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg{color:#7d8289; font: 12px/1.5 Microsoft YaHei, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
 #Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
 #Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
 #Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
