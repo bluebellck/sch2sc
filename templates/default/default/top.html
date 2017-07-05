@@ -8,7 +8,12 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 <div class="top">
 	<div class="top_main clearfix">
 		<div class="top_left">
-			欢迎来到<{$setting.sitename}>！<a href="<{$weburl}>/index.php?m=login">登录</a>
+			欢迎来到<{$setting.sitename}>！
+			<{if $islogin == 1}>
+				<a href="<{$weburl}>/index.php?m=login">个人中心</a>
+			<{else}>
+				<a href="<{$weburl}>/index.php?m=login">登录</a>
+			<{/if}>
 		</div>
 		<div class="top_right">
 			<a href="<{$weburl}>/m/">手机端</a>&nbsp;&nbsp;|&nbsp;&nbsp;客服热线：<span class="orange01 fb"><{$setting.tel}></span>

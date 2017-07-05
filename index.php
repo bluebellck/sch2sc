@@ -2,8 +2,10 @@
 include('common.inc.php');
 include('index/page.php');
 
-//if($_SESSION[])
-var_dump($_SESSION);
+if($_SESSION['USER_ID']) {
+	$tpl -> assign('islogin', 1);
+}
+
 $m = isset($_GET['m']) && trim($_GET['m']) ? trim($_GET['m']) : 'index';
 
 if(isMobile()){
