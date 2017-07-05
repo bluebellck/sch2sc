@@ -451,7 +451,9 @@ $(function() {
 		$("div.indexnews_box > div").eq(index).show().siblings().hide();
 	});
 	$(".alphet").click(function(){
-		var al = $(this).attr("data");alert(al);
+		var al = $(this).attr("data");
+		$(".alphet").removeClass('here');
+		$(this).addClass('here');
 		$(".markbox").hide();
 		$("."+al).show();
 	})
@@ -469,7 +471,7 @@ $(function() {
     <div class="p10">
       <div class="marklist">
         <ul class="clearfix">
-          <{foreach from=$hotkeywordlist key=skey item=hotkeyword}> <li class="alphet" data="<{$skey}>" <{if $skey=='A'}>class="here"<{/if}>><{$skey}>
+          <{foreach from=$hotkeywordlist key=skey item=hotkeyword}> <li data="<{$skey}>" <{if $skey=='A'}>class="alphet here"<{else}>class="alphet"<{/if}>><{$skey}>
           </li>
           <{/foreach}>
         </ul>
