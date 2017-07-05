@@ -452,6 +452,8 @@ $(function() {
 	});
 	$(".alphet").click(function(){
 		var al = $(this).attr("data");alert(al);
+		$(".markbox").hide();
+		$("."+al).show();
 	})
 });
 </script>
