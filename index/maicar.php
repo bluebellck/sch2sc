@@ -46,7 +46,7 @@ if (submitcheck('action'))
 
 	$post['p_addtime'] = TIMESTAMP;
 
-    $db->row_insert('assesscars',$post);
+    $db->row_insert('maicar',$post);
 
 	$lastprice = rapidasscars($post['p_subsubbrand'],$post['p_kilometre'],$post['p_year'],$post['p_month']);
 	$tpl -> assign('post', $post);
