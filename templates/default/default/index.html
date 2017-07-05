@@ -450,6 +450,9 @@ $(function() {
 		var index = $news_li.index(this);
 		$("div.indexnews_box > div").eq(index).show().siblings().hide();
 	});
+	$(".alphet").click(function(){
+		var al = $(this).attr("data");alert(al);
+	})
 });
 </script>
 
@@ -464,13 +467,13 @@ $(function() {
     <div class="p10">
       <div class="marklist">
         <ul class="clearfix">
-          <{foreach from=$hotkeywordlist key=skey item=hotkeyword}> <li <{if $skey=='A'}>class="here"<{/if}>><{$skey}>
+          <{foreach from=$hotkeywordlist key=skey item=hotkeyword}> <li class="alphet" data="<{$skey}>" <{if $skey=='A'}>class="here"<{/if}>><{$skey}>
           </li>
           <{/foreach}>
         </ul>
       </div>
       <div class="marklistbox"> <{foreach from=$hotkeywordlist key=skey item=hotkeyword}>
-        <div class="markbox <{if $skey<>'A'}>hide<{/if}>"> <{foreach from=$hotkeyword key=skey item=hotkey}> <a href="<{$weburl}>/index.php?m=search&k=<{$hotkey.keyword}>"><{$hotkey.keywords}></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <div class="markbox <{if $skey<>'A'}>hide <{$skey}><{/if}>"> <{foreach from=$hotkeyword key=skey item=hotkey}> <a href="<{$weburl}>/index.php?m=search&k=<{$hotkey.keyword}>"><{$hotkey.keywords}></a>&nbsp;&nbsp;|&nbsp;&nbsp;
           <{/foreach}> </div>
         <{/foreach}> </div>
     </div>
