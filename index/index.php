@@ -88,7 +88,7 @@ $tpl -> assign('noticelist', $notice);
 $tpl -> assign('link_list', get_flink()); 
 
 // 热门关键词
-$tpl -> assign('hotkeywordlist', get_bottomkeywords());
+$tpl -> assign('hotkeywordlist', get_bottomkeywords());var_dump(get_bottomkeywords());
 
 $tpl -> display('default/' . $settings['templates'] . '/index.html');
 ?>
