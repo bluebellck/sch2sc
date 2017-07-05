@@ -475,7 +475,7 @@ $(function() {
         </ul>
       </div>
       <div class="marklistbox"> <{foreach from=$hotkeywordlist key=skey item=hotkeyword}>
-        <div class="markbox <{if $skey<>'A'}>hide <{$skey}><{/if}>"> <{foreach from=$hotkeyword key=skey item=hotkey}> <a href="<{$weburl}>/index.php?m=search&k=<{$hotkey.keyword}>"><{$hotkey.keywords}></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <div class="markbox <{$skey}> <{if $skey<>'A'}>hide <{$skey}><{/if}>"> <{foreach from=$hotkeyword key=skey item=hotkey}> <a href="<{$weburl}>/index.php?m=search&k=<{$hotkey.keyword}>"><{$hotkey.keywords}></a>&nbsp;&nbsp;|&nbsp;&nbsp;
           <{/foreach}> </div>
         <{/foreach}> </div>
     </div>
