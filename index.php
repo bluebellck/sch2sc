@@ -2,6 +2,8 @@
 include('common.inc.php');
 include('index/page.php');
 
+//if($_SESSION[])
+var_dump($_SESSION);
 $m = isset($_GET['m']) && trim($_GET['m']) ? trim($_GET['m']) : 'index';
 
 if(isMobile()){
