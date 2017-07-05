@@ -376,3 +376,7 @@ background: #fff1e1;
 .poptable td input,.poptable td textarea{padding:5px 10px;border:1px solid #d8d8d8;font-size:12px;font-family:"微软雅黑";color:#666;}
 
 
+
+
+.sch-lcbox{width: 100%; background: #2b2b2b; height: 100px;}
+.sch-lcbox .sch-lc{width: 1200px; margin: 0 auto; background: url(../img/sch-lc.jpg) no-repeat; height: 100px;}

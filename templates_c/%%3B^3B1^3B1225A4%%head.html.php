@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:12:45
+<?php /* Smarty version 2.6.18, created on 2017-07-05 16:23:23
          compiled from default/default/head.html */ ?>
 
 
@@ -52,4 +52,5 @@ unset($_smarty_tpl_vars);
 		<?php endforeach; endif; unset($_from); ?>
 	</ul>
 </div>
+
 <!--头部end -->

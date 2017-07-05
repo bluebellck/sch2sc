@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:34:31
+<?php /* Smarty version 2.6.18, created on 2017-07-05 16:24:28
          compiled from default/default/index.html */ ?>
 <!DOCTYPE>
 <html>
@@ -191,7 +191,14 @@ unset($_smarty_tpl_vars);
  ?>
 </div>
 
+
+
+
+
+
+
 <div class="fullSlide">
+	
     <div class="leftsearch">
       <div class="leftsearch_tab">
         <ul class="clearfix">
@@ -384,6 +391,13 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
 });
 </script>
 <?php if ($this->_tpl_vars['setting']['version'] == 2 || $this->_tpl_vars['setting']['version'] == 3): ?>
+	
+	
+<div class="sch-lcbox">
+	<div class="sch-lc"></div>
+</div>	
+	
+	
 <div class="main mt20 clearfix" id="hot_brands">
   <div class="tab_title">
     <ul class="clearfix">
