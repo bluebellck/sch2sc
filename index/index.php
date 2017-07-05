@@ -43,7 +43,7 @@ $carlist['todaycar'] = get_todaycar($_COOKIE['city']);
 if($settings['version']==2 or $settings['version']==3){
 
 	//商家推荐二手车
-	$carlist['sjcar'] = get_carlist($_COOKIE['city'],"isrecom=1 and issell=0 and isshow=1 and uid in( select id from " . $db_config['TB_PREFIX'] . "member where isdealer=2)", '8', 'listtime desc');
+	$carlist['sjcar'] = get_carlist($_COOKIE['city'],"isrecom=1 and issell=0 and isshow=1 and uid in( select id from " . $db_config['TB_PREFIX'] . "member where isdealer=2)", '10', 'listtime desc');
 
 	//个人推荐二手车
 	$carlist['grcar'] = get_carlist($_COOKIE['city'],"isrecom=1 and issell=0  and isshow=1 and (uid in( select id from " . $db_config['TB_PREFIX'] . "member where isdealer=1) or uid=0)", '8', 'listtime desc');
