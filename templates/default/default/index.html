@@ -457,18 +457,11 @@ $(function() {
 
 <div class="main mt15 clearfix">
   <ul class="indexnews_tab clearfix">
-    <li>友情链接</li>
     <li class="here">热门车系</li>
+    <li>友情链接</li>
   </ul>
   <div class="indexnews_box">
     <div class="p10">
-      <ul class="link_list clearfix">
-        <{foreach from=$link_list item=linklist}>
-        <li><a href="<{$linklist.l_url}>" target="_blank"><{$linklist.l_name}></a></li>
-        <{/foreach}>
-      </ul>
-    </div>
-    <div class="hide p10">
       <div class="marklist">
         <ul class="clearfix">
           <{foreach from=$hotkeywordlist key=skey item=hotkeyword}> <li <{if $skey=='A'}>class="here"<{/if}>><{$skey}>
@@ -480,6 +473,13 @@ $(function() {
         <div class="markbox <{if $skey<>'A'}>hide<{/if}>"> <{foreach from=$hotkeyword key=skey item=hotkey}> <a href="<{$weburl}>/index.php?m=search&k=<{$hotkey.keyword}>"><{$hotkey.keywords}></a>&nbsp;&nbsp;|&nbsp;&nbsp;
           <{/foreach}> </div>
         <{/foreach}> </div>
+    </div>
+    <div class="hide p10">
+      <ul class="link_list clearfix">
+        <{foreach from=$link_list item=linklist}>
+        <li><a href="<{$linklist.l_url}>" target="_blank"><{$linklist.l_name}></a></li>
+        <{/foreach}>
+      </ul>
     </div>
   </div>
 </div>
