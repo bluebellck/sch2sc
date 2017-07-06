@@ -121,7 +121,7 @@
 					<{if $cars_list.issell==1}>
 					<div class="listcar clearfix soldout">
 						<div class="img">
-							<a href="<{$cars_list.p_url}>" target="_blank" title="<{$cars_list.p_allname}>"><{if $cars_list.p_mainpic<>""}><img src="<{$weburl}><{$cars_list.p_mainpic}>" alt="<{$cars_list.p_allname}>"/><{else}><img src="<{$weburl}>/static/img/car.jpg"/><{/if}></a>
+							<a href="<{$cars_list.p_url}>" target="_blank" title="<{$cars_list.p_allname}>"><{if $cars_list.p_mainpic<>""}><img src="<{$weburl}><{$cars_list.p_mainpic}>" alt="<{$cars_list.p_allname}>" width="200" height="160"/><{else}><img src="<{$weburl}>/static/img/car.jpg" width="200" height="160"/><{/if}></a>
 						</div>
 						<div class="word">
 							<p class="clearfix"><span class="carname fl"><a href="<{$cars_list.p_url}>" target="_blank"><{$cars_list.p_allname}></a></span>&nbsp;    <span class="fl pt5"><{if $cars_list.isdealer==2}><span class="check01" title="商家车源"></span><{/if}> <{if $cars_list.isdealer==1}><span class="check02" title="个人车源"></span><{/if}> <{if $cars_list.uid==-1}><span class="check05" title="本站发布"></span><{/if}><{if $cars_list.isnew_old==1}><span class="check04" title="新车旧卖"></span><{/if}><{if $cars_list.isshow==1}><span class="check03" title="审核通过"></span><{else}><span title="待审核">待审核</span><{/if}></span></p>
