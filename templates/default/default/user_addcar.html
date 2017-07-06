@@ -82,12 +82,9 @@ $(function(){
 			<tr>
 				<th>推荐位：</th>
 				<td>
-					<input name="isrecom" value="1" checked="" type="checkbox">
-					推荐 (首页)  
-					<input name="issprecom" value="1" checked="" type="checkbox">
-					特荐   
-					<input name="ishot" value="1" checked="" type="checkbox">
-					热门
+					<input type="checkbox" name="isrecom" value="1" <{if $cars.isrecom==1}>checked<{/if}>> 推荐(首页)   &nbsp;&nbsp;
+					<input type="checkbox" name="issprecom" value="1" <{if $cars.issprecom==1}>checked<{/if}>> 特荐 &nbsp;&nbsp; 
+					<input type="checkbox" name="ishot" value="1" <{if $cars.ishot==1}>checked<{/if}>> 热门 
 				</td>
 			</tr>    
     <{if $setting.version==3}>
