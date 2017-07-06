@@ -79,6 +79,17 @@ $(function(){
 </script>
 <form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">
     <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+			<tr>
+				<th>所在城市：</th>
+				<td>
+					<input name="isrecom" value="1" checked="" type="checkbox">
+					推荐   
+					<input name="issprecom" value="1" checked="" type="checkbox">
+					特荐   
+					<input name="ishot" value="1" checked="" type="checkbox">
+					热门
+				</td>
+			</tr>    
     <{if $setting.version==3}>
 			<tr>
 				<th>所在城市：</th>
