@@ -51,8 +51,9 @@ if (submitcheck('action'))
 	$lastprice = rapidasscars($post['p_subsubbrand'],$post['p_kilometre'],$post['p_year'],$post['p_month']);
 	$tpl -> assign('post', $post);
 	$tpl -> assign('lastprice', $lastprice);
+	showmsg('您的信息已成功提交！', "index.php?m=maicar");
 
-	$tpl -> display('default/' . $settings['templates'] . '/assessresult.html');
+	//$tpl -> display('default/' . $settings['templates'] . '/assessresult.html');
 }
 else{
 	$tpl -> assign('menustate', 4);
