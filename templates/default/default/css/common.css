@@ -6,6 +6,7 @@ a{ color:#333; text-decoration:none;}
 a:hover{ color:#ff6600; text-decoration:none;} 
 .blank{height:10px;}
 .blank{ height:10px;}
+img{width: 100%; width: auto/9; height: auto;}
 
 body{font-weight:normal;font:12px "微软雅黑",verdana,lucida,helvetica,arial,sans-serif;}
 
@@ -34,7 +35,7 @@ body{font-weight:normal;font:12px "微软雅黑",verdana,lucida,helvetica,arial,
 .head{margin-left:auto;margin-right:auto;height:100px;width:1200px;position:relative;z-index:100;}
 .head .logo{float:left;width:300px;height:70px;font-size:30px;font-family:"微软雅黑";padding-top:18px;}
 .head .logo a{display:block;width:300px;height:80px;color:#333;line-height:80px;}
-.head .logo img{width:350px;height:70px;}
+.head .logo img{width:auto;height:auto;}
 .head .topcity{float:left;padding:40px 1px 0 1px;cursor:pointer;}
 .head .topcity .topcitybox{border:1px solid #e7e7e7;background:#f7f7f7;padding:5px;}
 .head .topcity .topcitybox i{background:url("../img/icons.__1408011138__.png") no-repeat scroll -20px -19px;float: left;height:18px;width:18px;}

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 17:38:51
+<?php /* Smarty version 2.6.18, created on 2017-07-06 09:13:27
          compiled from default/default/carlist.html */ ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -227,8 +227,8 @@ unset($_smarty_tpl_vars);
 "><?php if ($this->_tpl_vars['cars_list']['p_mainpic'] <> ""): ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 <?php echo $this->_tpl_vars['cars_list']['p_mainpic']; ?>
 " alt="<?php echo $this->_tpl_vars['cars_list']['p_allname']; ?>
-"/><?php else: ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-/static/img/car.jpg"/><?php endif; ?></a>
+" width="180" height="144"/><?php else: ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/img/car.jpg" width="180" height="144"/><?php endif; ?></a>
 						</div>
 						<div class="word">
 							<p class="clearfix"><span class="carname fl"><a href="<?php echo $this->_tpl_vars['cars_list']['p_url']; ?>
@@ -265,8 +265,8 @@ unset($_smarty_tpl_vars);
 "><?php if ($this->_tpl_vars['cars_list']['p_mainpic'] <> ""): ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 <?php echo $this->_tpl_vars['cars_list']['p_mainpic']; ?>
 " alt="<?php echo $this->_tpl_vars['cars_list']['p_allname']; ?>
-"/><?php else: ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
-/static/img/car.jpg"/><?php endif; ?></a>
+" width="180" height="144"/><?php else: ?><img src="<?php echo $this->_tpl_vars['weburl']; ?>
+/static/img/car.jpg" width="180" height="144"/><?php endif; ?></a>
 						</div>
 						<div class="word">
 							<p class="clearfix"><span class="carname fl"><a href="<?php echo $this->_tpl_vars['cars_list']['p_url']; ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:12:45
+<?php /* Smarty version 2.6.18, created on 2017-07-06 09:33:02
          compiled from default/default/cars.html */ ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -239,20 +239,23 @@ unset($_smarty_tpl_vars);
             </div>
 			<div class="contactbox" id="tel">
 				<?php if ($this->_tpl_vars['cars']['uid'] == 0 || $this->_tpl_vars['cars']['uid'] == -1): ?>
-				<h3>免费咨询电话（8:30-17:00 周六日休息）</h3>
+				<h3>免费咨询电话</h3>
 				<div class="box">
-				    信息编号: <em><?php echo $this->_tpl_vars['cars']['p_no']; ?>
-</em><br/>
+				    <!--信息编号: <em><?php echo $this->_tpl_vars['cars']['p_no']; ?>
+</em><br/>-->
 					<span class="tel"><?php echo $this->_tpl_vars['setting']['tel']; ?>
 </span>
 				</div>
 				<?php else: ?>
-				<h3>免费咨询电话（8:30-17:00 周六日休息）</h3>
+				<h3>免费咨询电话</h3>
 				<div class="box">
-				    信息编号: <em><?php echo $this->_tpl_vars['cars']['p_no']; ?>
-</em><br/>
-					<p class="tel"><!--4000-400-400--><?php echo $this->_tpl_vars['shop']['mobilephone']; ?>
-<?php if ($this->_tpl_vars['shop']['isdealer'] == 2): ?>（商家车源）<?php endif; ?></p>
+				    <!--信息编号: <em><?php echo $this->_tpl_vars['cars']['p_no']; ?>
+</em><br/>-->
+					<p class="tel"><!--4000-400-400-->
+						<?php echo $this->_tpl_vars['shop']['mobilephone']; ?>
+
+						<!--<?php if ($this->_tpl_vars['shop']['isdealer'] == 2): ?>（商家车源）<?php endif; ?>-->
+					</p>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -377,7 +380,7 @@ unset($_smarty_tpl_vars);
 ?>
 				<p class="tc mt10"><img src="<?php echo $this->_tpl_vars['weburl']; ?>
 <?php echo $this->_tpl_vars['piclist']['pic']; ?>
-"></p>
+" class="carinfo_img"></p>
 				<?php endforeach; endif; unset($_from); ?>
 			</div>
 			<?php endif; ?>

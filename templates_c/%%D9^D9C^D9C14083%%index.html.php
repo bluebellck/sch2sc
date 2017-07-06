@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-05 16:24:28
+<?php /* Smarty version 2.6.18, created on 2017-07-05 17:29:38
          compiled from default/default/index.html */ ?>
 <!DOCTYPE>
 <html>
@@ -651,6 +651,13 @@ $(function() {
 		var index = $news_li.index(this);
 		$("div.indexnews_box > div").eq(index).show().siblings().hide();
 	});
+	$(".alphet").click(function(){
+		var al = $(this).attr("data");
+		$(".alphet").removeClass('here');
+		$(this).addClass('here');
+		$(".markbox").hide();
+		$("."+al).show();
+	})
 });
 </script>
 
@@ -658,11 +665,37 @@ $(function() {
 
 <div class="main mt15 clearfix">
   <ul class="indexnews_tab clearfix">
-    <li class="here">友情链接</li>
-    <li>热门车系</li>
+    <li class="here">热门车系</li>
+    <li>友情链接</li>
   </ul>
   <div class="indexnews_box">
     <div class="p10">
+      <div class="marklist">
+        <ul class="clearfix">
+          <?php $_from = $this->_tpl_vars['hotkeywordlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkeyword']):
+?> <li data="<?php echo $this->_tpl_vars['skey']; ?>
+" <?php if ($this->_tpl_vars['skey'] == 'A'): ?>class="alphet here"<?php else: ?>class="alphet"<?php endif; ?>><?php echo $this->_tpl_vars['skey']; ?>
+
+          </li>
+          <?php endforeach; endif; unset($_from); ?>
+        </ul>
+      </div>
+      <div class="marklistbox"> <?php $_from = $this->_tpl_vars['hotkeywordlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkeyword']):
+?>
+        <div class="markbox <?php echo $this->_tpl_vars['skey']; ?>
+ <?php if ($this->_tpl_vars['skey'] <> 'A'): ?>hide <?php echo $this->_tpl_vars['skey']; ?>
+<?php endif; ?>"> <?php $_from = $this->_tpl_vars['hotkeyword']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkey']):
+?> <a href="<?php echo $this->_tpl_vars['weburl']; ?>
+/index.php?m=search&k=<?php echo $this->_tpl_vars['hotkey']['keyword']; ?>
+"><?php echo $this->_tpl_vars['hotkey']['keywords']; ?>
+</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <?php endforeach; endif; unset($_from); ?> </div>
+        <?php endforeach; endif; unset($_from); ?> </div>
+    </div>
+    <div class="hide p10">
       <ul class="link_list clearfix">
         <?php $_from = $this->_tpl_vars['link_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['linklist']):
@@ -672,29 +705,6 @@ $(function() {
 </a></li>
         <?php endforeach; endif; unset($_from); ?>
       </ul>
-    </div>
-    <div class="hide p10">
-      <div class="marklist">
-        <ul class="clearfix">
-          <?php $_from = $this->_tpl_vars['hotkeywordlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkeyword']):
-?> <li <?php if ($this->_tpl_vars['skey'] == 'A'): ?>class="here"<?php endif; ?>><?php echo $this->_tpl_vars['skey']; ?>
-
-          </li>
-          <?php endforeach; endif; unset($_from); ?>
-        </ul>
-      </div>
-      <div class="marklistbox"> <?php $_from = $this->_tpl_vars['hotkeywordlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkeyword']):
-?>
-        <div class="markbox <?php if ($this->_tpl_vars['skey'] <> 'A'): ?>hide<?php endif; ?>"> <?php $_from = $this->_tpl_vars['hotkeyword']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['hotkey']):
-?> <a href="<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=search&k=<?php echo $this->_tpl_vars['hotkey']['keyword']; ?>
-"><?php echo $this->_tpl_vars['hotkey']['keywords']; ?>
-</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-          <?php endforeach; endif; unset($_from); ?> </div>
-        <?php endforeach; endif; unset($_from); ?> </div>
     </div>
   </div>
 </div>
