@@ -1,9 +1,4 @@
 <?php
-/**
- * 
- * @author littlemao <littlemao2007@126.com> 
- */
-
 if (!defined('APP_IN')) exit('Access Denied');
 // 当前模块
 $mod_name = '模版管理';

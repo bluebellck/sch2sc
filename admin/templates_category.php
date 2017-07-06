@@ -1,9 +1,4 @@
 <?php
-/**
- * @author littlemao <littlemao2007@126.com>
- * Sat Dec 18 00:22:32 CST 2010
- */
-
 if (!defined('APP_IN')) exit('Access Denied');
 
 //当前模块
