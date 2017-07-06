@@ -184,16 +184,19 @@
             </div>
 			<div class="contactbox" id="tel">
 				<{if $cars.uid==0 or $cars.uid==-1}>
-				<h3>免费咨询电话（8:30-17:00 周六日休息）</h3>
+				<h3>免费咨询电话</h3>
 				<div class="box">
-				    信息编号: <em><{$cars.p_no}></em><br/>
+				    <!--信息编号: <em><{$cars.p_no}></em><br/>-->
 					<span class="tel"><{$setting.tel}></span>
 				</div>
 				<{else}>
-				<h3>免费咨询电话（8:30-17:00 周六日休息）</h3>
+				<h3>免费咨询电话</h3>
 				<div class="box">
-				    信息编号: <em><{$cars.p_no}></em><br/>
-					<p class="tel"><!--4000-400-400--><{$shop.mobilephone}><{if $shop.isdealer==2}>（商家车源）<{/if}></p>
+				    <!--信息编号: <em><{$cars.p_no}></em><br/>-->
+					<p class="tel"><!--4000-400-400-->
+						<{$shop.mobilephone}>
+						<!--<{if $shop.isdealer==2}>（商家车源）<{/if}>-->
+					</p>
 				</div>
 				<{/if}>
 			</div>
