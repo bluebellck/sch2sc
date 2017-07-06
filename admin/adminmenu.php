@@ -30,8 +30,8 @@
 	<h3><span class="title">会员管理</span></h3>
 	<ul class="hide">
 		<li><a href="<?php echo WEB_PATH?>?m=member&a=list" target="report_iframe">会员管理</a></li>
-		<li><a href="<?php echo WEB_PATH?>?m=dealer_category&a=list" target="report_iframe">商家类型管理</a></li>
-		<li><a href="<?php echo WEB_PATH?>?m=member_dealer&a=list" target="report_iframe">销售代表管理</a></li>
+		<!--<li><a href="<?php echo WEB_PATH?>?m=dealer_category&a=list" target="report_iframe">商家类型管理</a></li>-->
+		<!--<li><a href="<?php echo WEB_PATH?>?m=member_dealer&a=list" target="report_iframe">销售代表管理</a></li>-->
 		<!--<li><a href="<?php echo WEB_PATH?>?m=member_news&a=list" target="report_iframe">促销信息管理</a></li>-->
 		<!--<li><a href="<?php echo WEB_PATH?>?m=member_ask&a=list" target="report_iframe">问答管理</a></li>-->
 	</ul>
