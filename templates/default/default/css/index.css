@@ -48,13 +48,13 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .leftsearch .leftsearchbox .clearfix a{float:left;padding-right:10px;color:#333;white-space:nowrap;font-size:14px;line-height:24px;}
 .leftsearch h3{font-size:14px;font-weight:bold;height:25px;line-height:25px;color:#f65100;}
 .leftsearch .leftsearchbox div a i{background: url("../img/icons.__1408011138__.png") no-repeat scroll -100px -60px ;display:inline-block;height:16px;margin:0 0 0 3px;position:absolute;top:6px;width:16px;}
-.leftsearch .leftsearchbox div a.more {color: #fc5300;display: block;position: relative;}
+.leftsearch .leftsearchbox div a.more {color: #cf1012;display: block;position: relative;}
 .leftsearch_tab li{float:left;width:165px;height:45px;line-height:45px;text-align:center;font-size:16px;font-weight:bold;background:#f5f5f5;cursor:pointer;}
 .leftsearch_tab li.here{background:#fff;}
 
 .leftsearch .other{height:75px;margin-top:6px;padding-left:20px}
 .leftsearch .other i{background:url("../img/icons.__1408011138__.png") no-repeat scroll 0 -40px rgba(0,0,0,0);float:left;height:44px;margin:15px 10px 0 0;width:54px}
-.leftsearch .other p.tel{color:#fc5300;font-size:24px;font-weight:bold;padding-top:10px}
+.leftsearch .other p.tel{color:#cf1012;font-size:24px;font-weight:bold;padding-top:10px}
 .leftsearch .other p.info{color:#898989;font-size:12px}
 
 .small-banner {position: absolute;right: 50%;top:12px;margin-right: -600px;width: 130px;height: 427px;float:right;z-index: 1;}
@@ -118,7 +118,7 @@ background: url("../image/4s_03.png") no-repeat;
 	margin-left:165px;
 	z-index:11;
 	display: none;
-	border: 3px solid #fc5300;
+	border: 3px solid #cf1012;
 	width: 864px;
 }
 
@@ -176,7 +176,7 @@ background: url("../image/4s_03.png") no-repeat;
 }
 
 .right_a img:hover {
-	border: 1px solid #fc5300;	
+	border: 1px solid #cf1012;	
 }
 
 #allcarlist h2 {
@@ -203,7 +203,7 @@ background: url("../image/4s_03.png") no-repeat;
 	padding-left:20px;
 	margin-right:10px;
 	background: #f7f7f7;border: 1px solid #ebebeb;
-	color: #fc5300;	font-weight: bold;
+	color: #cf1012;	font-weight: bold;
 }
 .carlist_a {
 	font-size: 14px;
@@ -229,7 +229,7 @@ background: url("../image/4s_03.png") no-repeat;
 
 .lefttitle {
 	float: left;
-	color: #fc5300;
+	color: #cf1012;
 	font-size: 14px;
 	margin-right: 20px;
 	width: 42px;
@@ -409,7 +409,7 @@ background: url("../image/4s_03.png") no-repeat;
 }
 
 .bx_t {
-	color: #FC5300;
+	color: #cf1012;
 	font-size: 17px;
 	font-weight: bold;
 	text-align: center;
@@ -430,7 +430,7 @@ background: url("../image/4s_03.png") no-repeat;
 #hot_brands .tab_title li{display:inline;float:left;font-family:Microsoft YaHei;font-size:14px;text-align:center}
 #hot_brands .tab_title li a{background:#f7f7f7;border-color:#ebebeb;border-image:none;border-style:solid none solid solid;border-width:1px 0 1px 1px;color:#2f3031;display:inline-block;float:left;height:78px;width:132px}
 #hot_brands .tab_title li a img{display:block;height:47px;margin:3px auto 0;width:47px}
-#hot_brands .tab_title li a.current{background:none repeat scroll 0 0 #fff;border-bottom:1px solid #fff;border-top:3px solid #fc5300;height:76px}
+#hot_brands .tab_title li a.current{background:none repeat scroll 0 0 #fff;border-bottom:1px solid #fff;border-top:3px solid #cf1012;height:76px}
 #hot_brands .tab_title li a.current img{margin-top:7px}
 #hot_brands .tab_title li a:hover{text-decoration:none}
 #hot_brands .tab_title li.last a{width:152px}
@@ -441,7 +441,7 @@ background: url("../image/4s_03.png") no-repeat;
 #hot_brands .nocar p a{color:#0090d8}
 #hot_brands .carmore{width:1200px;margin-top:10px;position:relative;text-align:center}
 #hot_brands .carmore a{background-color:#f7f7f7;border:1px solid #ebebeb;display:block;font-family:"Microsoft YaHei";font-size:16px;font-weight:bold;padding:10px 0;width:100%}
-#hot_brands .carmore a strong{color:#fc5300;font-weight:bold;margin:0 3px}
+#hot_brands .carmore a strong{color:#cf1012;font-weight:bold;margin:0 3px}
 #hot_brands .carmore a i{background:url("../img/icons.__1408011138__.png") no-repeat scroll -95px -60px rgba(0,0,0,0);display:inline-block;height:15px;position:absolute;top:16px;width:20px}
 #hot_brands .carmore a:hover{background-color:#ffeae0;border-color:#ffd9c7;color:#2f3031;text-decoration:none}
 
@@ -449,7 +449,7 @@ background: url("../image/4s_03.png") no-repeat;
 /*资讯*/
 .indexnews_tab{height:35px;background:#f7f7f7;border:1px solid #eee;}
 .indexnews_tab li{float:left;width:120px;text-align:center;line-height:35px;font-size:15px;font-weight:bold;border-right:1px solid #eee;cursor:pointer;color:#666;}
-.indexnews_tab li.here{border-top:2px solid #fc5300;color:#fc5300;background:#fff;height:34px;line-height:34px;}
+.indexnews_tab li.here{border-top:2px solid #cf1012;color:#cf1012;background:#fff;height:34px;line-height:34px;}
 .indexnews_box{padding:10px 0;}
 .indexnews_box .box_left{float:left;width:500px;}
 .indexnews_box .box_right{float:right;width:300px;}
@@ -536,7 +536,7 @@ margin: 0 0 7px 0;
 #services dl dt{font:bold 16px/1.5em "Microsoft YaHei"}
 #services dl dd a{display:block}
 #services .d1{padding-left:60px;width:195px}
-#services .d1 .tel{color:#fc5300;font-size:24px;font-weight:bold;padding:4px 0}
+#services .d1 .tel{color:#cf1012;font-size:24px;font-weight:bold;padding:4px 0}
 #services .d1 .time{font-size:14px;font-weight:bold}
 #services .d6{padding-left:75px;width:112px}
 

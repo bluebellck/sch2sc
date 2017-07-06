@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 16:44:54
+<?php /* Smarty version 2.6.18, created on 2017-07-06 14:06:47
          compiled from default/default/user_addcar.html */ ?>
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['weburl']; ?>
 /static/js/laydate/laydate.js"></script>
@@ -86,6 +86,14 @@ $(function(){
 </script>
 <form name="form1" class="carform" enctype="multipart/form-data" method="post" action="index.php?m=user">
     <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+			<tr>
+				<th>推荐位：</th>
+				<td colspan="3">
+					<input type="checkbox" name="isrecom" value="1" <?php if ($this->_tpl_vars['cars']['isrecom'] == 1): ?>checked<?php endif; ?>> 推荐(首页)   &nbsp;&nbsp;
+					<input type="checkbox" name="issprecom" value="1" <?php if ($this->_tpl_vars['cars']['issprecom'] == 1): ?>checked<?php endif; ?>> 特荐 &nbsp;&nbsp; 
+					<input type="checkbox" name="ishot" value="1" <?php if ($this->_tpl_vars['cars']['ishot'] == 1): ?>checked<?php endif; ?>> 热门 
+				</td>
+			</tr>    
     <?php if ($this->_tpl_vars['setting']['version'] == 3): ?>
 			<tr>
 				<th>所在城市：</th>

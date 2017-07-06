@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:12:41
+<?php /* Smarty version 2.6.18, created on 2017-07-06 14:06:58
          compiled from admin/add_cars.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -113,7 +113,11 @@ KindEditor.ready(function(K) {
 		<table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
 			<tr>
 				<th>推荐位：</th>
-				<td><input type="checkbox" name="isrecom" value="1" <?php if ($this->_tpl_vars['cars']['isrecom'] == 1): ?>checked<?php endif; ?>> 推荐 &nbsp;&nbsp;<input type="checkbox" name="issprecom" value="1" <?php if ($this->_tpl_vars['cars']['issprecom'] == 1): ?>checked<?php endif; ?>> 特荐 &nbsp;&nbsp; <input type="checkbox" name="ishot" value="1" <?php if ($this->_tpl_vars['cars']['ishot'] == 1): ?>checked<?php endif; ?>> 热门 </td>
+				<td colspan="3">
+					<input type="checkbox" name="isrecom" value="1" <?php if ($this->_tpl_vars['cars']['isrecom'] == 1): ?>checked<?php endif; ?>> 推荐(首页)   &nbsp;&nbsp;
+					<input type="checkbox" name="issprecom" value="1" <?php if ($this->_tpl_vars['cars']['issprecom'] == 1): ?>checked<?php endif; ?>> 特荐 &nbsp;&nbsp; 
+					<input type="checkbox" name="ishot" value="1" <?php if ($this->_tpl_vars['cars']['ishot'] == 1): ?>checked<?php endif; ?>> 热门 
+				</td>
 				<th>浏览次数：</th>
 				<td><input type="text" name="p_hits" value="<?php echo $this->_tpl_vars['cars']['p_hits']; ?>
 " size="6"></td>

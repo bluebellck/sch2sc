@@ -16,14 +16,14 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .search_box .search_list{padding:0 10px;}
 .search_box .search_list li{height:45px;line-height:45px;border-top:1px dashed #ebebeb;color:#999;padding:0 10px;font-size:14px;}
 .search_box .search_list li a{color:#0090d8;margin-left:10px;/*Rachel*/margin-right:20px;}
-.search_box .search_list li a:hover{background:#fc5300;color:#fff;padding:1px 5px;}
-.search_box .search_list li a.here{background:#fc5300;color:#fff;padding:1px 5px;}
+.search_box .search_list li a:hover{background:#cf1012;color:#fff;padding:1px 5px;}
+.search_box .search_list li a.here{background:#cf1012;color:#fff;padding:1px 5px;}
 
 /*条件*/
 .condition{height:40px;line-height:40px;background:#f9f9f9;font-size:14px;}
 .condition_list li{padding:0 5px;float:left;}
-.condition_list li a{padding:2px 20px 2px 3px;border:1px solid #fc5300;background:#fff url(../img/close.gif) no-repeat right 7px;color:#fc5300;}
-.condition_list li a:hover{border:1px solid #fc5300;color:#fc5300}
+.condition_list li a{padding:2px 20px 2px 3px;border:1px solid #cf1012;background:#fff url(../img/close.gif) no-repeat right 7px;color:#cf1012;}
+.condition_list li a:hover{border:1px solid #cf1012;color:#cf1012}
 .cbutton{background: none repeat scroll 0 0 #DDDDDD;border-color:-moz-use-text-color #666666 #666666 -moz-use-text-color;border-style: none solid solid none;border-width: 0 1px 1px 0;margin-left:2px;padding:3px 8px 2px 8px;}
 .condition .del {float:left;overflow:hidden;}
 .condition .del a {color: #0090d8;padding-left: 16px;position: relative;}
@@ -51,9 +51,9 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .orderlist{padding:0 10px 0 0;height:40px;line-height:40px;background:#f9f9f9;border:1px solid #e9e9e9;}
 .orderlist li{float:left;}
 .orderlist li a{float:left;display:block;padding:0 35px 0 30px;border-right:1px solid #e9e9e9;font-size:14px;}
-.orderlist li a.or01{background:#fc5300 url(../img/order.png) no-repeat 60px -32px;color:#fff;}
+.orderlist li a.or01{background:#cf1012 url(../img/order.png) no-repeat 60px -32px;color:#fff;}
 .orderlist li a.or02{background:url(../img/order.png) no-repeat 60px 15px;}
-.orderlist li a.or03{background:#fc5300 url(../img/order.png) no-repeat 60px -84px;color:#fff;}
+.orderlist li a.or03{background:#cf1012 url(../img/order.png) no-repeat 60px -84px;color:#fff;}
 
 /*每页显示条数*/
 .page_num{float:right;padding-right:20px;}
@@ -93,7 +93,7 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .carbox_center .carname{font-size:18px;font-weight:bold;color:#494949;height:52px;}
 .carbox_center .pricebox{position:absolute;left:-5px;top:105px;width:424px;height:110px;background: url("../img/icons.__1408011138__.png") no-repeat 0 -135px;padding:0 20px;color:#ffd0c3;}
 .carbox_center .pricebox .price{font-size:36px;font-weight:bold;color:#fff;}
-.carbox_center .pricebox a.a3,.carbox_center .pricebox a.a4{display: inline-block;width: 71px;height: 16px;border: 1px solid #fffaa8;background: #fc5300;color: #fffaa8;margin: 0 3px 0 2px;position: relative;cursor: pointer;}
+.carbox_center .pricebox a.a3,.carbox_center .pricebox a.a4{display: inline-block;width: 71px;height: 16px;border: 1px solid #fffaa8;background: #cf1012;color: #fffaa8;margin: 0 3px 0 2px;position: relative;cursor: pointer;}
 .carbox_center .pricebox  a.a3 i {display: inline-block;width: 16px;height: 16px;background: #fffaa8 url("../img/icons.__1408011138__.png") no-repeat -717px -38px;float: left;}
 .carbox_center .pricebox  a.a4 i {display: inline-block;width: 16px;height: 16px;background: #fffaa8 url("../img/icons.__1408011138__.png") no-repeat -757px -38px;float: left;}
 .carbox_center .pricebox  a.a3 span ,.carbox_center .pricebox  a.a4 span {width: 53px;line-height: 14px;height: 14px;padding: 2px 0 0 0;text-align: center;display: inline-block;float: right;font-size: 12px;}
@@ -118,7 +118,7 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 
 /*交易顾问*/
 .carbox_right{float:right;width:203px;height:430px;background:#f5f5f5;border-left:1px solid #e9e9e9;padding:20px;}
-.carbox_right h3{border-left:3px solid #fc5300;padding-left:10px;font-weight:bold;font-size:14px;}
+.carbox_right h3{border-left:3px solid #cf1012;padding-left:10px;font-weight:bold;font-size:14px;}
 .carbox_right .menu{background: none repeat scroll 0 0 #fff;border: 1px solid #e8e8e8;display: block;font-weight: bold;height: 33px;line-height: 33px;margin: 0 auto;text-align: center;width:182px;margin-top:20px;}
 .carbox_right .noimg{width:120px;height:120px;line-height:120px;text-align:center;background:#ccc;color:#999;}
 .carbox_right img{width:120px;height:120px;}
@@ -128,7 +128,7 @@ body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,
 .contactbox h3{height:35px;line-height:35px;background:#f2f2f2;color:#989898;padding:0 15px;}
 .contactbox .box{background:#f9f9f9;padding:5px 15px 5px 15px;}
 a.entershop{float:right;padding:5px 20px;background:#fc7000;color:#fff;position:absolute;right:15px;top:55px;}
-.tel{font-size:24px;font-weight:bold;color: #fc5300;}
+.tel{font-size:24px;font-weight:bold;color: #cf1012;}
 
 .ensure{padding:3px 0px 10px 0px;line-height:16px;}
 
@@ -169,11 +169,11 @@ vertical-align: top;
 /*车辆详情*/
 .cardetail_tab{height:35px;background:#f7f7f7;border:1px solid #eee;}
 .cardetail_tab li{float:left;width:160px;text-align:center;line-height:35px;font-size:16px;font-weight:bold;border-right:1px solid #eee;cursor:pointer;color:#666;}
-.cardetail_tab li.here{border-top:2px solid #fc5300;color:#fc5300;background:#fff;height:34px;line-height:34px;}
+.cardetail_tab li.here{border-top:2px solid #cf1012;color:#cf1012;background:#fff;height:34px;line-height:34px;}
 .cardetailbox{background:#fff;}
 .cardetailbox .box{padding:20px;font-size:14px;border:1px solid #e9e9e9;}
 .cardetailbox h4{font-size:15px;font-weight:bold;color:#333;padding:18px 0;}
-.cardetailbox h4 .title{display:block;text-align:center;border-left:3px solid #fc5300;padding-left:10px;text-align:left;}
+.cardetailbox h4 .title{display:block;text-align:center;border-left:3px solid #cf1012;padding-left:10px;text-align:left;}
 
 .cardetaillist li{float:left;width:226px;height:38px;line-height:38px;font-size:13px;border-bottom:1px dashed #d7d7d7;}
 .cardetaillist li span{color:#999;background-color:#fff;padding:9px;font-size:14px;}
@@ -256,7 +256,7 @@ vertical-align: top;
 .ladyScroll  span{display:block;width:298px;height:53px;position:absolute;left:5px;bottom:0;background:#5f626b;filter:alpha(opacity=80);opacity:0.80}
 .ladyScroll dt{margin:0 auto;width:86px;overflow:hidden;}
 .ladyScroll img{display:block;width:86px;height:66px;cursor:pointer;}
-.ladyScroll dl:hover {border:2px solid #fc5300;}
+.ladyScroll dl:hover {border:2px solid #cf1012;}
 .ladyScroll dl:hover span{background:#B52153;}
 
 

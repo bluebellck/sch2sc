@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-05 17:29:38
+<?php /* Smarty version 2.6.18, created on 2017-07-06 10:11:35
          compiled from default/default/index.html */ ?>
 <!DOCTYPE>
 <html>
@@ -87,13 +87,13 @@
 					$("#icon_02").css("background-position","-278px 0px");
 					$("#icon_04").css("background-position","-0px -219px");
 					$(".leftsearch .leftsearchbox .clearfix a").css("color","#333");	
-					$(".lefttitle").css("color","#fc5300");
+					$(".lefttitle").css("color","#cf1012");
 					$(".triangle").show();
-					$(".more:eq(0)").css("color","#fc5300");	
+					$(".more:eq(0)").css("color","#cf1012");	
 					$(".rightad").hide();
 					$(".leftsearch .leftsearchbox").css("background","#fff");
 									
-					$(".leftsearch .leftsearchbox:eq(0)").css("background","#fc5300");
+					$(".leftsearch .leftsearchbox:eq(0)").css("background","#cf1012");
 					$("#icon_01").css("background-position","-94px -266px");										   
 					$(".leftsearch .leftsearchbox:eq(0) .clearfix a").css("color","#fff");
 					$(".lefttitle:eq(0)").css("color","#fff");
@@ -107,13 +107,13 @@
 					$("#icon_03").css("background-position","-278px -47px");
 					$("#icon_04").css("background-position","-0px -219px");
 					$(".leftsearch .leftsearchbox .clearfix a").css("color","#333");
-					$(".lefttitle").css("color","#fc5300");
+					$(".lefttitle").css("color","#cf1012");
 					$(".triangle").show();
-					$(".more:eq(0)").css("color","#fc5300");					
+					$(".more:eq(0)").css("color","#cf1012");					
 					$(".rightad").hide();	
 					$(".leftsearch .leftsearchbox").css("background","#fff");
 					
-					$(".leftsearch .leftsearchbox:eq(1)").css("background","#fc5300");
+					$(".leftsearch .leftsearchbox:eq(1)").css("background","#cf1012");
 					$("#icon_02").css("background-position","-188px -219px");
 					$(".leftsearch .leftsearchbox:eq(1) .clearfix a").css("color","#fff");
 					$(".lefttitle:eq(1)").css("color","#fff");
@@ -127,13 +127,13 @@
 					$("#icon_02").css("background-position","-278px 0px");
 					$("#icon_04").css("background-position","-0px -219px");
 					$(".leftsearch .leftsearchbox .clearfix a").css("color","#333");
-					$(".lefttitle").css("color","#fc5300");
+					$(".lefttitle").css("color","#cf1012");
 					$(".triangle").show();
-					$(".more:eq(0)").css("color","#fc5300");					
+					$(".more:eq(0)").css("color","#cf1012");					
 					$(".rightad").hide();	
 					$(".leftsearch .leftsearchbox").css("background","#fff");
 					
-					$(".leftsearch .leftsearchbox:eq(2)").css("background","#fc5300");
+					$(".leftsearch .leftsearchbox:eq(2)").css("background","#cf1012");
 					$("#icon_03").css("background-position","-278px -94px");										   
 					$(".leftsearch .leftsearchbox:eq(2) .clearfix a").css("color","#fff");
 					$(".lefttitle:eq(2)").css("color","#fff");
@@ -147,13 +147,13 @@
 					$("#icon_02").css("background-position","-278px 0px");
 					$("#icon_03").css("background-position","-278px -47px");
 					$(".leftsearch .leftsearchbox .clearfix a").css("color","#333");	
-					$(".lefttitle").css("color","#fc5300");
+					$(".lefttitle").css("color","#cf1012");
 					$(".triangle").show();
-					$(".more:eq(0)").css("color","#fc5300");					
+					$(".more:eq(0)").css("color","#cf1012");					
 					$(".rightad").hide();	
 					$(".leftsearch .leftsearchbox").css("background","#fff");
 					
-					$(".leftsearch .leftsearchbox:eq(3)").css("background","#fc5300");
+					$(".leftsearch .leftsearchbox:eq(3)").css("background","#cf1012");
 					$("#icon_04").css("background-position","-141px -219px");										   
 					$(".leftsearch .leftsearchbox:eq(3) .clearfix a").css("color","#fff");
 					$(".lefttitle:eq(3)").css("color","#fff");
@@ -168,9 +168,9 @@
 					$("#icon_03").css("background-position","-278px -47px");	
 					$("#icon_04").css("background-position","0 -219px");	
 					$(".leftsearch .leftsearchbox .clearfix a").css("color","#333");	
-					$(".lefttitle").css("color","#fc5300");
+					$(".lefttitle").css("color","#cf1012");
 					$(".triangle").show();
-					$(".more:eq(0)").css("color","#fc5300");	
+					$(".more:eq(0)").css("color","#cf1012");	
 					$(".leftsearch .leftsearchbox").css("background","#fff");
 				});
 
@@ -366,7 +366,7 @@ unset($_smarty_tpl_vars);
     foreach ($_from as $this->_tpl_vars['film_list']):
 ?>
         <li _src="url(<?php echo $this->_tpl_vars['film_list']['pic']; ?>
-)" style="background:#fc5300 center 0 no-repeat;"><a target="_blank" href="<?php echo $this->_tpl_vars['film_list']['url']; ?>
+)" style="background:#cf1012 center 0 no-repeat;"><a target="_blank" href="<?php echo $this->_tpl_vars['film_list']['url']; ?>
 "></a></li>
         <?php endforeach; endif; unset($_from); ?>
       </ul>
@@ -401,7 +401,7 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
 <div class="main mt20 clearfix" id="hot_brands">
   <div class="tab_title">
     <ul class="clearfix">
-      <li class="js-title"> <a style="line-height:76px;cursor:pointer;color: #ff6600;font-weight: bold;font-size: 20px;" class="current">最新车源</a> </li>
+      <li class="js-title"> <a style="line-height:76px;cursor:pointer;color: #cf1012;font-weight: bold;font-size: 20px;" class="current">最新车源</a> </li>
       <?php $_from = $this->_tpl_vars['recombrandlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['recombrand']):
 ?>
