@@ -21,8 +21,8 @@ $tpl->assign( 'page_g', $page_g );
 
 //列表
 if ($ac == 'list')
-{
-    $where = 'mark="A" ';
+{echo 222;
+    $where = 'brand_mark="A" ';
     //搜索条件
 	$pagesize = 0;
     if ($sel_key != 'All' and $sel_key)
