@@ -1,4 +1,6 @@
 <?php
+
+
 //判断会员登陆
 function is_user_login()
 {
@@ -166,13 +168,13 @@ function arr_dealer_category()
 function arr_brand_with_search()
 {
 	global $db;
-	$brand = $db -> row_select('brand', "b_parent=-1", 'b_id,b_name,mark', 0, 'mark asc');
+	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
 	foreach ($brand as $k => $v) {
-		$brand[$k]['b_name'] = $brand[$k]['mark'] . ' ' . $brand[$k]['b_name'];
-		$brand[$k]['b_id'] = 'b_' . $brand[$k]['b_id'];
-		unset($brand[$k]['mark']);
+		$brand[$k]['brand_name'] = $brand[$k]['brand_mark'] . ' ' . $brand[$k]['brand_name'];
+		$brand[$k]['brand_id'] = 'b_' . $brand[$k]['brand_id'];
+		unset($brand[$k]['brand_mark']);
 	}
-	return get_array($brand, 'b_id', 'b_name');
+	return get_array($brand, 'brand_id', 'brand_name');
 	
 } 
 
@@ -180,76 +182,119 @@ function arr_brand_with_search()
 function arr_brand_with_index()
 {
 	global $db;
-	$brand = $db -> row_select('brand', "b_parent=-1", 'b_id,b_name,mark', 0, 'mark asc');
+	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
 	foreach ($brand as $k => $v) {
-		$brand[$k]['b_name'] = $brand[$k]['mark'] . ' ' . $brand[$k]['b_name'];
-		unset($brand[$k]['mark']);
+		$brand[$k]['brand_name'] = $brand[$k]['brand_mark'] . ' ' . $brand[$k]['brand_name'];
+		unset($brand[$k]['brand_mark']);
 	} 
-	return get_array($brand, 'b_id', 'b_name');
+	return get_array($brand, 'brand_id', 'brand_name');
 } 
 
  //车源品牌数组
-function arr_brand($parent)
+function arr_brand()
 {
 	global $db;
-	$brand = $db -> row_select('brand', "b_parent=".$parent, 'b_id,b_name,mark', 0, 'mark asc');
-	return get_array($brand, 'b_id', 'b_name');
+	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
+	return get_array($brand, 'brand_id', 'brand_name');
+
 } 
 
-//获取品牌名称
+// 车源品牌数组,搜索用
+function arr_brand_one()
+{
+	global $db;
+	$brand = $db -> row_select('brand', "1=1 and brand_id in (select min(brand_id) from simcms_brand group by brand_mark)", 'brand_id,brand_name,brand_mark', 0);
+	$brandlist = array();
+	foreach ($brand as $k => $v) {
+		$brandlist[$v['brand_mark']] = $db -> row_select('brand', " brand_mark='".$v['brand_mark']."'", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
+		foreach($brandlist[$v['brand_mark']] as $key => $value){
+			$brandlist[$v['brand_mark']][$key]['keywords'] = urlencode($value['brand_name']);
+		}
+	}
+	return $brandlist;
+}  
+
+//获取第一级级品牌名称
 function arr_brandname($bid)
 {
 	global $db;
-	$brand = $db -> row_select_one('brand', "b_id=".$bid, 'b_id,b_name,b_parent,classid');
-	if($brand['classid']==5){
-		$prebrand = $db -> row_select_one('brand', "b_id=".$brand['b_parent'], 'b_id,b_name');
-		$brandname = $prebrand['b_name']." ".$brand['b_name'];
-	}
-	else{
-		$brandname = $brand['b_name'];
-	}
-	return $brandname;
+	$brand = $db -> row_select_one('brand', "brand_id=".$bid, 'brand_id,brand_name');
+	return $brand['brand_name'];
 } 
+
+//获取第二级品牌名称
+function arr_subbrandname($bid)
+{
+	global $db;
+	$brand = $db -> row_select_one('series', "series_id=".$bid, 'series_id,series_name');
+	return $brand['series_name'];
+} 
+
+//获取第三级品牌名称
+function arr_subsubbrandname($bid){
+    global $db;
+	$brand=$db->row_select_one('styles','styles_id='.$bid,'styles_id,styles_name');
+	return $brand['styles_name'];
+}
 
 // 推荐车源品牌数组
 function arr_brand_recom()
 {
 	global $db;
-	$brand = $db -> row_select('brand', "b_parent=-1 and b_type=1", 'b_id,b_name,mark', 0, 'mark asc');
-	return get_array($brand, 'b_id', 'b_name');
+	$brand = $db -> row_select('brand', "brand_recommend=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
+	return get_array($brand, 'brand_id', 'brand_name');
 } 
 
 // 推荐车源品牌数组
 function get_brand_recom()
 {
 	global $db;
-	$brand = $db -> row_select('brand', "b_parent=-1 and b_type=1", 'b_id,b_name,mark,pic', 0, 'mark asc');
+	$brand = $db -> row_select('brand', "brand_recommend=1", 'brand_id,brand_name,brand_mark,brand_pic', 0, 'brand_mark asc');
 	return $brand;
 } 
 
-//子品牌选择
+//获取已选子品牌
 function select_subbrand($brandid = 0){
 	global $db;
-	$data = $db -> row_select_one('brand','b_id='.$brandid,'b_parent,b_name');
 	$brandlist = "";
-	if($data['b_parent']){
-		$data2 = $db -> row_select_one('brand','b_id='.$data['b_parent'],'b_parent,b_name');
-		if($data2['b_parent']){
-			$list = $db->row_select('brand',"b_parent='".$data2['b_parent']."'");
-			if($list){
-				foreach($list as $key => $value){
-					$brandlist .= "<optgroup label='".$value['b_name']."' style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
-					$sublist = $db->row_select('brand',"b_parent='".$value['b_id']."'");
-					foreach($sublist as $subkey => $subvalue){
-						if ($subvalue['b_id'] == $brandid){
-							$selected = 'selected';
-						}
-						else{
-							$selected = '';
-						}
-						$brandlist .= "<option value=".$subvalue['b_id']." ".$selected.">".$subvalue['b_name']."</option>";
-					}
+	$data=$db->row_select_one('series','series_id='.$brandid);
+	$list = $db->row_select('series',"brand_id='".$data['brand_id']."'",' distinct(series_groupname)');
+	if($list){
+		foreach($list as $key => $value){
+			$brandlist .= "<optgroup label=".$value['series_groupname']." style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
+			$sublist = $db->row_select('series',"series_groupname='".$value['series_groupname']."'");
+			foreach($sublist as $subkey => $subvalue){
+				if ($subvalue['series_id'] == $brandid){
+					$selected = 'selected';
 				}
+				else{
+					$selected = '';
+				}
+				$brandlist .= "<option value=".$subvalue['series_id']." ".$selected.">".$subvalue['series_name']."</option>";
+			}
+		}
+	}
+	return $brandlist;
+}
+
+//获取已选子品牌
+function select_subsubbrand($brandid = 0){
+	global $db;
+	$brandlist = "";
+	$data=$db->row_select_one('styles','styles_id='.$brandid);
+	$list = $db->row_select('styles',"series_id='".$data['series_id']."'",' distinct(styles_year) ');
+	if($list){
+		foreach($list as $key => $value){
+			$brandlist .= "<optgroup label='".$value['styles_year']."' style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
+			$sublist = $db->row_select('styles'," styles_year='".$value['styles_year']."' and series_id='".$data['series_id']."'");
+			foreach($sublist as $subkey => $subvalue){
+				if ($subvalue['styles_id'] == $brandid){
+					$selected = 'selected';
+				}
+				else{
+					$selected = '';
+				}
+				$brandlist .= "<option value=".$subvalue['styles_id']." ".$selected.">".$subvalue['styles_name']."</option>";
 			}
 		}
 	}
@@ -579,7 +624,7 @@ function rapidasscars($subsubbrand,$mk,$reyear,$remonth){
 	$year=date('Y',time());
     $month=date('m',time());
 	$term=($year-$reyear)*12+$month-$remonth;
-	$data=$db->row_select_one('brand',"b_id='".$subsubbrand."'");
+	$data=$db->row_select_one('styles',"styles_id='".$subsubbrand."'");
 	//新车指导价
 	$guideprice=$data['zd_price'];
 	// 判断是否传过来综合参数

@@ -28,10 +28,10 @@ if ($ac == 'list')
     if ($sel_key != 'All' and $sel_key)
     {
 		$pagesize = 100;
-        $where = "mark = '".$sel_key."'";
+        $where = "brand_mark = '".$sel_key."'";
     }
     include(INC_DIR.'Page.class.php');
-    $Page = new Page($db->tb_prefix.'brand',$where,'*',$pagesize,'mark');
+    $Page = new Page($db->tb_prefix.'brand',$where,'*',$pagesize,'brand_mark');
     $list = $Page->get_data();
 	$page = $Page -> page;
     foreach($list as $key => $value){
