@@ -244,14 +244,14 @@ if (isset($_COOKIE['city']) and isset($_GET['cy']) and  $_GET['cy'] == 0) {
 } 
 
 if (isset($_COOKIE['subbrand']) and $_COOKIE['subbrand'] <> 0) {
-		$subbrand = $db -> row_select_one('brand', 'b_id=' . $_COOKIE['subbrand'], 'b_name');
+		$subbrand = $db -> row_select_one('series', 'series_id=' . $_COOKIE['subbrand'], 'series_name');
 		$tpl -> assign('subrandname', $subbrand['b_name']);
 		$where .= " and p_subbrand = " . $_COOKIE['subbrand'];
 	} 
 
 if (isset($_COOKIE['subsubbrand']) and $_COOKIE['subsubbrand'] <> 0) {
-		$subsubbrand = $db -> row_select_one('brand', 'b_id=' . $_COOKIE['subsubbrand'], 'b_name');
-		$tpl -> assign('subsubrandname', $subsubbrand['b_name']);
+		$subsubbrand = $db -> row_select_one('styles', 'styles_id=' . $_COOKIE['subsubbrand'], 'styles_name');
+		$tpl -> assign('subsubrandname', $subsubbrand['styles_name']);
 		$where .= " and p_subsubbrand = " . $_COOKIE['subsubbrand'];
 	} 
 	//搜索条件
