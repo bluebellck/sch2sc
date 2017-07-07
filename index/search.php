@@ -335,7 +335,7 @@ $tpl -> assign('allnum', $listnum);
 $tpl -> assign('button_basic', $button_basic);
 $tpl -> assign('button_select', $button_select);
 $tpl -> assign('select_model', $select_model);
-$tpl -> assign('carslist', $list);
+$tpl -> assign('carslist', $list);var_dump($list);
 
 $tpl -> display('default/' . $settings['templates'] . '/carlist.html');
 ?>
