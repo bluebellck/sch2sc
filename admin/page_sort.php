@@ -1,6 +1,4 @@
 <?php
-git add -A;git commit -m '修改';git push origin master;
-
 if (!defined('APP_IN')) exit('Access Denied');
 
 //当前模块
