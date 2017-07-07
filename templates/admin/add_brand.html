@@ -5,7 +5,7 @@
 <title></title>
 <link href="static/css/admin/style.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="admin/kindeditor/themes/default/default.css" />
-<script type="text/javascript" src="<{$weburl}>/templates/default/<{$setting.templates}>/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="static/js/jquery.js"></script>
 <script charset="utf-8" src="admin/kindeditor/kindeditor-min.js"></script>
 <script charset="utf-8" src="admin/kindeditor/lang/zh_CN.js"></script>
 <script type="text/javascript" src="static/js/Validform_v5.3.2_min.js"></script>
@@ -14,24 +14,6 @@
 		//表单验证
 		$(".brandform").Validform({
 			tiptype:3
-		});
-	});
-	KindEditor.ready(function(K) {
-		var editor = K.editor({
-			uploadJson : '<{$adminpage}>?m=upload',
-			fileManagerJson : '<{$adminpage}>?m=upload_manager',
-			allowFileManager : true
-		});
-		K('#image1').click(function() {
-			editor.loadPlugin('image', function() {
-				editor.plugin.imageDialog({
-					imageUrl : K('#url1').val(),
-					clickFn : function(url, title, width, height, border, align) {
-						K('#url1').val(url);
-						editor.hideDialog();
-					}
-				});
-			});
 		});
 	});
 </script>
@@ -57,8 +39,14 @@
 			</tr>
 			<tr>
 				<th>品牌类型：</th>
-				<td><input type="checkbox" name="b_type" value="1" <{if $brand.b_type==1}>checked<{/if}>> 推荐 </td>
+				<td><input type="checkbox" name="b_type" value="1" <{if $brand.b_type==1}>checked="checked"<{/if}>> 推荐 </td>
 			</tr>
+            <{if $brand.b_parentname=='根品牌'}>
+            <tr>
+				<th>品牌系别：</th>
+				<td><input type="radio" name="brand_series" value="1" <{if $brand.brand_series==1}>checked="checked"<{/if}> />自主&nbsp;<input type="radio" name="brand_series" value="2" <{if $brand.brand_series==2}>checked="checked"<{/if}> />欧系&nbsp;<input type="radio" name="brand_series" value="3" <{if $brand.brand_series==3}>checked="checked"<{/if}> />德系&nbsp;<input type="radio" name="brand_series" value="4" <{if $brand.brand_series==4}>checked="checked"<{/if}> />美系&nbsp;<input type="radio" name="brand_series" value="5" <{if $brand.brand_series==5}>checked="checked"<{/if}> />日系&nbsp;<input type="radio" name="brand_series" value="6" <{if $brand.brand_series==6}>checked="checked"<{/if}> />韩系&nbsp;<input type="radio" name="brand_series" value="7" <{if $brand.brand_series==7}>checked="checked"<{/if}> />其他</td>
+			</tr>
+            <{/if}>
 			<tr>
 				<th>品牌名称：</th>
 				<td><input name="b_name" type="text" id="b_name" size="30" value="<{$brand.b_name}>"  datatype="*" nullmsg="请填写品牌名称！"/></td>
@@ -67,17 +55,19 @@
 				<th>相关关键词：</th>
 				<td><input name="b_keyword" type="text" id="b_name" size="30" value="<{$brand.b_keyword}>" /></td>
 			</tr>
+			<{if $brand.pic<>''}>
 			<tr>
-				<th>缩略图：</th>
-				<td><input type="text" name="pic" id="url1" value="<{$brand.pic}>" />
-					<input type="button" id="image1" value="选择图片" /></td>
+				<th></th>
+				<td><img src="/upload/brand/<{$brand.pic}>"></td>
 			</tr>
+			<{/if}>
 			<tr>
 				<th></th>
 				<td><div class="buttons">
 						<input type="submit" name="thevaluesubmit" value="提交保存" class="submit">
 						<input type="hidden" name="a" value="<{$ac}>">
-						<input type="hidden" name="b_id" value="<{$brand.b_id}>">
+						<input type="hidden" name="id" value="<{$brand.b_id}>">
+                        <input type="hidden" name="seriesname" value="<{$brand.seriesname}>">
 						<input type="hidden" name="page" value="<{$page}>">
 					</div>
 				</td>

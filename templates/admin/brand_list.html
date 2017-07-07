@@ -10,7 +10,7 @@
 	<div class="search clearfix">
 		<div class="searchL">
 			<ul class="menulist">
-				<li><a href="<{$adminpage}>?m=brand&a=add" class="add">添加品牌</a></li>
+				<li><a href="<{$adminpage}>?m=brand&a=addfirst" class="add">添加品牌</a></li>
 			</ul>
 		</div>
 		<div class="searchR" style="padding-top:5px">
@@ -22,7 +22,7 @@
         <div class="main">
 			<{foreach from=$brandlist item=pbrands}>
 			<div class="letter">
-				<b class="orange01"><{$pbrands.brand_mark}></b>
+				<b class="orange01"><{$pbrands.mark}></b>
 				<span class="fr"><a href="#top" target="_self" class="gray01">返回顶部↑</a></span>
 			</div>
 			<div class="brandlist clearfix">
@@ -31,12 +31,12 @@
 						<ul>
 							<li>
 								<{if $pbrands.brand_pic<>""}>
-								<img src="<{$pbrands.brand_pic}>">
+								<img src="<{$weburl}><{$pbrands.brand_pic}>">
 								<{else}>
 								<{/if}>
-								<b><{$pbrands.brand_name}> <{if $pbrands.brand_recommend==1}><span class="orange01">推荐</span><{/if}></b>
+								<p><{$pbrands.brand_name}> <span class="gray01"><{if $pbrands.brand_series==1}>自主<{elseif $pbrands.brand_series==2}>欧系<{elseif $pbrands.brand_series==3}>德系<{elseif $pbrands.brand_series==4}>美系<{elseif $pbrands.brand_series==5}>日系<{elseif $pbrands.brand_series==6}>韩系<{elseif $pbrands.brand_series==7}>其他<{/if}></span><{if $pbrands.b_type==1}><span class="orange01">推荐</span><{/if}></p>
 								<div class="brandmenu">
-									<a href="<{$adminpage}>?m=brand&a=add&id=<{$pbrands.brand_id}>&page=<{$page}>" class="add">添加子品牌</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$pbrands.brand_id}>&page=<{$page}>" class="edit">编辑</a> | <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$pbrands.brand_id}>&page=<{$page}>'" class="del">删除</a>
+									<a href="<{$adminpage}>?m=brand&a=addsecond&id=<{$pbrands.brand_id}>&page=<{$page}>" class="add">添加子品牌</a> | <a href="<{$adminpage}>?m=brand&a=editsecond&id=<{$pbrands.brand_id}>&page=<{$page}>" class="edit">编辑</a> | <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=delfirst&id=<{$pbrands.brand_id}>&page=<{$page}>'" class="del">删除</a>
 								</div>
 							</li>
 						</ul>
@@ -45,17 +45,17 @@
 				<div class="brandlist_right">
 					<{foreach from=$pbrands.brands_list item=brands_list}>
 					<div class="brandname mt10">
-						<b><{$brands_list.brand_name}>2222222222222</b>
-						<div class="brandmenu"><a href="<{$adminpage}>?m=brand&a=add&id=<{$brands_list.brand_id}>&page=<{$page}>" class="add">添加车系</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$brands_list.b_id}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$brands_list.b_id}>&page=<{$page}>'" class="del">删除</a>
+						<b><{$brands_list.series_groupname}></b>
+						<div class="brandmenu"><a href="<{$adminpage}>?m=brand&a=addthird&seriesname=<{$brands_list.series_groupname}>&page=<{$page}>" class="add">添加车系</a> | <a href="<{$adminpage}>?m=brand&a=editthird&seriesname=<{$brands_list.series_groupname}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=delsecond&seriesname=<{$brands_list.series_groupname}>&page=<{$page}>'" class="del">删除</a>
 						</div>
 					</div>
 					<div class="subbrandname">
 						<ul class="clearfix">
 							<{foreach from=$brands_list.subbrands_list item=subbrands_list}>
-							<li><{$subbrands_list.b_name}>
+							<li><{$subbrands_list.series_name}>
 								<div class="brandmenu">
-								<a href="<{$adminpage}>?m=brand&a=edit&id=<{$subbrands_list.b_id}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$subbrands_list.b_id}>&page=<{$page}>'" class="del">删除</a>
-                                <a href="<{$adminpage}>?m=carmodel&a=list&p_subbrand=<{$subbrands_list.b_id}>">查看</a>
+								<a href="<{$adminpage}>?m=brand&a=edit&id=<{$subbrands_list.series_id}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$subbrands_list.series_id}>&page=<{$page}>'" class="del">删除</a>
+                                <a href="<{$adminpage}>?m=carmodel&a=list&p_subbrand=<{$subbrands_list.series_id}>">查看</a>
 								</div>
 							</li>
 							<{/foreach}>
