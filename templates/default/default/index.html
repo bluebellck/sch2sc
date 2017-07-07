@@ -284,7 +284,7 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
     <ul class="clearfix">
       <li class="js-title"> <a style="line-height:62px;cursor:pointer;color: #cf1012;font-weight: bold;font-size: 20px;" class="current">最新车源</a> </li>
       <{foreach from=$recombrandlist key=skey item=recombrand}>
-      <li class="js-title"> <a  href="javascript:;"><img src="upload/brand/<{$recombrand.brand_pic}>" alt="<{$recombrand.b_name}>"><{$recombrand.b_name}></a> </li>
+      <li class="js-title"> <a  href="javascript:;"><img src="<{$recombrand.brand_pic}>" alt="<{$recombrand.b_name}>"><{$recombrand.b_name}></a> </li>
       <{/foreach}>
     </ul>
   </div>
