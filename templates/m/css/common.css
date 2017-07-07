@@ -13,12 +13,12 @@ a:focus/*取消链接的虚线*/{outline:none;-moz-outline:none;}
 
 /*头部导航*/
 .header{margin-left:auto;margin-right:auto;width:100%;padding:10px 0;}
-.header .logo{float:left;width:200px;font-size:22px;text-align:left;padding-left:10px;}
+.header .logo{float:left;width:auto;font-size:22px;text-align:left;padding-left:10px;}
 .header .logo a{color:#fff;}
 .header .logo img{width:90px;height:48px;}
-.header .city{float:right;width:50px;padding-left:20px;background:url(../img/city.png) no-repeat 0 0;}
-.header .city a,.header .city a:hover{color:#666;}
-.header.back{background: #323232;}
+.header .city{float:right;width:50px;padding-left:20px;}
+.header .city a,.header .city a:hover{color:#fff; font-size: 14px;}
+.header.back{background: #121212;}
 
 /*导航*/
 .topmenu{margin-left:auto;margin-right:auto;background:url(../img/topbg.jpg) repeat-x;height:40px;}

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-05 15:02:25
+<?php /* Smarty version 2.6.18, created on 2017-07-07 09:58:16
          compiled from m/aboutus.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,52 +34,18 @@
 </div>
 <!--头部结束-->
 <!--主体-->
-<div class="main mt10">
-	<div id="focus" class="focus">
-		<div class="hd">
-			<ul></ul>
-		</div>
-		<div class="bd">
-			<ul>
-				<?php $_from = $this->_tpl_vars['film_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['film']):
-?>
-				<li><a href="#"><img _src="<?php echo $this->_tpl_vars['webdomain']; ?>
-<?php echo $this->_tpl_vars['film']['pic']; ?>
-" src="images/blank.png" /></a></li>
-				<?php endforeach; endif; unset($_from); ?>
-			</ul>
-		</div>
-	</div>
-	<script type="text/javascript">
-		TouchSlide({ 
-			slideCell:"#focus",
-			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-			mainCell:".bd ul", 
-			effect:"left", 
-			autoPlay:true,//自动播放
-			autoPage:true, //自动分页
-			switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-		});
-	</script>
-</div>
+
 <div class="main">
-	<?php $_from = $this->_tpl_vars['newslist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['news']):
-?>
-	<div class="carlist clearfix mt10">
-		<div class="carlist_left">
-			<a href="index.php?m=about&id=<?php echo $this->_tpl_vars['news']['n_id']; ?>
-"><?php if ($this->_tpl_vars['news']['n_pic'] <> ''): ?><img src="<?php echo $this->_tpl_vars['news']['n_pic']; ?>
-"/><?php else: ?>暂无图片<?php endif; ?></a>
-		</div>
-		<div class="carlist_right">
-			<p class="f12 fb"><a href="index.php?m=about&id=<?php echo $this->_tpl_vars['news']['n_id']; ?>
-"><?php echo $this->_tpl_vars['news']['n_title']; ?>
-</a></p>
-		</div>
+	
+	<div class="scabout">
+		<img src="http://www.sch2sc.com/templates/m/img/sh-about.jpg" />
+		<p class="mt10">		
+			顺驰名车成立于2008年，坐落在美丽的港口城市宁波。依托9年多在宁波市场客源的积累，目前在宁波最大二手车室内市场途众汽车商城拥有400多平方的展厅。一直以来，公司秉承着“专业对车，诚信对客户”的宗旨，稳健经营，积累进取，开拓创新。现以逐步形成全面，系统，独特的服务方式，各项业务稳步发展，取得了良好的社会效益。
+		</p>		
 	</div>
-	<?php endforeach; endif; unset($_from); ?>
+	
+	
+	
 </div>
 <!--主体-->
 <!--底部--> 

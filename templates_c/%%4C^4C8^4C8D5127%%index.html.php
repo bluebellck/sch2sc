@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:13:01
+<?php /* Smarty version 2.6.18, created on 2017-07-07 09:48:31
          compiled from m/index.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,6 +30,7 @@
 <div class="header clearfix back">
     <div class="logo"><a href="index.php" title=""><?php echo $this->_tpl_vars['setting']['sitename']; ?>
 </a></div>
+    <div class="city"><a href="###" title="">登录</a></div>
 </div>
 <!--头部结束-->
 <!--主体-->
@@ -110,30 +111,32 @@
 </a><?php endforeach; endif; unset($_from); ?>
 		</div>
 	</div>
-
+	
+	<div class="indexbox">
+		<h3><span class="title">热门车源推荐</span></h3>
 	<?php $_from = $this->_tpl_vars['carslist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['carslist']):
 ?>
-	<div class="carlist clearfix mt10">
-		<div class="carlist_left">
-			<a href="<?php echo $this->_tpl_vars['carslist']['p_url']; ?>
+		<div class="carlist clearfix">
+			<div class="carlist_left">
+				<a href="<?php echo $this->_tpl_vars['carslist']['p_url']; ?>
 "><?php if ($this->_tpl_vars['carslist']['p_mainpic'] <> ''): ?><img src="<?php echo $this->_tpl_vars['carslist']['p_mainpic']; ?>
 "/><?php else: ?>暂无图片<?php endif; ?></a>
-		</div>
-		<div class="carlist_right">
-			<p class="f12 fb"><a href="<?php echo $this->_tpl_vars['carslist']['p_url']; ?>
+			</div>
+			<div class="carlist_right">
+				<p class="f12 fb"><a href="<?php echo $this->_tpl_vars['carslist']['p_url']; ?>
 "><?php echo $this->_tpl_vars['carslist']['p_allname']; ?>
 </a></p>
-			<p>上牌日期：<?php echo $this->_tpl_vars['carslist']['p_year']; ?>
+				<p>上牌日期：<?php echo $this->_tpl_vars['carslist']['p_year']; ?>
 年<?php echo $this->_tpl_vars['carslist']['p_month']; ?>
 月</p>
-			<p><span class="orange01 f14 fr pr10 fb"><?php echo $this->_tpl_vars['carslist']['p_price']; ?>
+				<p><span class="orange01 f14 fr pr10 fb"><?php echo $this->_tpl_vars['carslist']['p_price']; ?>
 </span><?php echo $this->_tpl_vars['carslist']['listtime']; ?>
 </p>
+			</div>
 		</div>
-	</div>
 	<?php endforeach; endif; unset($_from); ?>
-
+	</div>
 </div>
 
 <!--主体-->

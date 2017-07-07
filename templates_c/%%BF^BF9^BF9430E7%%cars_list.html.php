@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:12:47
+<?php /* Smarty version 2.6.18, created on 2017-07-06 15:38:35
          compiled from admin/cars_list.html */ ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -79,8 +79,8 @@ $(document).ready(function() {
 	<div class="search clearfix">
 		<div class="searchL">
 			<ul class="menulist">
-				<li><a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=cars&a=add" class="add">添加车源</a></li>
+				<!--<li><a href="<?php echo $this->_tpl_vars['adminpage']; ?>
+?m=cars&a=add" class="add">添加车源</a></li>-->
 			</ul>
 		</div>
 		<?php if ($this->_tpl_vars['setting']['version'] == 2 || $this->_tpl_vars['setting']['version'] == 3): ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-05 15:02:27
+<?php /* Smarty version 2.6.18, created on 2017-07-07 10:01:05
          compiled from m/contact.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,22 +36,23 @@
 <!--主体-->
 
 <div class="main">
-	<?php $_from = $this->_tpl_vars['newslist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['news']):
-?>
-	<div class="carlist clearfix mt10">
-		<div class="carlist_left">
-			<a href="index.php?m=about&id=<?php echo $this->_tpl_vars['news']['n_id']; ?>
-"><?php if ($this->_tpl_vars['news']['n_pic'] <> ''): ?><img src="<?php echo $this->_tpl_vars['news']['n_pic']; ?>
-"/><?php else: ?>暂无图片<?php endif; ?></a>
-		</div>
-		<div class="carlist_right">
-			<p class="f12 fb"><a href="index.php?m=about&id=<?php echo $this->_tpl_vars['news']['n_id']; ?>
-"><?php echo $this->_tpl_vars['news']['n_title']; ?>
-</a></p>
-		</div>
+	<div class="scabout">
+	<img src="http://www.sch2sc.com/upload/image/20170706/20170706091811_86753.jpg" alt="" width="950"> 
+		
+		<p >
+			<strong>顺驰名车</strong> 
+		</p>
+		<p >
+			地址：宁波市海曙区鄞县大道古林段1号途众汽车商城E27<br>
+		电话：18157447500
+		</p>
+		<p >
+			联系人：余经理
+		</p>
+		<p>
+			<br>
+		</p>
 	</div>
-	<?php endforeach; endif; unset($_from); ?>
 </div>
 <!--主体-->
 <!--底部--> 

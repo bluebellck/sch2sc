@@ -38,7 +38,7 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .business-top .yhm>p>img{max-width: 25px; max-height: 25px; margin-right: 5px;}
 }
 
-.business-tjxc{width: 95%; line-height: 50px; background: #ff6600; color: #fff; border-radius: 3px; margin-left: 2.5%;}
+.business-tjxc{width: 95%; line-height: 50px; background: #cf1012; color: #fff; border-radius: 3px; margin-left: 2.5%;}
 .business-button{width: 95%; background: #dddddd; color: #333333; line-height: 40px; border-radius: 3px; margin-left:2.5%;}
 .business-button.g{background: #fc7000; color: #fff;}
 
@@ -61,7 +61,7 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .business-shoucang .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: auto; overflow:hidden;}
 .business-shoucang .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
 .business-shoucang .text>p.jg{font-size: 14px;}
-.business-shoucang .text>p.jg span{color: #ff6600; font-weight: bold;}
+.business-shoucang .text>p.jg span{color: #cf1012; font-weight: bold;}
 .business-shoucang .button{width: 100%; line-height: 40px; background: #9dd820; color: #fff;}
 .business-shoucang .button.lx{background: #8fc420;}
 
@@ -86,7 +86,7 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .business-zaik .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: 40px;}
 .business-zaik .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
 .business-zaik .text>p.jg{font-size: 14px;}
-.business-zaik .text>p.jg span{color: #ff6600; font-weight: bold;}
+.business-zaik .text>p.jg span{color: #cf1012; font-weight: bold;}
 .business-zaik .button{width: 100%; line-height: 40px; background: #9dd820; color: #fff;}
 .business-zaik .button.lx{background: #8fc420;}
 

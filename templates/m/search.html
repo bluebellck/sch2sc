@@ -32,18 +32,19 @@
 </div>
 <!--头部结束-->
 <!--主体-->
-<div class="orderbox">
-	<ul class="clearfix">
-		<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==1}>2<{elseif $smarty.cookies.order==2}>1<{else}>2<{/if}>" <{if $smarty.cookies.order==1}>class="or03"<{elseif $smarty.cookies.order==2}>class="or04"<{else}>class="or02"<{/if}>>时间</a></li>
-		<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==3}>4<{elseif $smarty.cookies.order==4}>3<{else}>3<{/if}>" <{if $smarty.cookies.order==3}>class="or04"<{elseif $smarty.cookies.order==4}>class="or03"<{else}>class="or02"<{/if}>>价格</a></li>
-		<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==5}>6<{elseif $smarty.cookies.order==6}>5<{else}>5<{/if}>" <{if $smarty.cookies.order==5}>class="or04"<{elseif $smarty.cookies.order==6}>class="or03"<{else}>class="or02"<{/if}>>里程</a></li>
-		<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==7}>8<{elseif $smarty.cookies.order==8}>7<{else}>7<{/if}>" <{if $smarty.cookies.order==7}>class="or03"<{elseif $smarty.cookies.order==8}>class="or04"<{else}>class="or02"<{/if}>>车龄</a></li>
-	</ul>
-</div>
+
 <div class="main">
 	<h3 class="mt10 f14">共找到 <span class="orange01"><{$allnum}></span> 条车源信息</h3>
+	<div class="orderbox">
+		<ul class="clearfix">
+			<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==1}>2<{elseif $smarty.cookies.order==2}>1<{else}>2<{/if}>" <{if $smarty.cookies.order==1}>class="or03"<{elseif $smarty.cookies.order==2}>class="or04"<{else}>class="or02"<{/if}>>时间</a></li>
+			<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==3}>4<{elseif $smarty.cookies.order==4}>3<{else}>3<{/if}>" <{if $smarty.cookies.order==3}>class="or04"<{elseif $smarty.cookies.order==4}>class="or03"<{else}>class="or02"<{/if}>>价格</a></li>
+			<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==5}>6<{elseif $smarty.cookies.order==6}>5<{else}>5<{/if}>" <{if $smarty.cookies.order==5}>class="or04"<{elseif $smarty.cookies.order==6}>class="or03"<{else}>class="or02"<{/if}>>里程</a></li>
+			<li><a href="index.php?m=search&order=<{if $smarty.cookies.order==7}>8<{elseif $smarty.cookies.order==8}>7<{else}>7<{/if}>" <{if $smarty.cookies.order==7}>class="or03"<{elseif $smarty.cookies.order==8}>class="or04"<{else}>class="or02"<{/if}>>车龄</a></li>
+		</ul>
+	</div>
 	<{foreach from=$carslist item=carslist}>
-	<div class="carlist clearfix mt10">
+	<div class="carlist clearfix">
 		<div class="carlist_left">
 			<a href="<{$carslist.p_url}>"><{if $carslist.p_mainpic<>''}><img src="<{$carslist.p_mainpic}>"/><{else}>暂无图片<{/if}></a>
 		</div>

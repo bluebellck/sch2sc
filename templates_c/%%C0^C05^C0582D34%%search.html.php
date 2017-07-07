@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-06-29 15:07:00
+<?php /* Smarty version 2.6.18, created on 2017-07-07 09:33:13
          compiled from m/search.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -39,21 +39,22 @@
 </div>
 <!--头部结束-->
 <!--主体-->
-<div class="orderbox">
-	<ul class="clearfix">
-		<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 1): ?>2<?php elseif ($_COOKIE['order'] == 2): ?>1<?php else: ?>2<?php endif; ?>" <?php if ($_COOKIE['order'] == 1): ?>class="or03"<?php elseif ($_COOKIE['order'] == 2): ?>class="or04"<?php else: ?>class="or02"<?php endif; ?>>时间</a></li>
-		<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 3): ?>4<?php elseif ($_COOKIE['order'] == 4): ?>3<?php else: ?>3<?php endif; ?>" <?php if ($_COOKIE['order'] == 3): ?>class="or04"<?php elseif ($_COOKIE['order'] == 4): ?>class="or03"<?php else: ?>class="or02"<?php endif; ?>>价格</a></li>
-		<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 5): ?>6<?php elseif ($_COOKIE['order'] == 6): ?>5<?php else: ?>5<?php endif; ?>" <?php if ($_COOKIE['order'] == 5): ?>class="or04"<?php elseif ($_COOKIE['order'] == 6): ?>class="or03"<?php else: ?>class="or02"<?php endif; ?>>里程</a></li>
-		<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 7): ?>8<?php elseif ($_COOKIE['order'] == 8): ?>7<?php else: ?>7<?php endif; ?>" <?php if ($_COOKIE['order'] == 7): ?>class="or03"<?php elseif ($_COOKIE['order'] == 8): ?>class="or04"<?php else: ?>class="or02"<?php endif; ?>>车龄</a></li>
-	</ul>
-</div>
+
 <div class="main">
 	<h3 class="mt10 f14">共找到 <span class="orange01"><?php echo $this->_tpl_vars['allnum']; ?>
 </span> 条车源信息</h3>
+	<div class="orderbox">
+		<ul class="clearfix">
+			<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 1): ?>2<?php elseif ($_COOKIE['order'] == 2): ?>1<?php else: ?>2<?php endif; ?>" <?php if ($_COOKIE['order'] == 1): ?>class="or03"<?php elseif ($_COOKIE['order'] == 2): ?>class="or04"<?php else: ?>class="or02"<?php endif; ?>>时间</a></li>
+			<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 3): ?>4<?php elseif ($_COOKIE['order'] == 4): ?>3<?php else: ?>3<?php endif; ?>" <?php if ($_COOKIE['order'] == 3): ?>class="or04"<?php elseif ($_COOKIE['order'] == 4): ?>class="or03"<?php else: ?>class="or02"<?php endif; ?>>价格</a></li>
+			<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 5): ?>6<?php elseif ($_COOKIE['order'] == 6): ?>5<?php else: ?>5<?php endif; ?>" <?php if ($_COOKIE['order'] == 5): ?>class="or04"<?php elseif ($_COOKIE['order'] == 6): ?>class="or03"<?php else: ?>class="or02"<?php endif; ?>>里程</a></li>
+			<li><a href="index.php?m=search&order=<?php if ($_COOKIE['order'] == 7): ?>8<?php elseif ($_COOKIE['order'] == 8): ?>7<?php else: ?>7<?php endif; ?>" <?php if ($_COOKIE['order'] == 7): ?>class="or03"<?php elseif ($_COOKIE['order'] == 8): ?>class="or04"<?php else: ?>class="or02"<?php endif; ?>>车龄</a></li>
+		</ul>
+	</div>
 	<?php $_from = $this->_tpl_vars['carslist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['carslist']):
 ?>
-	<div class="carlist clearfix mt10">
+	<div class="carlist clearfix">
 		<div class="carlist_left">
 			<a href="<?php echo $this->_tpl_vars['carslist']['p_url']; ?>
 "><?php if ($this->_tpl_vars['carslist']['p_mainpic'] <> ''): ?><img src="<?php echo $this->_tpl_vars['carslist']['p_mainpic']; ?>

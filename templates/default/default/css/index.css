@@ -428,9 +428,9 @@ background: url("../image/4s_03.png") no-repeat;
 /*热门品牌*/
 #hot_brands .tab_title{background:none repeat scroll 0 0 #f7f7f7;border-right:1px solid #ebebeb}
 #hot_brands .tab_title li{display:inline;float:left;font-family:Microsoft YaHei;font-size:14px;text-align:center}
-#hot_brands .tab_title li a{background:#f7f7f7;border-color:#ebebeb;border-image:none;border-style:solid none solid solid;border-width:1px 0 1px 1px;color:#2f3031;display:inline-block;float:left;height:78px;width:132px}
-#hot_brands .tab_title li a img{display:block;height:47px;margin:3px auto 0;width:47px}
-#hot_brands .tab_title li a.current{background:none repeat scroll 0 0 #fff;border-bottom:1px solid #fff;border-top:3px solid #cf1012;height:76px}
+#hot_brands .tab_title li a{background:#f7f7f7;border-color:#ebebeb;border-image:none;border-style:solid none solid solid;border-width:1px 0 1px 1px;color:#2f3031;display:inline-block;float:left;height:66px;width:132px}
+#hot_brands .tab_title li a img{display:block;height:40px;margin:3px auto 0;width:40px}
+#hot_brands .tab_title li a.current{background:none repeat scroll 0 0 #fff;border-bottom:1px solid #fff;border-top:3px solid #cf1012;height:62px}
 #hot_brands .tab_title li a.current img{margin-top:7px}
 #hot_brands .tab_title li a:hover{text-decoration:none}
 #hot_brands .tab_title li.last a{width:152px}

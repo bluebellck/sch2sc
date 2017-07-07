@@ -41,7 +41,7 @@ a:hover{color:#f60;}
 
 /**/
 .indexbox h3{height:35px;line-height:35px;font-size:14px;color:#333;background:#f5f5f5;border-bottom:1px solid #d8d8d8;}
-.indexbox h3 .title{border-left:3px solid #ff6600;padding-left:10px;}
+.indexbox h3 .title{border-left:3px solid #cf1012;padding-left:10px;}
 .indexbox .box{background:#fff;}
 .indexbox .box a.bbr{border-right:1px solid #d8d8d8;}
 .indexbox .box a{float:left;display:block;width:25%;height:45px;line-height:45px;text-align:center;border-bottom:1px solid #d8d8d8;color:#666;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
@@ -73,9 +73,9 @@ a:hover{color:#f60;}
 .search .search_list li a{display:block;color:#333;font-size:14px;background:url(../img/dot.gif) no-repeat 300px 15px;}
 
 /*排序*/
-.orderbox{margin-left:auto;margin-right:auto;width:320px;background:#fff;border-left:1px solid #d8d8d8;border-top:1px solid #d8d8d8;}
-.orderbox li{float:left;}
-.orderbox li a{display:block;width:79px;height:35px;line-height:35px;border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;text-align:center;color:#666;font-size:14px;}
+.orderbox{margin-left:auto;margin-right:auto;width:100%;background:#fff;border-left:1px solid #d8d8d8;border-top:1px solid #d8d8d8; margin-bottom: 10px;}
+.orderbox li{float:left;width: 25%;}
+.orderbox li a{display:block;width:auto;height:35px;line-height:35px;border-right:1px solid #d8d8d8;border-bottom:1px solid #d8d8d8;text-align:center;color:#666;font-size:14px;}
 .orderbox li a.or02{background:url(../img/order.png) no-repeat 60px 16px}
 .orderbox li a.or03{background:url(../img/order.png) no-repeat 60px -14px}
 .orderbox li a.or04{background:url(../img/order.png) no-repeat 60px -45px}
@@ -92,7 +92,7 @@ a:hover{color:#f60;}
 .carlist_right p{padding:0;}
 
 /*车源详细*/
-.carname{height:auto;line-height:20px;padding:0 10px;font-size:16px;color:#fff;background:#666;}
+.carname{height:auto;line-height:20px;padding:5px 10px;font-size:16px;color:#fff;background:#666;}
 .carspicbox{background:#ccc;padding:10px;}
 .carspic li{float:left;padding:5px;width:290px;height:230px;}
 .carspic li img{width:290px;}
@@ -121,7 +121,7 @@ a:hover{color:#f60;}
 .carpic .hd ul li{display:inline-block;width:5px;height:5px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#8C8C8C;margin:0 5px;vertical-align:top;overflow:hidden}
 .carpic .hd ul .on{background:#FE6C9C}
 .carpic .bd{position:relative;z-index:0}
-.carpic .bd li img{width:100%;height:auto;background:url(../img/loading.gif) center center no-repeat}
+.carpic .bd li img{width:100%;height:280px;background:url(../img/loading.gif) center center no-repeat;}
 .carpic .bd li a{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 
 
@@ -139,12 +139,12 @@ a:hover{color:#f60;}
 .shoptopbox .shoplogo .shopimg{display:block;width:80px;text-align:center;color:#999;height:80px;line-height:80px;background:#eee;}
 
 .clicktel{display:block;width:153px;height:25px;background:url(../img/tel.jpg) no-repeat 0 0;}
-.entermenu,.entermenu:hover{display:block;width:100%;padding:3px 10px;background:#ff6600;color:#fff;font-weight:bold;}
+.entermenu,.entermenu:hover{display:block;width:100%;padding:3px 10px;background:#cf1012;color:#fff;font-weight:bold;}
 
 
 /*城市列表*/
 .arealist h3{position:relative;height:30px;line-height:30px;font-size:14px;font-weight:bold;color:#333;border-bottom:2px solid #d8d8d8;}
-.arealist h3 .title{position:absolute;bottom:-2px;left:0;border-bottom:2px solid #ff6600;}
+.arealist h3 .title{position:absolute;bottom:-2px;left:0;border-bottom:2px solid #cf1012;}
 .citylist{padding:5px 0;}
 .citylist li{float:left;height:30px;line-height:30px;padding-right:20px;}
 
@@ -154,7 +154,7 @@ a:hover{color:#f60;}
 .selltelbox p{padding:5px 0;}
 .inp01{width:100%;padding:10px 0;border:1px solid #d8d8d8;text-indent:10px;font-size:14px;font-family:"微软雅黑";}
 .butdiv{margin-left:auto;margin-right:auto;}
-.button01{display:block;width:100%;background:#ff5500;color:#fff;font-weight:bold;font-size:14px;font-family:"微软雅黑";border:none;padding:10px 0;}
+.button01{display:block;width:100%;background:#cf1012;color:#fff;font-weight:bold;font-size:14px;font-family:"微软雅黑";border:none;padding:10px 0;}
 .button01:hover{color:#fff;}
 .kilobox{position:relative;}
 .kilobox .kilo{position:absolute;top:10px;right:10px;font-size:14px;}
@@ -177,3 +177,11 @@ a:hover{color:#f60;}
 #foottel .clickfoottel{float:right;padding-top:15px;padding-right:10px;}
 #foottel .clickfoottel a{display:block;width:109px;height:33px;line-height:33px;text-align:center;color:#fff;font-size:14px;background:url(../img/telbg.png) no-repeat 0 0;}
 #foottel .clickfoottel a:hover{color:#fff;}
+
+
+
+
+
+.scabout{padding: 10px;}
+.scabout img{width: 100%; width: auto/9; height: auto;}
+.scabout p{line-height: 22px;}

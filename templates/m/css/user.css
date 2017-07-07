@@ -30,7 +30,7 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .user-shoucang .text>h2{font-size: 15px; margin: 0; padding: 0; line-height: 20px; height: 40px;}
 .user-shoucang .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
 .user-shoucang .text>p.jg{font-size: 14px;}
-.user-shoucang .text>p.jg span{color: #ff6600; font-weight: bold;}
+.user-shoucang .text>p.jg span{color: #cf1012; font-weight: bold;}
 .user-shoucang .button{width: 100%; line-height: 40px; background: #9dd820; color: #fff;}
 .user-shoucang .button.lx{background: #8fc420;}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-06 10:11:35
+<?php /* Smarty version 2.6.18, created on 2017-07-06 15:01:16
          compiled from default/default/index.html */ ?>
 <!DOCTYPE>
 <html>
@@ -398,10 +398,10 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
 </div>	
 	
 	
-<div class="main mt20 clearfix" id="hot_brands">
+<div class="main mt50 clearfix" id="hot_brands">
   <div class="tab_title">
     <ul class="clearfix">
-      <li class="js-title"> <a style="line-height:76px;cursor:pointer;color: #cf1012;font-weight: bold;font-size: 20px;" class="current">最新车源</a> </li>
+      <li class="js-title"> <a style="line-height:62px;cursor:pointer;color: #cf1012;font-weight: bold;font-size: 20px;" class="current">最新车源</a> </li>
       <?php $_from = $this->_tpl_vars['recombrandlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['recombrand']):
 ?>
@@ -452,7 +452,7 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
 </div>
 
 
-<div class="sjtj mt20">
+<div class="sjtj mt50">
 	
 	<div class="index_left01">
       <ul class="indexnews_tab clearfix">
@@ -495,7 +495,7 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
 
 <?php endif; ?>
 
-<div class="main mt15 clearfix">
+<div class="main mt50 clearfix">
   <div class="index_left02">
     <ul class="indexnews_tab clearfix">
       <li class="here">网站动态</li>
@@ -663,7 +663,7 @@ $(function() {
 
 
 
-<div class="main mt15 clearfix">
+<div class="main mt30 clearfix">
   <ul class="indexnews_tab clearfix">
     <li class="here">热门车系</li>
     <li>友情链接</li>

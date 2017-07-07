@@ -26,42 +26,18 @@
 </div>
 <!--头部结束-->
 <!--主体-->
-<div class="main mt10">
-	<div id="focus" class="focus">
-		<div class="hd">
-			<ul></ul>
-		</div>
-		<div class="bd">
-			<ul>
-				<{foreach from=$film_list item=film}>
-				<li><a href="#"><img _src="<{$webdomain}><{$film.pic}>" src="images/blank.png" /></a></li>
-				<{/foreach}>
-			</ul>
-		</div>
-	</div>
-	<script type="text/javascript">
-		TouchSlide({ 
-			slideCell:"#focus",
-			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-			mainCell:".bd ul", 
-			effect:"left", 
-			autoPlay:true,//自动播放
-			autoPage:true, //自动分页
-			switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-		});
-	</script>
-</div>
+
 <div class="main">
-	<{foreach from=$newslist item=news}>
-	<div class="carlist clearfix mt10">
-		<div class="carlist_left">
-			<a href="index.php?m=about&id=<{$news.n_id}>"><{if $news.n_pic<>''}><img src="<{$news.n_pic}>"/><{else}>暂无图片<{/if}></a>
-		</div>
-		<div class="carlist_right">
-			<p class="f12 fb"><a href="index.php?m=about&id=<{$news.n_id}>"><{$news.n_title}></a></p>
-		</div>
+	
+	<div class="scabout">
+		<img src="http://www.sch2sc.com/templates/m/img/sh-about.jpg" />
+		<p class="mt10">		
+			顺驰名车成立于2008年，坐落在美丽的港口城市宁波。依托9年多在宁波市场客源的积累，目前在宁波最大二手车室内市场途众汽车商城拥有400多平方的展厅。一直以来，公司秉承着“专业对车，诚信对客户”的宗旨，稳健经营，积累进取，开拓创新。现以逐步形成全面，系统，独特的服务方式，各项业务稳步发展，取得了良好的社会效益。
+		</p>		
 	</div>
-	<{/foreach}>
+	
+	
+	
 </div>
 <!--主体-->
 <!--底部--> 
