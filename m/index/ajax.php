@@ -14,12 +14,12 @@ $array_month = array('01' => '01月', '02' => '02月', '03' => '03月', '04' => 
 if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['brand']) && intval($_GET['brand'])==1)
 {	header('Content-Type:text/plain; charset=utf-8');
 	$str = "<div class='comnav clearfix'><a href='javascript:void(0);' class='reback' id='reback'>返回</a>品牌</div><ul class='optionlist'>";
-	$brand = $db -> row_select('brand', "b_parent=-1", 'b_id,b_name,mark', 0, 'mark asc');
+	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
 	foreach ($brand as $k => $v) {
-		$brand[$k]['b_name'] = $brand[$k]['mark'] . ' ' . $brand[$k]['b_name'];
-		unset($brand[$k]['mark']);
+		$brand[$k]['brand_name'] = $brand[$k]['brand_mark'] . ' ' . $brand[$k]['brand_name'];
+		unset($brand[$k]['brand_mark']);
 	} 
-	$list = get_array($brand, 'b_id', 'b_name');
+	$list = get_array($brand, 'brand_id', 'brand_name');
 	foreach($list as $key => $value){
 		$str .= "<li><a href='javascript:void(0);'>".$value."</a><input type='hidden' name='id' value='".$key."'><input type='hidden' name='mod' value='brand'></li>";
 	}
