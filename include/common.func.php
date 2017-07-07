@@ -171,7 +171,7 @@ function arr_brand_with_search()
 	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
 	foreach ($brand as $k => $v) {
 		$brand[$k]['brand_name'] = $brand[$k]['brand_mark'] . ' ' . $brand[$k]['brand_name'];
-		$brand[$k]['brand_id'] = 'b_' . $brand[$k]['brand_id'];
+		$brand[$k]['brand_id'] = $brand[$k]['brand_id'];
 		unset($brand[$k]['brand_mark']);
 	}
 	return get_array($brand, 'brand_id', 'brand_name');
