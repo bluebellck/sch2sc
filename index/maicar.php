@@ -24,20 +24,24 @@ if (submitcheck('action'))
 	$post['p_subsubbrand'] = intval($_POST['p_subsubbrand']);
 	$post['p_allname'] = "";
 
-	if(!empty($post['p_subbrand'])){
-		$bname = $commoncache['brandlist'][$post['p_brand']];
-		$subbname = arr_brandname($post['p_subbrand']);
-		$compareword = strstr($subbname,$bname);
-		if(!empty($compareword)){
-			$post['p_allname'] .= arr_brandname($post['p_subbrand']);
+		if(!empty($post['p_brand'])){
+			$bname = arr_brandname($post['p_brand']);
+			$post['p_allname'] .= $bname;
 		}
-		else{
-			$post['p_allname'] .= $bname ." ".arr_brandname($post['p_subbrand']);
+		if(!empty($post['p_subbrand'])){
+			$subname = arr_subbrandname($post['p_subbrand']);
+			$subsubname=arr_subsubbrandname($post['p_subsubbrand']);
+			$compareword = strstr($subsubname,$subname);
+			if(!empty($compareword)){
+				$post['p_allname'] .= $subsubname;
+			}
+			else{
+				$post['p_allname'] .= $subname ." ".$subsubname;
+			}
 		}
-	}
-	if(!empty($post['p_subsubbrand'])){
-		$post['p_allname'] .= " ".arr_brandname($post['p_subsubbrand']);
-	}
+		if(empty($post['p_brand'])){
+			echo $post['p_allname'] = $post['p_name'];
+		}
 
 	$post['p_kilometre'] =trim($post['p_kilometre']);
 	$post['p_year'] = intval($post['p_year']);
