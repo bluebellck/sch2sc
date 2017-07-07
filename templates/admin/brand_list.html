@@ -22,7 +22,7 @@
         <div class="main">
 			<{foreach from=$brandlist item=pbrands}>
 			<div class="letter">
-				<b class="orange01"><{$pbrands.mark}></b>
+				<b class="orange01"><{$pbrands.brand_mark}></b>
 				<span class="fr"><a href="#top" target="_self" class="gray01">返回顶部↑</a></span>
 			</div>
 			<div class="brandlist clearfix">
@@ -30,13 +30,13 @@
 					<div class="pbrandname">
 						<ul>
 							<li>
-								<{if $pbrands.b_pic<>""}>
-								<img src="<{$pbrands.b_pic}>">
+								<{if $pbrands.brand_pic<>""}>
+								<img src="<{$pbrands.brand_pic}>">
 								<{else}>
 								<{/if}>
-								<b><{$pbrands.b_name}> <{if $pbrands.b_type==1}><span class="orange01">推荐</span><{/if}></b>
+								<b><{$pbrands.brand_name}> <{if $pbrands.brand_recommend==1}><span class="orange01">推荐</span><{/if}></b>
 								<div class="brandmenu">
-									<a href="<{$adminpage}>?m=brand&a=add&id=<{$pbrands.b_id}>&page=<{$page}>" class="add">添加子品牌</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$pbrands.b_id}>&page=<{$page}>" class="edit">编辑</a> | <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$pbrands.b_id}>&page=<{$page}>'" class="del">删除</a>
+									<a href="<{$adminpage}>?m=brand&a=add&id=<{$pbrands.brand_id}>&page=<{$page}>" class="add">添加子品牌</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$pbrands.brand_id}>&page=<{$page}>" class="edit">编辑</a> | <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$pbrands.brand_id}>&page=<{$page}>'" class="del">删除</a>
 								</div>
 							</li>
 						</ul>
@@ -45,8 +45,8 @@
 				<div class="brandlist_right">
 					<{foreach from=$pbrands.brands_list item=brands_list}>
 					<div class="brandname mt10">
-						<b><{$brands_list.b_name}></b>
-						<div class="brandmenu"><a href="<{$adminpage}>?m=brand&a=add&id=<{$brands_list.b_id}>&page=<{$page}>" class="add">添加车系</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$brands_list.b_id}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$brands_list.b_id}>&page=<{$page}>'" class="del">删除</a>
+						<b><{$brands_list.brand_name}>2222222222222</b>
+						<div class="brandmenu"><a href="<{$adminpage}>?m=brand&a=add&id=<{$brands_list.brand_id}>&page=<{$page}>" class="add">添加车系</a> | <a href="<{$adminpage}>?m=brand&a=edit&id=<{$brands_list.b_id}>&page=<{$page}>" class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<{$adminpage}>?m=brand&a=del&id=<{$brands_list.b_id}>&page=<{$page}>'" class="del">删除</a>
 						</div>
 					</div>
 					<div class="subbrandname">
