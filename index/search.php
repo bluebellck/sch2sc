@@ -293,7 +293,7 @@ if (isset($_GET['showtype'])) {
 	setMyCookie("showtype", 'list', time() + COOKIETIME);
 } 
 
-include(INC_DIR . 'Page.class.php');echo $where;
+include(INC_DIR . 'Page.class.php');
 $Page = new Page($db -> tb_prefix . 'cars', $where, '*', $_COOKIE['pagenum'], $orderby);
 $listnum = $Page -> total_num;
 $list = $Page -> get_data();
@@ -335,7 +335,7 @@ $tpl -> assign('allnum', $listnum);
 $tpl -> assign('button_basic', $button_basic);
 $tpl -> assign('button_select', $button_select);
 $tpl -> assign('select_model', $select_model);
-$tpl -> assign('carslist', $list);var_dump($list);
+$tpl -> assign('carslist', $list);
 
 $tpl -> display('default/' . $settings['templates'] . '/carlist.html');
 ?>
