@@ -21,7 +21,7 @@ $tpl->assign( 'page_g', $page_g );
 
 //列表
 if ($ac == 'list')
-{echo 222;
+{
     $where = 'brand_mark="A" ';
     //搜索条件
 	$pagesize = 0;
@@ -37,7 +37,7 @@ if ($ac == 'list')
     foreach($list as $key => $value){
         $subbrandlist = $db->row_select('series','brand_id = '.$value['brand_id']);
 		foreach($subbrandlist as $subkey => $subvalue){
-			 $subsubbrandlist = $db->row_select('style','series_id = '.$subvalue['series_id']);
+			 $subsubbrandlist = $db->row_select('styles','series_id = '.$subvalue['series_id']);
 			 $subbrandlist[$subkey]['subbrands_list']=$subsubbrandlist;
 		}
         $list[$key]['brands_list']=$subbrandlist;
