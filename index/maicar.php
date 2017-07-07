@@ -39,9 +39,6 @@ if (submitcheck('action'))
 				$post['p_allname'] .= $subname ." ".$subsubname;
 			}
 		}
-		if(empty($post['p_brand'])){
-			echo $post['p_allname'] = $post['p_name'];
-		}
 
 	$post['p_kilometre'] =trim($post['p_kilometre']);
 	$post['p_year'] = intval($post['p_year']);
