@@ -17,7 +17,7 @@ $tpl -> assign('filmlist', get_filmstrip(1));
 $recombrand = get_brand_recom();
 
 foreach($recombrand as $key => $value){
-	$recombrand[$key]['carlist'] = get_carlist($_COOKIE['city'],"p_brand=".$value['b_id']." and issell=0 and p_mainpic!='' and isshow=1", '10', 'listtime desc');
+	$recombrand[$key]['carlist'] = get_carlist($_COOKIE['city'],"p_brand=".$value['brand_id']." and issell=0 and p_mainpic!='' and isshow=1", '10', 'listtime desc');
 }
 
 $tpl -> assign('recombrandlist', $recombrand);
