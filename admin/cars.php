@@ -764,7 +764,7 @@ elseif ($ac == 'add' || $ac == 'edit') {
 		$page_get = isset($_GET['page']) ? $_GET['page'] : "";
 		$select_brand = select_make($data['p_brand'], $commoncache['markbrandlist'], '请选择品牌');
 		$select_subbrand = select_subbrand(intval($data['p_subbrand']));
-		$select_subsubbrand = select_subbrand(intval($data['p_subsubbrand']));
+		$select_subsubbrand = select_subsubbrand(intval($data['p_subsubbrand']));
 		$select_model = select_make($data['p_model'], $commoncache['modellist'], '');
 		$select_year = select_make($data['p_year'], $commoncache['yearlist'], '请选择年份');
 		$select_month = select_make($data['p_month'], array('01' => '01月', '02' => '02月', '03' => '03月', '04' => '04月', '05' => '05月', '06' => '06月', '07' => '07月', '08' => '08月', '09' => '09月', '10' => '10月', '11' => '11月', '12' => '12月'), '请选择月份');	
