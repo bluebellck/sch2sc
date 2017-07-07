@@ -293,7 +293,7 @@ if (isset($_GET['showtype'])) {
 	setMyCookie("showtype", 'list', time() + COOKIETIME);
 } 
 
-include(INC_DIR . 'Page.class.php');
+include(INC_DIR . 'Page.class.php');echo $where;
 $Page = new Page($db -> tb_prefix . 'cars', $where, '*', $_COOKIE['pagenum'], $orderby);
 $listnum = $Page -> total_num;
 $list = $Page -> get_data();
