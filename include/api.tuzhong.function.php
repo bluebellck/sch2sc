@@ -6,9 +6,7 @@ function api_tuzhong_all($data,$uid){
 	$arr['uid'] = $uid;
 	$arr['cheyuan_id'] = $data['p_id'];
 	$arr['p_brand'] = $data['p_brand'];
-	$arr['p_brandname'] = 1;
 	$arr['p_subbrand'] = $data['p_subbrand'];
-	$arr['p_subbrandname'] = $data[''];
 	$arr['p_subsubbrand'] = $data['p_subsubbrand'];
 	$arr['p_allname'] = $data['p_allname'];
 	$arr['aid'] = $data['aid'];
