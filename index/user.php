@@ -348,7 +348,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$insertid = $db -> insert_id();
 			$post['p_id'] = $insertid;
 			include(INC_DIR . 'api.tuzhong.function.php');
-			api_tuzhong_all($post,'111');
+			api_tuzhong_all($post,'706','add');
 			
 			$post = array();
 			//添加自定义参数值
