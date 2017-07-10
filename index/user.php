@@ -233,7 +233,7 @@ elseif ($ac == 'carlist') {
 	$where = 'uid=' . $_SESSION['USER_ID'];
 	if(!empty($_GET['keywords'])) {
 		$keywords = $_GET['keywords'];
-		$where .= " and (p_allname like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
+		$where .= " and (p_allname like '%{$keywords}%')";
 		
 	}
 	include(INC_DIR . 'Page.class.php');
