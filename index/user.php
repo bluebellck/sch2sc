@@ -426,7 +426,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 		$page_get = isset($_GET['page']) ? $_GET['page'] : "";
 		$select_brand = select_make($data['p_brand'], $commoncache['markbrandlist'], '请选择品牌');
 		$select_subbrand = select_subbrand(intval($data['p_subbrand']));
-		$select_subsubbrand = select_subbrand(intval($data['p_subsubbrand']));
+		$select_subsubbrand = select_subsubbrand(intval($data['p_subsubbrand']));
 		$select_model = select_make($data['p_model'], $array_model, '');
 		$select_year = select_make($data['p_year'], $array_year, '请选择年份');
 		$select_color = select_make($data['p_color'], $array_color, '请选择颜色');
@@ -745,7 +745,7 @@ elseif ($ac == 'addrentcar' || $ac == 'editrentcar') {
 		// 品牌选择
 		$select_brand = select_make($data['p_brand'], $commoncache['markbrandlist'], '请选择品牌');
 		$select_subbrand = select_subbrand(intval($data['p_subbrand']));
-		$select_subsubbrand = select_subbrand(intval($data['p_subsubbrand']));
+		$select_subsubbrand = select_subsubbrand(intval($data['p_subsubbrand']));
 
 		$page_get = isset($_GET['page']) ? $_GET['page'] : "";
 		$select_rentmodel = select_make($data['p_model'], $commoncache['rentmodellist'], '请选择车型');
