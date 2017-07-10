@@ -139,13 +139,13 @@ if (!empty($_GET['ajax']) && !empty($_GET['subbrandid']))
 
 {	header('Content-Type:text/plain; charset=utf-8');
 	$brandlist = "<option value='' selected>请选择款式</option>";
-	$list = $db->row_select('brand',"b_parent='".$_GET['subbrandid']."'");
+	$list = $db->row_select('styles',"series_id='".$_GET['subbrandid']."'",' distinct(styles_year) ');
 	if($list){
 		foreach($list as $key => $value){
-			$brandlist .= "<optgroup label='".$value['b_name']."' style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
-			$sublist = $db->row_select('brand',"b_parent='".$value['b_id']."'");
+			$brandlist .= "<optgroup label='".$value['styles_year']."' style='font-style: normal; background: none repeat scroll 0% 0% rgb(239, 239, 239); text-align: center;'></optgroup>";
+			$sublist = $db->row_select('styles'," styles_year='".$value['styles_year']."' and series_id='".$_GET['subbrandid']."'");
 			foreach($sublist as $subkey => $subvalue){
-				$brandlist .= "<option value=".$subvalue['b_id'].">".$subvalue['b_name']."</option>";
+				$brandlist .= "<option value=".$subvalue['styles_id'].">".$subvalue['styles_name']."</option>";
 			}
 		}
 	}
