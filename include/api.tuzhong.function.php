@@ -1,24 +1,5 @@
 <?php
 function api_tuzhong_all($data,$uid){
-	var_dump($data);
-	$model_arr = array();
-	$pics_arr = explode('|',$data['p_pics']);
-	$arr = array();
-	$arr['uid'] = $uid;
-	$arr['cheyuan_id'] = $data['p_id'];
-	$arr['p_brand'] = $data['p_brand'];
-	$arr['p_brandname'] = 1;
-	$arr['p_subbrand'] = $data['p_subbrand'];
-	$arr['p_subbrandname'] = $data[''];
-	$arr['p_subsubbrand'] = $data['p_subsubbrand'];
-	$arr['p_allname'] = $data['p_allname'];
-	$arr['aid'] = $data['aid'];
-	$arr['cid'] = $data['cid'];
-	$arr['p_ontime'] = time($data['p_year'].'-'.$data['p_month'].'-01');
-	$arr['p_kilometre'] = $data['p_kilometre'];
-	$arr['p_bidprice'] = $data[''];
-	$arr['p_price'] = $data['p_price'];
-	$arr['p_newprice'] = $data['p_newprice'];
 	$arr['p_color'] = $data['p_color'];
 	$arr['p_model'] = $model_arr($data['p_model']);
 	$arr['p_gas'] = $data['p_gas'];
