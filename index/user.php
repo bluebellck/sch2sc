@@ -346,7 +346,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
-			$post['p_id'] = $insertid;
+			$post['cheyuan_id'] = $insertid;
 			include(INC_DIR . 'api.tuzhong.function.php');
 			api_tuzhong_all($post,'706','add');
 			
@@ -370,6 +370,11 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			html_cars($insertid);
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
+echo 111;
+			$post['cheyuan_id'] =  intval($_POST['id']);
+			include(INC_DIR . 'api.tuzhong.function.php');
+			//api_tuzhong_all($post,'706','edit');
+
 			//修改改自定义参数值
 			$post = post('p_id','c_value');
 			foreach($paralist as $key => $value){
