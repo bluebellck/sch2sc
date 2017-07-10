@@ -32,8 +32,10 @@ function api_tuzhong_all($data,$uid,$type){
 	$arr['p_rightbackpic'] = $pics_arr[7];
 	$arr['p_leftpic'] = $pics_arr[8];
 	$arr['p_sidepic'] = $pics_arr[9];
-	$arr['p_addtime'] = $data['p_addtime'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
+	if($type == 'add'){
+		$arr['p_addtime'] = $data['p_addtime'];	
+	}
 
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
 	//初始化
