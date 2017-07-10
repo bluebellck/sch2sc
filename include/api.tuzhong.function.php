@@ -1,4 +1,5 @@
 <?php
+echo 2222;
 function api_tuzhong_all($data,$uid,$type){
 	$model_arr = array('1' => 1,'3' => 1,'4' => 1,'5' => 1,'6' => 1,'7' => 4,'8' => 3,'9' => 2,'38' => 5,'41' => 1);
 	$pics_arr = explode('|',$data['p_pics']);
@@ -62,6 +63,6 @@ function api_tuzhong_all($data,$uid,$type){
 
 }
 
-
+echo 333;
 
 ?>
