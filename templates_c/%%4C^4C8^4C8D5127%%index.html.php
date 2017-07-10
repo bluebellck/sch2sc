@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-07 09:48:31
+<?php /* Smarty version 2.6.18, created on 2017-07-10 09:13:06
          compiled from m/index.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +30,7 @@
 <div class="header clearfix back">
     <div class="logo"><a href="index.php" title=""><?php echo $this->_tpl_vars['setting']['sitename']; ?>
 </a></div>
-    <div class="city"><a href="###" title="">登录</a></div>
+    <div class="city"><a href="index.php?m=login" title="登录">登录</a></div>
 </div>
 <!--头部结束-->
 <!--主体-->

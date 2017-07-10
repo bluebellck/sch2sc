@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-06 14:25:36
+<?php /* Smarty version 2.6.18, created on 2017-07-07 14:00:29
          compiled from admin/brand_list.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +13,7 @@
 		<div class="searchL">
 			<ul class="menulist">
 				<li><a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=add" class="add">添加品牌</a></li>
+?m=brand&a=addfirst" class="add">添加品牌</a></li>
 			</ul>
 		</div>
 		<div class="searchR" style="padding-top:5px">
@@ -42,22 +42,23 @@
 					<div class="pbrandname">
 						<ul>
 							<li>
-								<?php if ($this->_tpl_vars['pbrands']['b_pic'] <> ""): ?>
-								<img src="<?php echo $this->_tpl_vars['pbrands']['b_pic']; ?>
+								<?php if ($this->_tpl_vars['pbrands']['brand_pic'] <> ""): ?>
+								<img src="<?php echo $this->_tpl_vars['weburl']; ?>
+<?php echo $this->_tpl_vars['pbrands']['brand_pic']; ?>
 ">
 								<?php else: ?>
 								<?php endif; ?>
-								<b><?php echo $this->_tpl_vars['pbrands']['b_name']; ?>
- <?php if ($this->_tpl_vars['pbrands']['b_type'] == 1): ?><span class="orange01">推荐</span><?php endif; ?></b>
+								<p><?php echo $this->_tpl_vars['pbrands']['brand_name']; ?>
+ <span class="gray01"><?php if ($this->_tpl_vars['pbrands']['brand_series'] == 1): ?>自主<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 2): ?>欧系<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 3): ?>德系<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 4): ?>美系<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 5): ?>日系<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 6): ?>韩系<?php elseif ($this->_tpl_vars['pbrands']['brand_series'] == 7): ?>其他<?php endif; ?></span><?php if ($this->_tpl_vars['pbrands']['b_type'] == 1): ?><span class="orange01">推荐</span><?php endif; ?></p>
 								<div class="brandmenu">
 									<a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=add&id=<?php echo $this->_tpl_vars['pbrands']['b_id']; ?>
+?m=brand&a=addsecond&id=<?php echo $this->_tpl_vars['pbrands']['brand_id']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 " class="add">添加子品牌</a> | <a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=edit&id=<?php echo $this->_tpl_vars['pbrands']['b_id']; ?>
+?m=brand&a=editsecond&id=<?php echo $this->_tpl_vars['pbrands']['brand_id']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 " class="edit">编辑</a> | <a href="javascript:if(confirm('确实要删除吗?'))location='<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=del&id=<?php echo $this->_tpl_vars['pbrands']['b_id']; ?>
+?m=brand&a=delfirst&id=<?php echo $this->_tpl_vars['pbrands']['brand_id']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 '" class="del">删除</a>
 								</div>
@@ -70,16 +71,16 @@
     foreach ($_from as $this->_tpl_vars['brands_list']):
 ?>
 					<div class="brandname mt10">
-						<b><?php echo $this->_tpl_vars['brands_list']['b_name']; ?>
+						<b><?php echo $this->_tpl_vars['brands_list']['series_groupname']; ?>
 </b>
 						<div class="brandmenu"><a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=add&id=<?php echo $this->_tpl_vars['brands_list']['b_id']; ?>
+?m=brand&a=addthird&seriesname=<?php echo $this->_tpl_vars['brands_list']['series_groupname']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 " class="add">添加车系</a> | <a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=edit&id=<?php echo $this->_tpl_vars['brands_list']['b_id']; ?>
+?m=brand&a=editthird&seriesname=<?php echo $this->_tpl_vars['brands_list']['series_groupname']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 " class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=del&id=<?php echo $this->_tpl_vars['brands_list']['b_id']; ?>
+?m=brand&a=delsecond&seriesname=<?php echo $this->_tpl_vars['brands_list']['series_groupname']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 '" class="del">删除</a>
 						</div>
@@ -89,18 +90,18 @@
 							<?php $_from = $this->_tpl_vars['brands_list']['subbrands_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['subbrands_list']):
 ?>
-							<li><?php echo $this->_tpl_vars['subbrands_list']['b_name']; ?>
+							<li><?php echo $this->_tpl_vars['subbrands_list']['series_name']; ?>
 
 								<div class="brandmenu">
 								<a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=edit&id=<?php echo $this->_tpl_vars['subbrands_list']['b_id']; ?>
+?m=brand&a=edit&id=<?php echo $this->_tpl_vars['subbrands_list']['series_id']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 " class="edit">编辑</a> <a href="javascript:if(confirm('确实要删除吗?'))location='<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=brand&a=del&id=<?php echo $this->_tpl_vars['subbrands_list']['b_id']; ?>
+?m=brand&a=del&id=<?php echo $this->_tpl_vars['subbrands_list']['series_id']; ?>
 &page=<?php echo $this->_tpl_vars['page']; ?>
 '" class="del">删除</a>
                                 <a href="<?php echo $this->_tpl_vars['adminpage']; ?>
-?m=carmodel&a=list&p_subbrand=<?php echo $this->_tpl_vars['subbrands_list']['b_id']; ?>
+?m=carmodel&a=list&p_subbrand=<?php echo $this->_tpl_vars['subbrands_list']['series_id']; ?>
 ">查看</a>
 								</div>
 							</li>

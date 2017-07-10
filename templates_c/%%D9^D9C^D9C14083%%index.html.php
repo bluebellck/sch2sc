@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-06 15:01:16
+<?php /* Smarty version 2.6.18, created on 2017-07-07 16:02:03
          compiled from default/default/index.html */ ?>
 <!DOCTYPE>
 <html>
@@ -315,8 +315,8 @@ unset($_smarty_tpl_vars);
             <div class="clearfix""> <?php $_from = $this->_tpl_vars['recombrandlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['brandlist']):
 ?><a href="<?php echo $this->_tpl_vars['weburl']; ?>
-/index.php?m=search&c=b_<?php echo $this->_tpl_vars['brandlist']['b_id']; ?>
-" <?php if ($_COOKIE['brand'] == $this->_tpl_vars['brandlist']['b_id']): ?>class="here"<?php endif; ?>><?php echo $this->_tpl_vars['brandlist']['b_name']; ?>
+/index.php?m=search&c=b_<?php echo $this->_tpl_vars['brandlist']['brand_id']; ?>
+" <?php if ($_COOKIE['brand'] == $this->_tpl_vars['brandlist']['brand_id']): ?>class="here"<?php endif; ?>><?php echo $this->_tpl_vars['brandlist']['brand_name']; ?>
 </a><?php endforeach; endif; unset($_from); ?> <a href="<?php echo $this->_tpl_vars['weburl']; ?>
 /index.php?m=search" class="more">更多<i></i></a> </div>
           </div>
@@ -405,7 +405,7 @@ jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",
       <?php $_from = $this->_tpl_vars['recombrandlist']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['skey'] => $this->_tpl_vars['recombrand']):
 ?>
-      <li class="js-title"> <a  href="javascript:;"><img src="upload/brand/<?php echo $this->_tpl_vars['recombrand']['pic']; ?>
+      <li class="js-title"> <a  href="javascript:;"><img src="<?php echo $this->_tpl_vars['recombrand']['brand_pic']; ?>
 " alt="<?php echo $this->_tpl_vars['recombrand']['b_name']; ?>
 "><?php echo $this->_tpl_vars['recombrand']['b_name']; ?>
 </a> </li>

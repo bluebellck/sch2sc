@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-06 09:13:27
+<?php /* Smarty version 2.6.18, created on 2017-07-07 16:41:42
          compiled from default/default/carlist.html */ ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -23,7 +23,7 @@
 				$("#brand").change(function(){
 					$.get("<?php echo $this->_tpl_vars['weburl']; ?>
 /index.php?m=ajax&ajax=1", { 
-						bid :  $("#brand").val() 
+						brandid :  $("#brand").val() 
 					}, function (data, textStatus){
 						   $("#subbrand").html(data); // 把返回的数据添加到页面上
 						}
