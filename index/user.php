@@ -372,7 +372,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
 			
 			//同步到途众好车网
-			$rs = $db -> row_select_one('cars', $post, "p_id=" . intval($_POST['id']));
+			$rs = $db -> row_select_one('cars', "p_id=" . intval($_POST['id']));
 			$post['issell'] = $rs['issell'];
 			$post['cheyuan_id'] =  intval($_POST['id']);
 			include(INC_DIR . 'api.tuzhong.function.php');
