@@ -369,6 +369,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
 			
+echo INC_DIR . 'api.tuzhong.function.php';
 			$post = array();
 			//添加自定义参数值
 			foreach($paralist as $key => $value){
@@ -390,6 +391,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
+
+
 			//修改改自定义参数值
 			$post = post('p_id','c_value');
 			foreach($paralist as $key => $value){
