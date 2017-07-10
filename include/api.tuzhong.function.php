@@ -37,7 +37,7 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_addtime'] = $data['p_addtime'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
 	
-	$url = "http://www.tuzhong.cn/api/api_sch2sc.php";
+	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
 	//初始化
 	$curl = curl_init();
 	//设置抓取的url
