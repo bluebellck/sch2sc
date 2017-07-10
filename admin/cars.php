@@ -599,7 +599,7 @@ elseif ($ac == 'add' || $ac == 'edit') {
 			}
 		}
 		if(empty($post['p_brand'])){
-			echo $post['p_allname'] = $post['p_name'];
+			$post['p_allname'] = $post['p_name'];
 		}
 
 		
