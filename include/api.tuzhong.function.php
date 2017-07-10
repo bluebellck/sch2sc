@@ -48,7 +48,7 @@ function api_tuzhong_all($data,$uid){
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	//设置post方式提交
 	curl_setopt($curl, CURLOPT_POST, 1);
-	curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
+	curl_setopt($curl, CURLOPT_POSTFIELDS, $arr);
 	//执行命令
 	$data = curl_exec($curl);
 	//关闭URL请求
