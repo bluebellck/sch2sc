@@ -552,8 +552,9 @@ elseif ($ac == 'addpicture') {
 		}
 		$data['p_pics'] = trim($data['p_pics'],'|');
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
+
 		//同步到途众好车网
-		$post = $data;
+		$post = $data;unset($data['p_mainpic']);
 		$rs = $db -> row_select_one('cars', "p_id=" .$carid);
 		$post['issell'] = $rs['issell'];
 		$post['cheyuan_id'] =  $carid;
