@@ -11,6 +11,9 @@ foreach($carlist['sjcar'] as $key => $value){
 	$carlist['sjcar'][$key]['p_url'] = "index.php?m=cars&id=".$carlist['sjcar'][$key]['p_id'];
 
 }
+if($_SESSION['USER_ID']) {
+	$tpl -> assign('islogin', 1);
+}
 
 $tpl -> assign('carslist', $carlist['sjcar']); 
 
