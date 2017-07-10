@@ -13,11 +13,15 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_allname'] = $data['p_allname'];
 	$arr['aid'] = $data['aid'];
 	$arr['cid'] = $data['cid'];
-	$arr['p_ontime'] = time($data['p_year'].'-'.$data['p_month'].'-01');
+
 	$arr['p_kilometre'] = $data['p_kilometre'];
 	$arr['p_bidprice'] = $data[''];
 	$arr['p_price'] = $data['p_price'];
 	$arr['p_newprice'] = $data['p_newprice'];
+	$arr['p_color'] = $data['p_color'];
+	$arr['p_model'] = $model_arr($data['p_model']);
+	$arr['p_gas'] = $data['p_gas'];
+	$arr['p_transmission'] = $data['p_transmission'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
 	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
