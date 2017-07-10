@@ -346,12 +346,9 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
-			include(INC_DIR . 'api.tuzhong.class.php');
-			if(function_exists('api_tuzhong_all')){
-				echo 111;
-			}else{
-				echo 222;
-			}
+			include(INC_DIR . 'api.tuzhong.function.php');
+			api_tuzhong_all($post,'111');
+			
 			$post = array();
 			//添加自定义参数值
 			foreach($paralist as $key => $value){
@@ -396,7 +393,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			}			
 			html_cars(intval($_POST['id']));
 		} 
-		//showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'), "index.php?m=user&a=carlist");
+		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'), "index.php?m=user&a=carlist");
 	} 
 	// 转向添加或修改页面
 	else {
