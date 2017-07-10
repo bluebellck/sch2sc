@@ -234,10 +234,11 @@ elseif ($ac == 'carlist') {
 	if(!empty($_GET['keywords'])) {
 		$keywords = $_GET['keywords'];
 		$where .= " and (p_allname like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
+		
 	}
 	include(INC_DIR . 'Page.class.php');
 	$Page = new Page($db -> tb_prefix . 'cars', $where, '*', '50', 'issell asc,listtime desc');
-	$list = $Page -> get_data();
+	$list = $Page -> get_data();echo $where;
 	foreach($list as $key => $value) {
 		$list[$key]['listtime'] = date('Y-m-d H:i:s', $value['listtime']);
 		$list[$key]['p_addtime'] = date('Y-m-d H:i:s', $value['p_addtime']);
