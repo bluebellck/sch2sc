@@ -553,12 +553,12 @@ elseif ($ac == 'addpicture') {
 		$data['p_pics'] = trim($data['p_pics'],'|');
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
 		//同步到途众好车网
-		$post = $data;echo 111;
-		$rs = $db -> row_select_one('cars', "p_id=" .$carid);echo 222;
-		$post['issell'] = $rs['issell'];echo 333;
-		$post['cheyuan_id'] =  $carid;echo 144411;
-		include('../'.INC_DIR . 'api.tuzhong.function.php');echo 555;
-		api_tuzhong_all($post,'706','addpicture');echo 666;
+		$post = $data;
+		$rs = $db -> row_select_one('cars', "p_id=" .$carid);
+		$post['issell'] = $rs['issell'];
+		$post['cheyuan_id'] =  $carid;
+		include('../'.INC_DIR . 'api.tuzhong.function.php');var_dump($post);
+		api_tuzhong_all($post,'706','addpicture');
 
 		html_cars($carid);
 		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
