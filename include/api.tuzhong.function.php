@@ -3,6 +3,7 @@ function api_tuzhong_all($data,$uid,$type){
 	$model_arr = array('1' => 1,'3' => 1,'4' => 1,'5' => 1,'6' => 1,'7' => 4,'8' => 3,'9' => 2,'38' => 5,'41' => 1);
 	$pics_arr = explode('|',$data['p_pics']);
 	$arr = array();
+	$arr['type'] = $type;
 	$arr['uid'] = $uid;
 	$arr['cheyuan_id'] = $data['p_id'];
 	$arr['p_brand'] = $data['p_brand'];
