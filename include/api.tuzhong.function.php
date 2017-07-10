@@ -22,8 +22,6 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_model'] = $model_arr($data['p_model']);
 	$arr['p_gas'] = $data['p_gas'];
 	$arr['p_transmission'] = $data['p_transmission'];
-	$arr['p_usetype'] = '家用';
-	$arr['p_remarks'] = $data['p_details'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
 	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
