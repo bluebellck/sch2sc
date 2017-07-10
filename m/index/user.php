@@ -371,7 +371,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			
 			//同步到途众好车网
 			$post['cheyuan_id'] = $insertid;
-			include(INC_DIR . 'api.tuzhong.function.php');
+			include('../'.INC_DIR . 'api.tuzhong.function.php');
 			api_tuzhong_all($post,'706','add');
 
 			$post = array();
@@ -400,7 +400,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$rs = $db -> row_select_one('cars', "p_id=" . intval($_POST['id']));
 			$post['issell'] = $rs['issell'];
 			$post['cheyuan_id'] =  intval($_POST['id']);
-			include(INC_DIR . 'api.tuzhong.function.php');
+			include('../'.INC_DIR . 'api.tuzhong.function.php');
 			api_tuzhong_all($post,'706','edit');
 
 			//修改改自定义参数值
