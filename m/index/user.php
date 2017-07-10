@@ -369,7 +369,11 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
 			
-echo INC_DIR . 'api.tuzhong.function.php';
+			//同步到途众好车网
+			$post['cheyuan_id'] = $insertid;
+			include(INC_DIR . 'api.tuzhong.function.php');
+			api_tuzhong_all($post,'706','add');
+
 			$post = array();
 			//添加自定义参数值
 			foreach($paralist as $key => $value){
@@ -387,11 +391,17 @@ echo INC_DIR . 'api.tuzhong.function.php';
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
 			html_cars($insertid);
-			//header("location:index.php?m=user&a=addpicture&carid=".$insertid);
+			header("location:index.php?m=user&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
 
+						//同步到途众好车网
+			$rs = $db -> row_select_one('cars', "p_id=" . intval($_POST['id']));
+			$post['issell'] = $rs['issell'];
+			$post['cheyuan_id'] =  intval($_POST['id']);
+			include(INC_DIR . 'api.tuzhong.function.php');
+			api_tuzhong_all($post,'706','edit');
 
 			//修改改自定义参数值
 			$post = post('p_id','c_value');
