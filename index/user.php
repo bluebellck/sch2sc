@@ -346,6 +346,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
+			$post['p_id'] = $insertid;
 			include(INC_DIR . 'api.tuzhong.function.php');
 			api_tuzhong_all($post,'111');
 			
