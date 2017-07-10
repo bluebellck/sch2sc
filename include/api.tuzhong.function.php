@@ -1,6 +1,7 @@
 <?php
-function api_tuzhong_all($data,$uid){
+function api_tuzhong_all(){
 	
+	echo 111;
 
 
 
