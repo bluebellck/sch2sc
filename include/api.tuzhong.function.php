@@ -14,6 +14,9 @@ function api_tuzhong_all($data,$uid){
 	$arr['aid'] = $data['aid'];
 	$arr['cid'] = $data['cid'];
 
+	$arr['p_kilometre'] = $data['p_kilometre'];
+	$arr['p_bidprice'] = $data[''];
+	$arr['p_price'] = $data['p_price'];
 	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
 	//初始化
