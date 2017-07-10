@@ -30,8 +30,14 @@ if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['brand']) &&
 
 //车系选择
 if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['subbrand']) && intval($_GET['subbrand'])==1 && !empty($_GET['brandid']))
-{	
-	echo $_GET['brandid'];
+{	header('Content-Type:text/plain; charset=utf-8');
+	$str = "<div class='comnav clearfix'><a href='javascript:void(0);' class='reback' id='reback'>返回</a>车系</div><ul class='optionlist'>";
+	$brand = $db -> row_select('series', "brand_id=".intval($_GET['brandid']), '*', 0, 'series_id asc');
+	foreach($brand as $key => $value){
+		$str .= "<li><a href='javascript:void(0);'>".$value['series_name']."&nbsp;&nbsp;".$v['series_name']."</a><input type='hidden' name='id' value='".$v['series_id']."'><input type='hidden' name='mod' value='subbrand'></li>";
+	}
+	$str .= "</ul>";
+	echo $str;
 	exit;
 }
 
