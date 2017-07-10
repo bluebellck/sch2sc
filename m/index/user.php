@@ -552,6 +552,14 @@ elseif ($ac == 'addpicture') {
 		}
 		$data['p_pics'] = trim($data['p_pics'],'|');
 		$rs = $db -> row_update('cars', $data, "p_id=".$carid);
+		//同步到途众好车网
+		$post = $data;
+		$rs = $db -> row_select_one('cars', "p_id=" .$carid);
+		$post['issell'] = $rs['issell'];
+		$post['cheyuan_id'] =  $carid;
+		include('../'.INC_DIR . 'api.tuzhong.function.php');
+		api_tuzhong_all($post,'706','addpicture');
+
 		html_cars($carid);
 		showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'),"index.php?m=user&a=index");
 	} 
