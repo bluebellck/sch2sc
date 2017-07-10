@@ -346,6 +346,8 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 
 			$rs = $db -> row_insert('cars', $post);
 			$insertid = $db -> insert_id();
+
+			//同步到途众好车网
 			$post['cheyuan_id'] = $insertid;
 			include(INC_DIR . 'api.tuzhong.function.php');
 			api_tuzhong_all($post,'706','add');
