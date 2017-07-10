@@ -387,7 +387,7 @@ echo INC_DIR . 'api.tuzhong.function.php';
 				$r = $db -> row_insert('selfdefine_value', $post);
 			}
 			html_cars($insertid);
-			header("location:index.php?m=user&a=addpicture&carid=".$insertid);
+			//header("location:index.php?m=user&a=addpicture&carid=".$insertid);
 			exit;
 		} else {
 			$rs = $db -> row_update('cars', $post, "p_id=" . intval($_POST['id']));
