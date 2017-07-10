@@ -10,23 +10,6 @@ $array_transmission = array('1' => '手动', '2' => '自动', '3' => '手自一�
 $array_kilometre = array('1' => '1万公里以下', '2' => '1-3万公里', '3' => '3-5万公里', '4' => '5-8万公里', '5' => '8-10万公里', '6' => '10万公里以上');
 $array_month = array('01' => '01月', '02' => '02月', '03' => '03月', '04' => '04月', '05' => '05月', '06' => '06月', '07' => '07月', '08' => '08月', '09' => '09月', '10' => '10月', '11' => '11月', '12' => '12月');
 
-//品牌选择
-if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['brand']) && intval($_GET['brand'])==1)
-{	header('Content-Type:text/plain; charset=utf-8');
-	$str = "<div class='comnav clearfix'><a href='javascript:void(0);' class='reback' id='reback'>返回</a>品牌</div><ul class='optionlist'>";
-	$brand = $db -> row_select('brand', "1=1", 'brand_id,brand_name,brand_mark', 0, 'brand_mark asc');
-	foreach ($brand as $k => $v) {
-		$brand[$k]['brand_name'] = $brand[$k]['brand_mark'] . ' ' . $brand[$k]['brand_name'];
-		unset($brand[$k]['brand_mark']);
-	} 
-	$list = get_array($brand, 'brand_id', 'brand_name');
-	foreach($list as $key => $value){
-		$str .= "<li><a href='javascript:void(0);'>".$value."</a><input type='hidden' name='id' value='".$key."'><input type='hidden' name='mod' value='brand'></li>";
-	}
-	$str .= "</ul>";
-	echo $str;
-	exit;
-}
 
 //车系选择
 if (isset($_GET['ajax']) && intval($_GET['ajax'])==1 && isset($_GET['subbrand']) && intval($_GET['subbrand'])==1 && !empty($_GET['brandid']))
