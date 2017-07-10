@@ -36,7 +36,7 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_sidepic'] = $pics_arr[9];
 	$arr['p_addtime'] = $data['p_addtime'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
-	
+	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
 	//初始化
 	$curl = curl_init();
