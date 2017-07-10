@@ -19,7 +19,7 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_price'] = $data['p_price'];
 	$arr['p_newprice'] = $data['p_newprice'];
 	$arr['p_color'] = $data['p_color'];
-	$arr['p_model'] = $data['p_model'];
+	$arr['p_model'] = $model_arr[$data['p_model']];
 	$arr['p_gas'] = $data['p_gas'];
 	$arr['p_transmission'] = $data['p_transmission'];
 	$arr['p_usetype'] = '家用';
@@ -36,7 +36,6 @@ function api_tuzhong_all($data,$uid){
 	$arr['p_sidepic'] = $pics_arr[9];
 	$arr['p_addtime'] = $data['p_addtime'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
-	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
 	//初始化
 	$curl = curl_init();
@@ -48,7 +47,7 @@ function api_tuzhong_all($data,$uid){
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	//设置post方式提交
 	curl_setopt($curl, CURLOPT_POST, 1);
-	curl_setopt($curl, CURLOPT_POSTFIELDS, array('1'));
+	curl_setopt($curl, CURLOPT_POSTFIELDS, $arr);
 	//执行命令
 	$data = curl_exec($curl);
 	//关闭URL请求
