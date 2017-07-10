@@ -238,7 +238,7 @@ elseif ($ac == 'carlist') {
 	}
 	include(INC_DIR . 'Page.class.php');
 	$Page = new Page($db -> tb_prefix . 'cars', $where, '*', '50', 'issell asc,listtime desc');
-	$list = $Page -> get_data();echo $where;
+	$list = $Page -> get_data();
 	foreach($list as $key => $value) {
 		$list[$key]['listtime'] = date('Y-m-d H:i:s', $value['listtime']);
 		$list[$key]['p_addtime'] = date('Y-m-d H:i:s', $value['p_addtime']);
@@ -304,7 +304,7 @@ elseif ($ac == 'addcar' || $ac == 'editcar') {
 			}
 		}
 		if(empty($post['p_brand'])){
-			echo $post['p_allname'] = $post['p_name'];
+			$post['p_allname'] = $post['p_name'];
 		}
 
 		$post['p_details'] = strip_tags($post['p_details']);
