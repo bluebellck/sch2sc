@@ -62,8 +62,8 @@ html,body{padding: 0; margin: 0 auto; max-width: 640px; min-width: 320px; backgr
 .business-shoucang .text>p{padding: 0; margin: 0; font-size: 12px; line-height: 25px;}
 .business-shoucang .text>p.jg{font-size: 14px;}
 .business-shoucang .text>p.jg span{color: #cf1012; font-weight: bold;}
-.business-shoucang .button{width: 100%; line-height: 40px; background: #9dd820; color: #fff;}
-.business-shoucang .button.lx{background: #8fc420;}
+.business-shoucang .button{width: 100%; line-height: 40px; background: #fc7000; color: #fff;}
+.business-shoucang .button.lx{background: #d65f00;}
 
 .business-tongji{width: 100%; background: #fff; padding: 10px 15px;}
 .business-tongji .g{line-height: 30px;}

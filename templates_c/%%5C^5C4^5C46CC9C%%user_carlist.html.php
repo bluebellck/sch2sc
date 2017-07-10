@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-04 14:38:45
+<?php /* Smarty version 2.6.18, created on 2017-07-10 13:23:41
          compiled from m/user_carlist.html */ ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +62,7 @@
 				<div class="uk-width-1-2">
 					<a href="index.php?m=user&a=refresh&id=<?php echo $this->_tpl_vars['cars']['p_id']; ?>
 &page=<?php echo $this->_tpl_vars['currpage']; ?>
-" class="button uk-button lx">刷新</a>
+" class="button uk-button">刷新</a>
 				</div>
 				<div class="uk-width-1-2">
 					<a href="index.php?m=user&a=sellcar&sell=<?php if ($this->_tpl_vars['cars']['issell'] == 1): ?>0<?php else: ?>1<?php endif; ?>&id=<?php echo $this->_tpl_vars['cars']['p_id']; ?>

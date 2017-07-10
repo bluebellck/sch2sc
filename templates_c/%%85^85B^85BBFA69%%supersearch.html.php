@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-07-05 14:51:43
+<?php /* Smarty version 2.6.18, created on 2017-07-10 11:27:34
          compiled from m/supersearch.html */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -50,8 +50,8 @@
 		<form method="get" action="index.php?m=search">
 		<input type="hidden" name="m" value="search">
 		<ul>
-			<li><a href="javascript:void(0);" id="model"><span class="all">不限</span><label>级别</label><input type="hidden" name="model" value=""></a></li>
 			<li><a href="javascript:void(0);" id="brand"><span class="all">不限</span><label>品牌</label><input type="hidden" name="brand" value=""></a></li>
+			<li><a href="javascript:void(0);" id="model"><span class="all">不限</span><label>车型</label><input type="hidden" name="model" value=""></a></li>
 			<li><a href="javascript:void(0);" id="price"><span class="all">不限</span><label>价格</label><input type="hidden" name="price" value=""></a></li>
 			<li><a href="javascript:void(0);" id="years"><span class="all">不限</span><label>车龄</label><input type="hidden" name="years" value=""></a></li>
 			<li><a href="javascript:void(0);" id="kilometre"><span class="all">不限</span><label>里程</label><input type="hidden" name="kilometre" value=""></a></li>
