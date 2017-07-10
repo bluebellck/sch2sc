@@ -558,7 +558,7 @@ elseif ($ac == 'addpicture') {
 		$rs = $db -> row_select_one('cars', "p_id=" .$carid);
 		$post['issell'] = $rs['issell'];
 		$post['cheyuan_id'] =  $carid;
-		include('../'.INC_DIR . 'api.tuzhong.function.php');var_dump($post);
+		include(''.INC_DIR . 'api.tuzhong.function.php');
 		api_tuzhong_all($post,'706','addpicture');
 
 		html_cars($carid);
