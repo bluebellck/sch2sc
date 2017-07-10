@@ -1,7 +1,7 @@
 $.fn.selectOption=function(opt) {
 	$("#"+opt+"").live("click", function(){
 		if(opt=="subbrand"){
-			var brandid = $("input[name=brand]").val();
+			var brandid = $("input[name=brand]").val();alert(brandid);
 		}
 		$.get("index.php?m=ajax&ajax=1&"+opt+"=1&brandid="+brandid, { 
 		}, function (data, textStatus){
