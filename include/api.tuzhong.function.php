@@ -1,4 +1,5 @@
 <?php
+echo 888;
 function api_tuzhong_all(){
 	
 	echo 111;
@@ -8,6 +9,6 @@ function api_tuzhong_all(){
 
 }
 
-
+echo 4444;
 
 ?>
