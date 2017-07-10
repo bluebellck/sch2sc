@@ -1,22 +1,5 @@
 <?php
 function api_tuzhong_all($data,$uid){
-	$arr['p_color'] = $data['p_color'];
-	$arr['p_model'] = $model_arr($data['p_model']);
-	$arr['p_gas'] = $data['p_gas'];
-	$arr['p_transmission'] = $data['p_transmission'];
-	$arr['p_usetype'] = $data['家用'];
-	$arr['p_remarks'] = $data['p_details'];
-	$arr['p_mainpic'] = $pics_arr[0];
-	$arr['p_backpic'] = $pics_arr[1];
-	$arr['p_foresightpic'] = $pics_arr[2];
-	$arr['p_leftforepic'] = $pics_arr[3];
-	$arr['p_rightforepic'] = $pics_arr[4];
-	$arr['p_backsightpic'] = $pics_arr[5];
-	$arr['p_leftbackpic'] = $pics_arr[6];
-	$arr['p_rightbackpic'] = $pics_arr[7];
-	$arr['p_leftpic'] = $pics_arr[8];
-	$arr['p_sidepic'] = $pics_arr[9];
-	$arr['p_addtime'] = $data['p_addtime'];
 	$arr['status'] = $data['issell'] ? 6 : 7;
 	var_dump($arr);
 	$url = "http://www.tuzhong.cn/api.php?m=api_sch2sc";
