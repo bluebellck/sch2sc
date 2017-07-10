@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>途众好车</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, business-scalable=no">
+		
+		<link href="<{$weburl}>/templates/m/css/uikit/uikit.min.css" rel="stylesheet" type="text/css"/>
+ 		<link href="<{$weburl}>/templates/m/css/business.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="topbox uk-grid uk-grid-collapse">
+			<div class="uk-width-1-10 uk-text-center left">
+				<a href="<{$weburl}>/m/index.php?m=user"><i class="uk-icon-chevron-left"></i></a>
+			</div>
+			<div class="uk-width-8-10 uk-text-center center">
+				<span>已售车辆</span>
+			</div>
+			<div class="uk-width-1-10"></div>
+		</div>
+		<div class="boxhzcl uk-margin-bottom"></div>
+		
+		<{foreach from=$carslist item=cars}>		
+		<div class="business-shoucang uk-container-center business-hz uk-margin-bottom">
+			<div class="business-hz top">
+				<a href="index.php?m=user&a=editcar&id=<{$cars.p_id}>&page=<{$currpage}>" class="uk-float-right"><i class="uk-icon-cog"></i> 编辑</a>
+				<span>
+					刷新时间：<{$cars.listtime}>
+				</span>
+			</div>
+			<div class="text business-hz">
+				<div class="img uk-float-left">
+					<a href="index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_mainpic<>''}><img src="<{$cars.p_mainpic}>" width="80" height="60"/><{else}><img src="/static/img/img-cs.png" /><{/if}></a>
+				</div>
+				<h2>
+					<a href="index.php?m=cars&id=<{$cars.p_id}>"><{if $cars.p_allname!=""}><{$cars.p_allname}><{else}><{$cars.p_name}><{/if}></a>
+				</h2>
+				<p><{$cars.p_year}>年<{$cars.p_month}>月 | <{$cars.p_kilometre}>万公里</p>
+				<p class="jg">当前价格： <span>¥<{$cars.p_price}></span> 万</p>
+			</div>
+			<div class="uk-grid uk-grid-collapse">
+				<div class="uk-width-1-2">
+					<a href="index.php?m=user&a=refresh&id=<{$cars.p_id}>&page=<{$currpage}>" class="button uk-button">刷新</a>
+				</div>
+				<div class="uk-width-1-2">
+					<a href="index.php?m=user&a=sellcar&sell=<{if $cars.issell==1}>0<{else}>1<{/if}>&id=<{$cars.p_id}>&page=<{$currpage}>" class="button uk-button lx"><{if $cars.issell==1}>恢复为在售<{else}>设置为已出售<{/if}></a> 
+				</div>
+			</div>
+		</div>
+		<{/foreach}>
+		
+		<div class="page_list">
+			<{$button_basic}>
+		</div>
+		<script type="text/javascript" src="<{$weburl}>/static/js/uikit/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="<{$weburl}>/static/js/uikit/uikit.min.js"></script>
+	</body>
+</html>

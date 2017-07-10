@@ -67,7 +67,7 @@ $tpl -> assign('carid', $carid);
 
 // 允许操作
 if($userinfo['isdealer']==1){
-	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态', 'carlist' => '车源列表','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息');
+	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态', 'carlist' => '车源列表','carlistselled' => '已售列表','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息');
 }
 else{
 	$ac_arr = array('index' => '欢迎登陆', 'logout' => '退出登录', 'upinfo' => '编辑个人信息', 'uppwd' => '修改密码','addlogo'=>'修改头像', 'addcar' => '添加车源','addpicture'=>'添加图片', 'editcar' => '编辑车源', 'delcar' => '删除车源', 'refresh' => '刷新车源', 'sellcar' => '改变买卖状态','rentcarlist' => '租车信息列表', 'addrentcar' => '添加租车信息', 'editrentcar' => '编辑租车信息', 'delrentcar' => '删除租车信息', 'refreshrentcar' => '刷新租车信息', 'carlist' => '车源列表','editshop' => '店铺设置', 'asklist' => '问答列表', 'replyask' => '回复问答', 'delask' => '删除问答', 'newslist' => '促销信息列表', 'addnews' => '添加促销信息', 'editnews' => '编辑促销信息', 'delnews' => '删除促销信息', 'dealerlist' => '销售代表列表', 'adddealer' => '添加销售代表', 'editdealer' => '编辑销售代表', 'deldealer' => '删除销售代表','subscribelist'=>'预约管理','subscribelist'=>'预约管理','delsubscribe'=>'删除预约','inquirylist'=>'询价管理','delinquiry'=>'删除询价');
@@ -236,7 +236,7 @@ elseif ($ac == 'addlogo') {
 } 
 // 车源列表
 elseif ($ac == 'carlist') {
-	$where = 'uid=' . $_SESSION['USER_ID'];
+	$where = 'issell=0 and uid=' . $_SESSION['USER_ID'];
 	if(!empty($_GET['keywords'])) {
 		$keywords = $_GET['keywords'];
 		$where .= " and (name like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
@@ -261,7 +261,33 @@ elseif ($ac == 'carlist') {
 	$tpl -> display('m/user_carlist.html');
 	exit;
 } 
-// 添加或修改车源
+// 车源列表
+elseif ($ac == 'carlistselled') {
+	$where = 'issell=1 and uid=' . $_SESSION['USER_ID'];
+	if(!empty($_GET['keywords'])) {
+		$keywords = $_GET['keywords'];
+		$where .= " and (name like '%{$keywords}%' or mobilephone like '%{$keywords}%')";
+	}
+	include('../'.INC_DIR . 'Page.class.php');
+	$Page = new Page($db -> tb_prefix . 'cars', $where, '*', '50', 'issell asc,listtime desc');
+	$list = $Page -> get_data();
+	foreach($list as $key => $value) {
+		$list[$key]['listtime'] = date('Y-m-d H:i:s', $value['listtime']);
+		$list[$key]['p_addtime'] = date('Y-m-d H:i:s', $value['p_addtime']);
+		if (!empty($value['p_model'])) $list[$key]['p_modelname'] = $array_model[$value['p_model']];
+		$list[$key]['p_url'] = HTML_DIR . "buycars/" . date('Y/m/d', $value['p_addtime']) . "/" . $value['p_id'] . ".html";
+	} 
+
+	$button_basic = $Page -> button_basic();
+	$button_select = $Page -> button_select();
+	$pageid = $Page -> page;
+	$tpl -> assign('button_basic', $button_basic);
+	$tpl -> assign('button_select', $button_select);
+	$tpl -> assign('carslist', $list);
+	$tpl -> assign('currpage', $pageid);
+	$tpl -> display('m/user_carlistselled.html');
+	exit;
+}// 添加或修改车源
 elseif ($ac == 'addcar' || $ac == 'editcar') {
 	if ($userinfo['isdealer'] == 2 and $userinfo['ischeck']!=1) {
 		showmsg('您的公司信息暂未通过审核，暂不能发布信息！', "index.php?m=user&a=carlist");
