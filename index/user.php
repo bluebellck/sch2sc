@@ -534,6 +534,13 @@ elseif ($ac == 'sellcar') {
 	$issell = intval($_GET['sell']);
 	$rs = $db -> row_update('cars', array('issell' => $issell), "p_id=" . $id);
 	html_cars($id);
+
+	//同步到途众好车网
+	$post['issell'] = $issell;
+	$post['cheyuan_id'] =  $id;
+	include(INC_DIR . 'api.tuzhong.function.php');
+	api_tuzhong_function($post,'706','sellcar');
+
 	showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'), "index.php?m=user&a=carlist");
 } 
 // 单条删除
@@ -558,6 +565,14 @@ elseif ($ac == 'delcar') {
 		} 
 	} 
 	$rs = $db -> row_delete('cars', "p_id=$p_id");
+
+	//同步到途众好车网
+	$post['issell'] = 1;
+	$post['cheyuan_id'] =  $id;
+	include(INC_DIR . 'api.tuzhong.function.php');
+	api_tuzhong_function($post,'706','sellcar');
+
+
 	showmsg($ac_arr[$ac].($rs ? '成功' : '失败'),"index.php?m=user&a=carlist");
 }
 // 预约列表
