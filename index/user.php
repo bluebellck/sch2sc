@@ -568,7 +568,7 @@ elseif ($ac == 'delcar') {
 
 	//同步到途众好车网
 	$post['issell'] = 1;
-	$post['cheyuan_id'] =  $id;
+	$post['cheyuan_id'] =  $p_id;
 	include(INC_DIR . 'api.tuzhong.function.php');
 	api_tuzhong_function($post,'706','sellcar');
 
