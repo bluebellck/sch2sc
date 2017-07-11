@@ -614,7 +614,7 @@ elseif ($ac == 'sellcar') {
 	//同步到途众好车网
 	$post['issell'] = $issell;
 	$post['cheyuan_id'] =  $id;
-	include(''.INC_DIR . 'api.tuzhong.function.php');
+	include('../'.INC_DIR . 'api.tuzhong.function.php');
 	api_tuzhong_function($post,'706','sellcar');
 
 	showmsg($ac_arr[$ac] . ($rs ? '成功' : '失败'), "index.php?m=user&a=carlist");
